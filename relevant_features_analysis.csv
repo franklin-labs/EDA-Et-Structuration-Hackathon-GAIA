@@ -1,0 +1,435 @@
+Sheet,Variable,Description,Type,Fill Rate,Unique Values,Category,Is Relevant
+Atelier Grandes cultures,DTGCUCP.GCU_CALCULE,GCU Coût de production calculé (O/N),O/N,0.996742671009772,3,Economic,True
+Atelier Grandes cultures,DTGCUCP.GCUCP_VENTEGCU,Description not found,Unknown,0.996742671009772,156,Economic,True
+Caractéristiques,FONC1.CAPPUGB,Chargement apparent UGB/ha SFT,NUM,0.990228013029316,144,Economic,True
+Système fourrager,FONC1.CCORUGB,Chargement corrigé UGB/ha SFP,NUM,0.9869706840390879,130,Economic,True
+Atelier Bovins viande,DTBVCP.BV_CALCULE,BV Coût de production calculé (O/N),O/N,0.38110749185667747,2,Economic,True
+Atelier Bovins viande,DTBVCP.BV_NBUNITES,BV Nombre d'unités (100kgvv) pour le calcul du coût de production,NUM,0.38110749185667747,114,Economic,True
+Atelier Bovins viande,DTBVCP.BVCP_VENTEANI,Description not found,Unknown,0.38110749185667747,115,Economic,True
+Atelier Bovins viande,DTBVCP.BVCP_ACHATSANI,Description not found,Unknown,0.38110749185667747,102,Economic,True
+Atelier Bovins lait,DTBL.PRIXLC,Description not found,Unknown,0.3224755700325733,60,Economic,True
+Atelier Bovins lait,DTBL.PRIXCONCBL,Description not found,Unknown,0.3224755700325733,99,Economic,True
+Atelier Bovins lait,DTBLCP.BL_CALCULE,BL Coût de production calculé (O/N),O/N,0.3224755700325733,2,Economic,True
+Atelier Bovins lait,DTBLCP.BLCP_ACHATSANI,Description not found,Unknown,0.3224755700325733,4,Economic,True
+Atelier Ovins viande,DTOV.PRIXMA,Description not found,Unknown,0.250814332247557,71,Economic,True
+Atelier Ovins viande,DTOV.PRIXMAHR,Description not found,Unknown,0.250814332247557,70,Economic,True
+Atelier Ovins viande,DTOV.PRIXMAKGC,Description not found,Unknown,0.250814332247557,43,Economic,True
+Atelier Ovins viande,DTOVCP.OV_CALCULE,OV Coût de production calculé (O/N),O/N,0.250814332247557,2,Economic,True
+Atelier Ovins viande,DTOVCP.OV_NBUNITES,OV Nombre d'unités (Eq. kgc) pour le calcul du coût de production,INT,0.250814332247557,75,Economic,True
+Atelier Ovins viande,DTOV.CHARAPOV,Chargement appar OV:EMP/ha SFPO,NUM,0.247557003257329,68,Economic,True
+Résultats économiques,ECOCO.LIBACA,Libellé autre charge animale,STR,0.14332247557003253,26,Economic,True
+Atelier Caprins,DTCA.QLVDCA,Lait chèvre vente directe (l),INT,0.1140065146579805,2,Economic,True
+Atelier Caprins,DTCACP.CA_CALCULE,CA Coût de production calculé (O/N),O/N,0.1140065146579805,2,Economic,True
+Atelier Caprins,DTCACP.CACP_ACHATSANI,Description not found,Unknown,0.1140065146579805,9,Economic,True
+Résultats économiques,ECOVEG.LIBACV,Libellé autre charge végétale,STR,0.09446254071661242,23,Economic,True
+Atelier Ovins lait,DTOLCP.OL_CALCULE,OL Coût de production calculé (O/N),O/N,0.04234527687296419,2,Economic,True
+Atelier Ovins lait,DTOLCP.OL_NBUNITES,OL Nombre d'unités (1000l) pour le calcul du coût de production,NUM,0.04234527687296419,13,Economic,True
+Atelier Ovins lait,DTOLCP.OLCP_ACHATSANI,Description not found,Unknown,0.04234527687296419,13,Economic,True
+Liste dossiers Excel,STRUC.PATELIERVEA,Présence d'un atelier HS Veaux (O/N),O/N,0.996742671009772,2,Environment,True
+Caractéristiques,FONC1.TSAU,Total SAU de l'assolement,NUM,0.996742671009772,128,Environment,True
+Système fourrager,SYSFOU.TUGBFSD,tMS de fourrages conservés utilisés /UGB,NUM,0.996742671009772,216,Environment,True
+Système fourrager,SYSFOU.TUGBFAD,tMS fourrages et co-produits achetés utilisés / UGB,NUM,0.996742671009772,65,Environment,True
+Système fourrager,SYSFOU.PAUTOFC,Pourcentage d'autonomie des fourrages conservés,NUM,0.996742671009772,74,Environment,True
+Résultats économiques,ECOCSTB.EAU,Description not found,Unknown,0.996742671009772,214,Environment,True
+Résultats économiques,ECOCSTB.GAZ,Description not found,Unknown,0.996742671009772,6,Environment,True
+Environnement,DCOMP.NFOUR,Entrée: N fourrages,INT,0.996742671009772,150,Environment,True
+Environnement,DCOMP.PFOUR,Entrée: P2O5 fourrages,INT,0.996742671009772,146,Environment,True
+Environnement,DCOMP.KFOUR,Entrée: K2O fourrages,INT,0.996742671009772,147,Environment,True
+Atelier Grandes cultures,DTGCUCP.GCUCP_BATI_EAU,Description not found,Unknown,0.996742671009772,138,Environment,True
+Atelier Grandes cultures,DTGCUCP.GCUCP_BATI_ELECGAZ,Description not found,Unknown,0.996742671009772,157,Environment,True
+Environnement,DCOMP.NENGEAU,Entrée: N engrais SAU+Eau irrigation,INT,0.9804560260586319,236,Environment,True
+Environnement,ENERGIE.EQFELECP,Total MJ Electricité et pompage collectif eau irrigation,INT,0.7719869706840391,180,Environment,True
+Environnement,ENERGIE.PEQFELECP,% MJ Electricité et pompage collectif eau irrigation,NUM,0.7719869706840391,173,Environment,True
+Atelier Grandes cultures,ENERGIE.EQFGCU,Consommation d'énergie MJ atelier GCU,INT,0.7654723127035831,191,Environment,True
+Atelier Grandes cultures,ENERGIE.EQFELEGCU,MJ Electricité et pompage eau atelier GCU,INT,0.7654723127035831,184,Environment,True
+Atelier Bovins viande,FONC1.NBTAUBV,Nombre de taureaux BV,NUM,0.38110749185667747,34,Environment,True
+Atelier Bovins viande,DTBV.NVBV1,Nb vêlages BV janvier,INT,0.38110749185667747,32,Environment,True
+Atelier Bovins viande,DTBV.DVGBV1,Nb vêlages génisse BV janvier,INT,0.38110749185667747,14,Environment,True
+Atelier Bovins viande,DTBV.NVBV2,Nb vêlages BV février,INT,0.38110749185667747,31,Environment,True
+Atelier Bovins viande,DTBV.DVGBV2,Nb vêlages génisse BV février,INT,0.38110749185667747,17,Environment,True
+Atelier Bovins viande,DTBV.NVBV3,Nb vêlages BV mars,INT,0.38110749185667747,27,Environment,True
+Atelier Bovins viande,DTBV.DVGBV3,Nb vêlages génisse BV mars,INT,0.38110749185667747,12,Environment,True
+Atelier Bovins viande,DTBV.NVBV4,Nb vêlages BV avril,INT,0.38110749185667747,18,Environment,True
+Atelier Bovins viande,DTBV.DVGBV4,Nb vêlages génisse BV avril,INT,0.38110749185667747,5,Environment,True
+Atelier Bovins viande,DTBV.NVBV5,Nb vêlages BV mai,INT,0.38110749185667747,12,Environment,True
+Atelier Bovins viande,DTBV.DVGBV5,Nb vêlages génisse BV mai,INT,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,DTBV.NVBV6,Nb vêlages BV juin,INT,0.38110749185667747,10,Environment,True
+Atelier Bovins viande,DTBV.DVGBV6,Nb vêlages génisse BV juin,INT,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,DTBV.NVBV7,Nb vêlages BV juillet,INT,0.38110749185667747,10,Environment,True
+Atelier Bovins viande,DTBV.DVGBV7,Nb vêlages génisse BV juillet,INT,0.38110749185667747,6,Environment,True
+Atelier Bovins viande,DTBV.NVBV8,Nb vêlages BV août,INT,0.38110749185667747,19,Environment,True
+Atelier Bovins viande,DTBV.DVGBV8,Nb vêlages génisse BV août,INT,0.38110749185667747,13,Environment,True
+Atelier Bovins viande,DTBV.NVBV9,Nb vêlages BV septembre,INT,0.38110749185667747,20,Environment,True
+Atelier Bovins viande,DTBV.DVGBV9,Nb vêlages génisse BV septembre,INT,0.38110749185667747,13,Environment,True
+Atelier Bovins viande,DTBV.NVBV10,Nb vêlages BV octobre,INT,0.38110749185667747,20,Environment,True
+Atelier Bovins viande,DTBV.DVGBV10,Nb vêlages génisse BV octobre,INT,0.38110749185667747,13,Environment,True
+Atelier Bovins viande,DTBV.NVBV11,Nb vêlages BV novembre,INT,0.38110749185667747,27,Environment,True
+Atelier Bovins viande,DTBV.DVGBV11,Nb vêlages génisse BV novembre,INT,0.38110749185667747,15,Environment,True
+Atelier Bovins viande,DTBV.NVBV12,Nb vêlages BV décembre,INT,0.38110749185667747,29,Environment,True
+Atelier Bovins viande,DTBV.DVGBV12,Nb vêlages génisse BV décembre,INT,0.38110749185667747,16,Environment,True
+Atelier Bovins viande,FONC1.VEAUNAISNT,Veaux naissants BV vendus Nb têtes,INT,0.38110749185667747,5,Environment,True
+Atelier Bovins viande,FONC1.VEAUNAISPOT,Veaux naissants BV vendus Poids moyen kilo vif/tête,INT,0.38110749185667747,5,Environment,True
+Atelier Bovins viande,FONC1.VEAUNAISPRT,Description not found,Unknown,0.38110749185667747,5,Environment,True
+Atelier Bovins viande,FONC1.VEAUSNT,Veaux sevrés vendus Nb têtes,INT,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUSPOT,Veaux sevrés vendus Poids moyen kilo vif/tête,INT,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUSPRT,Description not found,Unknown,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUSLMNT,Veaux sous la mères vendus Nb têtes,INT,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.VEAUSLMPOT,Veaux sous la mères vendus Poids moyen kilo carcasse/tête,INT,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.VEAUSLMPRT,Description not found,Unknown,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.VEAUAVNT,Veaux d'Aveyron vendus Nb têtes,INT,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,FONC1.VEAUAVPOT,Veaux d'Aveyron vendus Poids moyen kilo carcasse/tête,INT,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,FONC1.VEAUAVPRT,Description not found,Unknown,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,FONC1.VEAULNT,Veaux lourds vendus Nb têtes,INT,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.VEAULPOT,Veaux lourds vendus Poids moyen kilo carcasse/tête,INT,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.VEAULPRT,Description not found,Unknown,0.38110749185667747,8,Environment,True
+Atelier Bovins viande,FONC1.TAURRBVNT,Taureaux de réforme BV vendus Nb têtes,INT,0.38110749185667747,4,Environment,True
+Atelier Bovins viande,FONC1.TAURRBVPOT,Taureaux de réforme BV vendus Poids moyen kilo carcasse/tête,INT,0.38110749185667747,28,Environment,True
+Atelier Bovins viande,FONC1.VEAUABVNT,Veaux achetés BV Nb têtes,INT,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUABVPOT,Veaux achetés BV Poids moyen kilo vif/tête,INT,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUABVPRT,Description not found,Unknown,0.38110749185667747,2,Environment,True
+Atelier Bovins viande,FONC1.VEAUCBVNT,Veaux issus de l'atelier BL Nb têtes,INT,0.38110749185667747,11,Environment,True
+Atelier Bovins viande,FONC1.VEAUCBVPOT,Veaux issus de l'atelier BL Poids moyen kilo vif/tête,INT,0.38110749185667747,7,Environment,True
+Atelier Bovins viande,FONC1.VEAUCBVPRT,Description not found,Unknown,0.38110749185667747,10,Environment,True
+Atelier Bovins viande,SYSFOUAT.QFOUBVU,Quantité de fourrages conservés utilisés atelier BV t.MS/UGB,NUM,0.38110749185667747,111,Environment,True
+Atelier Bovins viande,RESAUTO.FOUMASSBV,Autonomie massique Fourrages atelier BV %,INT,0.38110749185667747,13,Environment,True
+Atelier Bovins viande,RESAUTO.FOUENERBV,Autonomie énergétique Fourrages atelier BV %,INT,0.38110749185667747,10,Environment,True
+Atelier Bovins viande,RESAUTO.FOUPROTBV,Autonomie protéique Fourrages atelier BV %,INT,0.38110749185667747,11,Environment,True
+Atelier Bovins viande,DTBVCP.BVCP_BATI_EAU,Description not found,Unknown,0.38110749185667747,98,Environment,True
+Atelier Bovins viande,DTBVCP.BVCP_BATI_ELECGAZ,Description not found,Unknown,0.38110749185667747,88,Environment,True
+Atelier Bovins lait,FONC1.NBTAUBL,Nombre de taureaux BL,NUM,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,DTBL.QLAITDVBL,Lait distribué aux veaux l atelier BL,INT,0.3224755700325733,70,Environment,True
+Atelier Bovins lait,DTBL.QLAITDVBV,Lait distribué aux veaux l atelier BV,INT,0.3224755700325733,8,Environment,True
+Atelier Bovins lait,DTBL.VELTOT,Nombre de vêlages,INT,0.3224755700325733,65,Environment,True
+Atelier Bovins lait,DTBL.VELG,dont vêlages génisses,INT,0.3224755700325733,35,Environment,True
+Atelier Bovins lait,DTBL.NVELCR,dont vêlages en croisement,INT,0.3224755700325733,25,Environment,True
+Atelier Bovins lait,DTBL.PNVELCRBL,Pourcentage de vêlages en croisement (%),NUM,0.3224755700325733,35,Environment,True
+Atelier Bovins lait,DTBL.NVBL1,Nb vêlages BL janvier,INT,0.3224755700325733,21,Environment,True
+Atelier Bovins lait,DTBL.DVGBL1,Nb vêlages génisse BL janvier,INT,0.3224755700325733,12,Environment,True
+Atelier Bovins lait,DTBL.NVBL2,Nb vêlages BL février,INT,0.3224755700325733,20,Environment,True
+Atelier Bovins lait,DTBL.DVGBL2,Nb vêlages génisse BL février,INT,0.3224755700325733,10,Environment,True
+Atelier Bovins lait,DTBL.NVBL3,Nb vêlages BL mars,INT,0.3224755700325733,18,Environment,True
+Atelier Bovins lait,DTBL.DVGBL3,Nb vêlages génisse BL mars,INT,0.3224755700325733,9,Environment,True
+Atelier Bovins lait,DTBL.NVBL4,Nb vêlages BL avril,INT,0.3224755700325733,18,Environment,True
+Atelier Bovins lait,DTBL.DVGBL4,Nb vêlages génisse BL avril,INT,0.3224755700325733,9,Environment,True
+Atelier Bovins lait,DTBL.NVBL5,Nb vêlages BL mai,INT,0.3224755700325733,16,Environment,True
+Atelier Bovins lait,DTBL.DVGBL5,Nb vêlages génisse BL mai,INT,0.3224755700325733,9,Environment,True
+Atelier Bovins lait,DTBL.NVBL6,Nb vêlages BL juin,INT,0.3224755700325733,16,Environment,True
+Atelier Bovins lait,DTBL.DVGBL6,Nb vêlages génisse BL juin,INT,0.3224755700325733,10,Environment,True
+Atelier Bovins lait,DTBL.NVBL7,Nb vêlages BL juillet,INT,0.3224755700325733,17,Environment,True
+Atelier Bovins lait,DTBL.DVGBL7,Nb vêlages génisse BL juillet,INT,0.3224755700325733,8,Environment,True
+Atelier Bovins lait,DTBL.NVBL8,Nb vêlages BL août,INT,0.3224755700325733,18,Environment,True
+Atelier Bovins lait,DTBL.DVGBL8,Nb vêlages génisse BL août,INT,0.3224755700325733,10,Environment,True
+Atelier Bovins lait,DTBL.NVBL9,Nb vêlages BL septembre,INT,0.3224755700325733,21,Environment,True
+Atelier Bovins lait,DTBL.DVGBL9,Nb vêlages génisse BL septembre,INT,0.3224755700325733,11,Environment,True
+Atelier Bovins lait,DTBL.NVBL10,Nb vêlages BL octobre,INT,0.3224755700325733,20,Environment,True
+Atelier Bovins lait,DTBL.DVGBL10,Nb vêlages génisse BL octobre,INT,0.3224755700325733,12,Environment,True
+Atelier Bovins lait,DTBL.NVBL11,Nb vêlages BL novembre,INT,0.3224755700325733,20,Environment,True
+Atelier Bovins lait,DTBL.DVGBL11,Nb vêlages génisse BL novembre,INT,0.3224755700325733,10,Environment,True
+Atelier Bovins lait,DTBL.NVBL12,Nb vêlages BL décembre,INT,0.3224755700325733,19,Environment,True
+Atelier Bovins lait,DTBL.DVGBL12,Nb vêlages génisse BL décembre,INT,0.3224755700325733,9,Environment,True
+Atelier Bovins lait,FONC1.VEAUNBLNT,Veaux naissants BL vendus Nb têtes,INT,0.3224755700325733,53,Environment,True
+Atelier Bovins lait,FONC1.VEAUNBLPOT,Veaux naissants BL vendus Poids moyen kilo vif/tête,INT,0.3224755700325733,30,Environment,True
+Atelier Bovins lait,FONC1.VEAUNBLPRT,Description not found,Unknown,0.3224755700325733,58,Environment,True
+Atelier Bovins lait,FONC1.VEAUCRBLNT,Veaux croisés BL vendus Nb têtes,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUCRBLPOT,Veaux croisés BL vendus Poids moyen kilo vif/tête,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUCRBLPRT,Description not found,Unknown,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUBBLNT,Veaux de boucherie BL vendus Nb têtes,INT,0.3224755700325733,4,Environment,True
+Atelier Bovins lait,FONC1.VEAUBBLPOT,Veaux de boucherie BL vendus Poids moyen kilo carcasse/tête,INT,0.3224755700325733,4,Environment,True
+Atelier Bovins lait,FONC1.VEAUBBLPRT,Description not found,Unknown,0.3224755700325733,4,Environment,True
+Atelier Bovins lait,FONC1.VEAUSBLNT,Veaux sevrés BL vendus Nb têtes,INT,0.3224755700325733,5,Environment,True
+Atelier Bovins lait,FONC1.VEAUSBLPOT,Veaux sevrés BL vendus Poids moyen kilo vif/tête,INT,0.3224755700325733,5,Environment,True
+Atelier Bovins lait,FONC1.VEAUSBLPRT,Description not found,Unknown,0.3224755700325733,5,Environment,True
+Atelier Bovins lait,FONC1.TAURRBLNT,Taureaux de réforme BL vendus Nb têtes,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.TAURRBLPOT,Taureaux de réforme BL vendus Poids moyen kilo carcasse/tête,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUABLNT,Veaux achetés BL Nb têtes,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUABLPOT,Veaux achetés BL Poids moyen kilo vif/tête,INT,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,FONC1.VEAUABLPRT,Description not found,Unknown,0.3224755700325733,2,Environment,True
+Atelier Bovins lait,SYSFOUAT.QFOUBLU,Quantité de fourrages conservés utilisés atelier BL t.MS/UGB,NUM,0.3224755700325733,98,Environment,True
+Atelier Bovins lait,RESAUTO.FOUMASSBL,Autonomie massique Fourrages atelier BL %,INT,0.3224755700325733,16,Environment,True
+Atelier Bovins lait,RESAUTO.FOUENERBL,Autonomie énergétique Fourrages atelier BL %,INT,0.3224755700325733,18,Environment,True
+Atelier Bovins lait,RESAUTO.FOUPROTBL,Autonomie protéique Fourrages Atelier BL %,INT,0.3224755700325733,18,Environment,True
+Atelier Bovins lait,DTBLCP.BLCP_BATI_EAU,Description not found,Unknown,0.3224755700325733,72,Environment,True
+Atelier Bovins lait,DTBLCP.BLCP_BATI_ELECGAZ,Description not found,Unknown,0.3224755700325733,92,Environment,True
+Atelier Bovins lait,DTBL.LPVELCBL,Période de vêlages BL,STR,0.3159609120521173,5,Environment,True
+Atelier Bovins viande,DTBV.MORG,Taux de mortalité des veaux avant sevrage BV,NUM,0.3127035830618893,68,Environment,True
+Atelier Bovins viande,DTBV.NBVS,Nombre de veaux sevrés,INT,0.3127035830618893,58,Environment,True
+Atelier Bovins viande,DTBV.GES,Taux de gestation BV,NUM,0.30293159609120524,75,Environment,True
+Atelier Bovins viande,DTBV.DCVBV,Date début campagne des vêlages BV,DATE,0.2996742671009772,37,Environment,True
+Atelier Bovins viande,ENERGIE.EQFBVP,"Consommation d'énergie MJ atelier BV ""Production""",INT,0.28013029315960913,86,Environment,True
+Atelier Bovins viande,ENERGIE.EQFELEBV,MJ Electricité et pompage eau atelier BV,INT,0.28013029315960913,84,Environment,True
+Atelier Bovins viande,ENERGIE.EQFFOUBV,MJ Fourrages atelier BV,INT,0.28013029315960913,65,Environment,True
+Atelier Bovins lait,ENERGIE.EQFBLP,"Consommations d'énergie MJ atelier BL ""Production""",INT,0.25732899022801303,79,Environment,True
+Atelier Bovins lait,ENERGIE.EQFELEBL,MJ Electricité et pompage eau atelier BL,INT,0.25732899022801303,79,Environment,True
+Atelier Bovins lait,ENERGIE.EQFFOUBL,MJ Fourrages atelier BL,INT,0.25732899022801303,57,Environment,True
+Atelier Ovins viande,DTOV.LTYPEAGNP,Libellé du type d'agneaux produits,STR,0.250814332247557,8,Environment,True
+Atelier Ovins viande,DTOV.NAELEV,Nombre d'agneaux élevés,INT,0.250814332247557,71,Environment,True
+Atelier Ovins viande,DTOV.PMAG,Poids moyen des agneaux vendus hors repro. kgc,NUM,0.250814332247557,49,Environment,True
+Atelier Ovins viande,DTOV.NAOV1,Nb agnelages OV janvier,INT,0.250814332247557,26,Environment,True
+Atelier Ovins viande,DTOV.NAOVA1,Nb agnelages OV agnel. janvier,INT,0.250814332247557,13,Environment,True
+Atelier Ovins viande,DTOV.NAOV2,Nb agnelages OV février,INT,0.250814332247557,34,Environment,True
+Atelier Ovins viande,DTOV.NAOVA2,Nb agnelages OV agnel. février,INT,0.250814332247557,14,Environment,True
+Atelier Ovins viande,DTOV.NAOV3,Nb agnelages OV mars,INT,0.250814332247557,50,Environment,True
+Atelier Ovins viande,DTOV.NAOVA3,Nb agnelages OV agnel. mars,INT,0.250814332247557,14,Environment,True
+Atelier Ovins viande,DTOV.NAOV4,Nb agnelages OV avril,INT,0.250814332247557,35,Environment,True
+Atelier Ovins viande,DTOV.NAOVA4,Nb agnelages OV agnel. avril,INT,0.250814332247557,19,Environment,True
+Atelier Ovins viande,DTOV.NAOV5,Nb agnelages OV mai,INT,0.250814332247557,15,Environment,True
+Atelier Ovins viande,DTOV.NAOVA5,Nb agnelages OV agnel. mai,INT,0.250814332247557,9,Environment,True
+Atelier Ovins viande,DTOV.NAOV6,Nb agnelages OV juin,INT,0.250814332247557,4,Environment,True
+Atelier Ovins viande,DTOV.NAOVA6,Nb agnelages OV agnel. juin,INT,0.250814332247557,3,Environment,True
+Atelier Ovins viande,DTOV.NAOV7,Nb agnelages OV juillet,INT,0.250814332247557,6,Environment,True
+Atelier Ovins viande,DTOV.NAOVA7,Nb agnelages OV agnel. juillet,INT,0.250814332247557,3,Environment,True
+Atelier Ovins viande,DTOV.NAOV8,Nb agnelages OV août,INT,0.250814332247557,18,Environment,True
+Atelier Ovins viande,DTOV.NAOVA8,Nb agnelages OV agnel. août,INT,0.250814332247557,3,Environment,True
+Atelier Ovins viande,DTOV.NAOV9,Nb agnelages OV septembre,INT,0.250814332247557,28,Environment,True
+Atelier Ovins viande,DTOV.NAOVA9,Nb agnelages OV agnel. septembre,INT,0.250814332247557,3,Environment,True
+Atelier Ovins viande,DTOV.NAOV10,Nb agnelages OV octobre,INT,0.250814332247557,28,Environment,True
+Atelier Ovins viande,DTOV.NAOVA10,Nb agnelages OV agnel. octobre,INT,0.250814332247557,5,Environment,True
+Atelier Ovins viande,DTOV.NAOV11,Nb agnelages OV novembre,INT,0.250814332247557,34,Environment,True
+Atelier Ovins viande,DTOV.NAOVA11,Nb agnelages OV agnel. novembre,INT,0.250814332247557,6,Environment,True
+Atelier Ovins viande,DTOV.NAOV12,Nb agnelages OV décembre,INT,0.250814332247557,32,Environment,True
+Atelier Ovins viande,DTOV.NAOVA12,Nb agnelages OV agnel. décembre,INT,0.250814332247557,11,Environment,True
+Atelier Ovins viande,DTOV.ALOURBNT,Agneaux lourds bergerie vendus Nb têtes,INT,0.250814332247557,55,Environment,True
+Atelier Ovins viande,DTOV.ALOURBPRC,Pourcentage des agneaux lourds bergerie vendus,NUM,0.250814332247557,26,Environment,True
+Atelier Ovins viande,DTOV.ALOURBPOT,Agneaux lourds bergerie vendus Poids moyen kilo carcasse/tête,NUM,0.250814332247557,33,Environment,True
+Atelier Ovins viande,DTOV.ALOURHNT,Agneaux lourds herbe vendus Nb têtes,INT,0.250814332247557,27,Environment,True
+Atelier Ovins viande,DTOV.ALOURHPRC,Pourcentage des agneaux lourds herbe vendus,NUM,0.250814332247557,16,Environment,True
+Atelier Ovins viande,DTOV.ALOURHPOT,Agneaux lourds herbe Poids moyen kilo carcasse/tête,NUM,0.250814332247557,20,Environment,True
+Atelier Ovins viande,DTOV.AMAIGRNT,Agneaux maigres vendus Nb têtes,INT,0.250814332247557,5,Environment,True
+Atelier Ovins viande,DTOV.AMAIGRPRC,Pourcentage d' agneaux maigres vendus,NUM,0.250814332247557,5,Environment,True
+Atelier Ovins viande,DTOV.AMAIGRPOT,Agneaux maigres vendus Poids moyen kilo vif/tête,NUM,0.250814332247557,5,Environment,True
+Atelier Ovins viande,DTOV.ALEGERNT,Agneaux légers vendus Nb têtes,INT,0.250814332247557,9,Environment,True
+Atelier Ovins viande,DTOV.ALEGERPRC,Pourcentage d'agneaux légers vendus,NUM,0.250814332247557,9,Environment,True
+Atelier Ovins viande,DTOV.ALEGERPOT,Agneaux légers vendus Poids moyen kilo vif/tête,NUM,0.250814332247557,5,Environment,True
+Atelier Ovins viande,DTOV.ALAITNT,Agneaux de lait vendus Nb têtes,INT,0.250814332247557,2,Environment,True
+Atelier Ovins viande,DTOV.ALAITPRC,Pourcentage d'agneaux de lait vendus,NUM,0.250814332247557,2,Environment,True
+Atelier Ovins viande,DTOV.ALAITPOT,Agneaux de lait vendus Poids moyen kilo vif/tête,NUM,0.250814332247557,2,Environment,True
+Atelier Ovins viande,SYSFOUAT.QFOUOVU,Quantité de fourrages conservés utilisés atelier OV Kg.MS/brebis,INT,0.250814332247557,71,Environment,True
+Atelier Ovins viande,RESAUTO.FOUMASSOV,Autonomie massique Fourrages atelier OV %,INT,0.250814332247557,12,Environment,True
+Atelier Ovins viande,RESAUTO.FOUENEROV,Autonomie énergétique Fouurages atelier OV %,INT,0.250814332247557,12,Environment,True
+Atelier Ovins viande,RESAUTO.FOUPROTOV,Autonomie protéique Fourrages atelier OV %,INT,0.250814332247557,11,Environment,True
+Atelier Ovins viande,DTOVCP.OVCP_BATI_EAU,Description not found,Unknown,0.250814332247557,28,Environment,True
+Atelier Ovins viande,DTOVCP.OVCP_BATI_ELECGAZ,Description not found,Unknown,0.250814332247557,48,Environment,True
+Atelier Ovins viande,DTOV.DDCAOV,Date début de campagne agnelages OV,DATE,0.24429967426710097,36,Environment,True
+Atelier Ovins viande,ENERGIE.EQFOVP,"Consommation d'énergie MJ atelier OV ""Production""",INT,0.16938110749185664,52,Environment,True
+Atelier Ovins viande,ENERGIE.EQFOVU,"MJ atelier OV ""Production"" /100 kilos carcasse agneaux",INT,0.16938110749185664,52,Environment,True
+Atelier Ovins viande,ENERGIE.EQFELEOV,MJ Electricité et pompage eau atelier OV,INT,0.16938110749185664,48,Environment,True
+Atelier Caprins,DTCA.QLAITDC,Lait consommé par les chevreaux (l),INT,0.1140065146579805,3,Environment,True
+Atelier Caprins,DTCA.LAITRACAFF,Lait transformé en fromages frais CA (%),INT,0.1140065146579805,3,Environment,True
+Atelier Caprins,DTCA.LAITRACAFL,Lait transformé en fromages de lactosérum CA (%),INT,0.1140065146579805,3,Environment,True
+Atelier Caprins,DTCA.LAITRACAFPP,Lait transformé en fromages à pâte persillée CA (%),INT,0.1140065146579805,2,Environment,True
+Atelier Caprins,SYSFOUAT.QFOUCAU,Quantité de fourrages conservés utilisés atelier CA Kg.MS/chèvre,INT,0.1140065146579805,35,Environment,True
+Atelier Caprins,RESAUTO.FOUMASSCA,Autonomie massique Fourrages atelier CA %,INT,0.1140065146579805,15,Environment,True
+Atelier Caprins,ENERGIE.EQFELECA,MJ Electricité et pompage eau atelier Caprins,INT,0.1140065146579805,33,Environment,True
+Atelier Caprins,ENERGIE.EQFFOUCA,MJ Fourrages atelier Caprins,INT,0.1140065146579805,27,Environment,True
+Atelier Caprins,DTCACP.CACP_BATI_EAU,Description not found,Unknown,0.1140065146579805,35,Environment,True
+Atelier Caprins,DTCACP.CACP_BATI_ELECGAZ,Description not found,Unknown,0.1140065146579805,35,Environment,True
+Atelier Caprins,RESAUTO.FOUENERCA,Autonomie énergétique Fourrages atelier CA %,INT,0.11074918566775249,14,Environment,True
+Atelier Caprins,RESAUTO.FOUPROTCA,Autonomie protéique Fourrages atelier CA %,INT,0.11074918566775249,15,Environment,True
+Atelier Ovins lait,DTOL.LAITRAOLFF,Lait transformé en fromages frais OL (%),INT,0.04234527687296419,2,Environment,True
+Atelier Ovins lait,DTOL.LAITRAOLFL,Lait transformé en fromages de lactosérum OL (%),INT,0.04234527687296419,2,Environment,True
+Atelier Ovins lait,DTOL.LAITRAOLFPP,Lait transformé en fromages à pâte persillée OL (%),INT,0.04234527687296419,2,Environment,True
+Atelier Ovins lait,DTOL.AEEMPOL,Agneaux élevés/EMP OL,NUM,0.04234527687296419,7,Environment,True
+Atelier Ovins lait,SYSFOUAT.QFOUOLU,Quantité de fourrages conservés utilisés atelier OL Kg.MS/brebis,INT,0.04234527687296419,13,Environment,True
+Atelier Ovins lait,RESAUTO.RATIONMASSOL,Autonomie massique Ration atelier OL %,INT,0.04234527687296419,9,Environment,True
+Atelier Ovins lait,RESAUTO.FOUMASSOL,Autonomie massique Fourrages atelier OL %,INT,0.04234527687296419,11,Environment,True
+Atelier Ovins lait,RESAUTO.CONCMASSOL,Autonomie massique Concentrés atelier OL %,INT,0.04234527687296419,13,Environment,True
+Atelier Ovins lait,RESAUTO.FOUENEROL,Autonomie énergétique Fourrages atelier OL %,INT,0.04234527687296419,11,Environment,True
+Atelier Ovins lait,RESAUTO.FOUPROTOL,Autonomie protéique Fourrages atelier OL %,INT,0.04234527687296419,10,Environment,True
+Atelier Ovins lait,DTOL.QCDOL,Quantité de concentrés troupeau OL (t),NUM,0.04234527687296419,13,Environment,True
+Atelier Ovins lait,DTOL.QCPBOL,Quantité de concentrés troupeau OL (kg)/brebis,INT,0.04234527687296419,12,Environment,True
+Atelier Ovins lait,DTOLCP.OLCP_BATI_EAU,Description not found,Unknown,0.04234527687296419,13,Environment,True
+Atelier Ovins lait,DTOLCP.OLCP_BATI_ELECGAZ,Description not found,Unknown,0.04234527687296419,13,Environment,True
+Atelier Ovins lait,ENERGIE.EQFOLP,"Consommation d'énergie MJ atelier OL ""Production""",INT,0.039087947882736174,12,Environment,True
+Atelier Ovins lait,ENERGIE.EQFELEOL,MJ Electricité et pompage eau atelier OL,INT,0.039087947882736174,12,Environment,True
+Atelier Ovins lait,ENERGIE.EQFFOUOL,MJ Fourrages atelier OL,INT,0.039087947882736174,12,Environment,True
+Liste dossiers Excel,STRUC.ATELIERGCU,Atelier Grandes cultures significatif (O/N),O/N,0.996742671009772,3,Production,True
+Caractéristiques,FONC1.HASFP,Surface fourragère principale (ha),NUM,0.996742671009772,171,Production,True
+Caractéristiques,FONC1.HACF,SFP cultures fourragères (ha),NUM,0.996742671009772,71,Production,True
+Caractéristiques,STRUC.RECOURSSP,Recours à des surfaces pastorales (O/N),O/N,0.996742671009772,3,Production,True
+Caractéristiques,FONC1.HAGCU,Grandes cultures - GCU (ha),NUM,0.996742671009772,118,Production,True
+Caractéristiques,FONC1.HACPE,Cultures pérennes (ha),NUM,0.996742671009772,6,Production,True
+Caractéristiques,FONC1.HACSP,Cultures spéciales (ha),NUM,0.996742671009772,3,Production,True
+Système fourrager,FONC1.HASFP,Surface fourragère principale (ha),NUM,0.996742671009772,171,Production,True
+Système fourrager,FONC1.HASTH,Surface toujours en herbe (ha),NUM,0.996742671009772,133,Production,True
+Système fourrager,FONC1.HACF,SFP cultures fourragères (ha),NUM,0.996742671009772,71,Production,True
+Système fourrager,FONC1.SURFMEHA,Surface en maïs ensilage (ha),NUM,0.996742671009772,68,Production,True
+Système fourrager,STRUC.RECOURSSP,Recours à des surfaces pastorales (O/N),O/N,0.996742671009772,3,Production,True
+Système fourrager,FONC1.HASP,Surface pastorale individuelle (ha),NUM,0.996742671009772,26,Production,True
+Système fourrager,FONC1.NMCF,N / ha Culture fourragère hors herbe (fumure minérale),INT,0.996742671009772,43,Production,True
+Système fourrager,FONC1.PMCF,P2O5 / ha Culture fourragère hors herbe (fumure minérale),INT,0.996742671009772,21,Production,True
+Système fourrager,FONC1.KMCF,K2O / ha Culture fourragère hors herbe (fumure minérale),INT,0.996742671009772,14,Production,True
+Résultats économiques,ECOCO.PLAIT,Description not found,Unknown,0.996742671009772,145,Production,True
+Environnement,DCOMP.SNLAIT,Sortie: N lait,INT,0.996742671009772,141,Production,True
+Environnement,DCOMP.SPLAIT,Sortie: P2O5 lait,INT,0.996742671009772,136,Production,True
+Environnement,DCOMP.SKLAIT,Sortie: K2O lait,INT,0.996742671009772,136,Production,True
+Atelier Grandes cultures,STRUC.LPATGCU,Poids de l'atelier grandes cultures,STR,0.996742671009772,5,Production,True
+Atelier Grandes cultures,FONC1.HAGCU,Grandes cultures - GCU (ha),NUM,0.996742671009772,118,Production,True
+Atelier Grandes cultures,FONC1.GCUCAHBDHA,Surface céréales d'automne hors blé dur (ha),NUM,0.996742671009772,101,Production,True
+Atelier Grandes cultures,FONC1.GCUCAHBDRDT,Rendement céréales d'automne hors blé dur (q/ha),NUM,0.996742671009772,119,Production,True
+Atelier Grandes cultures,FONC1.GCUBDHA,Surface blé dur (ha),NUM,0.996742671009772,2,Production,True
+Atelier Grandes cultures,FONC1.GCUBDRDT,Rendement blé dur (q/ha),NUM,0.996742671009772,2,Production,True
+Atelier Grandes cultures,FONC1.GCUCPHMAISHA,Surface céréales de printemps hors blé dur et maïs (ha),NUM,0.996742671009772,21,Production,True
+Atelier Grandes cultures,FONC1.GCUCPHMAISRDT,Rendement céréales de printemps hors blé dur et maïs (q/ha),NUM,0.996742671009772,16,Production,True
+Atelier Grandes cultures,FONC1.GCUCPMAISHA,Surface maïs grain (ha),NUM,0.996742671009772,36,Production,True
+Atelier Grandes cultures,FONC1.GCUCPMAISRDT,Rendement maïs grain (q/ha),NUM,0.996742671009772,19,Production,True
+Atelier Grandes cultures,FONC1.GCUOLEHA,Surface oléagineux (ha),NUM,0.996742671009772,39,Production,True
+Atelier Grandes cultures,FONC1.GCUOLERDT,Rendement oléagineux (q/ha),NUM,0.996742671009772,32,Production,True
+Atelier Grandes cultures,FONC1.GCUPROHA,Surface protéagineux (ha),NUM,0.996742671009772,19,Production,True
+Atelier Grandes cultures,FONC1.GCUPRORDT,Rendement protéagineux (q/ha),NUM,0.996742671009772,9,Production,True
+Atelier Grandes cultures,FONC1.GCUCIHA,Surface cultures industrielles GCU (ha),NUM,0.996742671009772,12,Production,True
+Atelier Grandes cultures,FONC1.GCUAUTHA,Surface autres grandes cultures (ha),NUM,0.996742671009772,3,Production,True
+Atelier Grandes cultures,FONC1.GCUJAHA,Surface jachères (ha),NUM,0.996742671009772,7,Production,True
+Atelier Grandes cultures,FONC1.NMSNF,N / ha de grandes cultures (fumure minérale),INT,0.996742671009772,85,Production,True
+Atelier Grandes cultures,FONC1.PMSNF,P2O5 / ha de grandes cultures (fumure minérale),INT,0.996742671009772,58,Production,True
+Atelier Grandes cultures,DTGCUCP.GCU_HAGCUVEN,GCU Grandes cultures commercialisées (ha),NUM,0.996742671009772,178,Production,True
+Atelier Grandes cultures,FONC1.KMSNF,K2O / ha de grandes cultures (fumure minérale),INT,0.993485342019544,49,Production,True
+Résultats économiques,ECOPA.SPAIDICHNHA,Surface primée pour l'ICHN (ha),NUM,0.9674267100977199,52,Production,True
+Environnement,DCOMP.NVIANDE,Sortie: N viande,INT,0.9641693811074918,258,Production,True
+Environnement,DCOMP.PVIANDE,Sortie: P2O5 viande,INT,0.9641693811074918,239,Production,True
+Environnement,DCOMP.KVIANDE,Sortie: K2O viande,INT,0.9641693811074918,177,Production,True
+Résultats économiques,ECOPA.SPAIDDECTOTHA,Surface primée pour les aides découplées (ha),NUM,0.9511400651465798,85,Production,True
+Atelier Grandes cultures,DTGCUCP.GCU_HAGCUVENUMO,GCU Productivité de la main-d'oeuvre rémunérée (ha GCU VEN /UMO),NUM,0.9022801302931596,144,Production,True
+Atelier Bovins viande,DTBV.LRACE1BV,Race principale bovins viande,STR,0.38110749185667747,14,Production,True
+Atelier Bovins viande,FONC1.NBVA,Nombre de vaches allaitantes,NUM,0.38110749185667747,93,Production,True
+Atelier Bovins viande,DTBV.PBVVBV,Production brute de viande vive BV (kgv),INT,0.38110749185667747,114,Production,True
+Atelier Bovins viande,FONC1.HACFBV,SFP cultures fourragères (ha) atelier BV,NUM,0.38110749185667747,33,Production,True
+Atelier Bovins viande,FONC1.HASPBV,Surface pastorale (ha) atelier BV,NUM,0.38110749185667747,8,Production,True
+Atelier Bovins viande,DTBVCP.BVCP_SURFCERINT,Surface en céréales intra-consommées atelier BV (ha),NUM,0.38110749185667747,65,Production,True
+Atelier Bovins viande,RESAUTO.RATIONMASSBV,Autonomie massique Ration atelier BV %,INT,0.38110749185667747,24,Production,True
+Atelier Bovins viande,RESAUTO.RATIONENERBV,Autonomie énergétique Ration atelier BV %,INT,0.38110749185667747,25,Production,True
+Atelier Bovins viande,RESAUTO.RATIONPROTBV,Autonomie protéique Ration atelier BV %,INT,0.38110749185667747,31,Production,True
+Atelier Bovins viande,RESAUTO.CONCMASSBV,Autonomie massique Concentrés atelier BV %,INT,0.38110749185667747,44,Production,True
+Atelier Bovins viande,RESAUTO.CONCENERBV,Autonomie énergétique Concentrés atelier BV %,INT,0.38110749185667747,38,Production,True
+Atelier Bovins viande,RESAUTO.CONCPROTBV,Autonomie protéique Concentrés atelier BV %,INT,0.38110749185667747,34,Production,True
+Atelier Bovins viande,DTBV.QTCONCBVKGP100KGVV,Quantité de concentrés (kg) / 100 kilos de viande vive,INT,0.38110749185667747,94,Production,True
+Atelier Bovins viande,DTBVCP.BV_PBVVUMO,BV Productivité de la main-d'oeuvre rémunérée (kgvv/UMO),INT,0.38110749185667747,116,Production,True
+Atelier Bovins viande,DTBVCP.BVCP_PRODVIANDE,Description not found,Unknown,0.38110749185667747,115,Production,True
+Atelier Bovins lait,DTBL.LRACE1BL,Race principale bovins lait,STR,0.3224755700325733,7,Production,True
+Atelier Bovins lait,FONC1.NBVL,Nombre de vaches laitières,NUM,0.3224755700325733,69,Production,True
+Atelier Bovins lait,FONC1.UGBVL,Nb UGB vaches laitières,NUM,0.3224755700325733,70,Production,True
+Atelier Bovins lait,DTBL.QLAITP,Lait produit l,INT,0.3224755700325733,98,Production,True
+Atelier Bovins lait,DTBL.LPVL,Lait produit l/VL,INT,0.3224755700325733,93,Production,True
+Atelier Bovins lait,DTBL.QLAITVL,Quantité de lait vendu laiterie (l),INT,0.3224755700325733,92,Production,True
+Atelier Bovins lait,DTBL.PLAITVL,Description not found,Unknown,0.3224755700325733,60,Production,True
+Atelier Bovins lait,DTBL.QLAITVD,Quantité de lait vendu directement (l),INT,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.PLAITVD,Description not found,Unknown,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.QLAITTR,Quantité de lait transformé (l),INT,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.PLAITTR,Description not found,Unknown,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.QLAITATR,dont quantité lait acheté pour transformation l,INT,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.PLAITATR,Description not found,Unknown,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBL.PLAITDVBL,Description not found,Unknown,0.3224755700325733,7,Production,True
+Atelier Bovins lait,DTBL.PLAITDVBV,Description not found,Unknown,0.3224755700325733,4,Production,True
+Atelier Bovins lait,DTBL.TBMOY,TB moyen laiterie (g/l),NUM,0.3224755700325733,33,Production,True
+Atelier Bovins lait,DTBL.TPMOY,TP moyen laiterie (g/l),NUM,0.3224755700325733,29,Production,True
+Atelier Bovins lait,FONC1.HACFBL,SFP cultures fourragères (ha) atelier BL,NUM,0.3224755700325733,62,Production,True
+Atelier Bovins lait,FONC1.HASPBL,Surface pastorale (ha) atelier BL,NUM,0.3224755700325733,5,Production,True
+Atelier Bovins lait,DTBLCP.BLCP_SURFCERINT,Surface en céréales intra-consommées atelier BL (ha),NUM,0.3224755700325733,52,Production,True
+Atelier Bovins lait,RESAUTO.RATIONMASSBL,Autonomie massique Ration atelier BL %,INT,0.3224755700325733,34,Production,True
+Atelier Bovins lait,RESAUTO.RATIONENERBL,Autonomie énergétique Ration atelier BL %,INT,0.3224755700325733,33,Production,True
+Atelier Bovins lait,RESAUTO.RATIONPROTBL,Autonomie protéique Ration Atelier BL %,INT,0.3224755700325733,47,Production,True
+Atelier Bovins lait,RESAUTO.CONCMASSBL,Autonomie massique Concentrés atelier BL %,INT,0.3224755700325733,40,Production,True
+Atelier Bovins lait,RESAUTO.CONCENERBL,Autonomie énergétique Concentrés atelier BL %,INT,0.3224755700325733,39,Production,True
+Atelier Bovins lait,RESAUTO.CONCPROTBL,Autonomie protéique Concentrés Atelier BL %,INT,0.3224755700325733,29,Production,True
+Atelier Bovins lait,DTBL.PAUTPBL,Pourcentage de production autonome économique / Lait produit BL (%),NUM,0.3224755700325733,73,Production,True
+Atelier Bovins lait,DTBLCP.BL_LAITCOM,BL Lait commercialisé (l),INT,0.3224755700325733,95,Production,True
+Atelier Bovins lait,DTBLCP.BL_LAITTRANS,BL dont lait transformé (%),INT,0.3224755700325733,2,Production,True
+Atelier Bovins lait,DTBLCP.BL_LAITCOMUMO,BL Productivité de la main-d'oeuvre rémunérée (l/UMO),INT,0.3224755700325733,99,Production,True
+Atelier Bovins lait,DTBLCP.BLCP_PRODLAIT,Description not found,Unknown,0.3224755700325733,67,Production,True
+Atelier Bovins lait,DTBLCP.BLCP_PRODVIANDE,Description not found,Unknown,0.3224755700325733,98,Production,True
+Atelier Bovins lait,DTBL.LSIGQBL,Signe de qualité Bovins lait,STR,0.30293159609120524,10,Production,True
+Atelier Bovins viande,DTBV.PRONUM,Taux de productivité numérique BV,NUM,0.30293159609120524,76,Production,True
+Atelier Bovins viande,ENERGIE.EQFBVU,"MJ atelier BV ""Production"" /100 kilos de viande vive",INT,0.28013029315960913,84,Production,True
+Atelier Bovins lait,ENERGIE.EQFBLU,"MJ atelier BL ""Production"" /1000 litres de lait",INT,0.25732899022801303,76,Production,True
+Atelier Ovins viande,FONC1.NBBV,Nombre de brebis viande EMP,NUM,0.250814332247557,46,Production,True
+Atelier Ovins viande,DTOV.LRACE1BR,Race principale des brebis allaitantes,STR,0.250814332247557,22,Production,True
+Atelier Ovins viande,DTOV.TPNECO,Taux de productivité numérique éco.,NUM,0.250814332247557,70,Production,True
+Atelier Ovins viande,DTOV.PRODPON,Productivité pondérale,NUM,0.250814332247557,73,Production,True
+Atelier Ovins viande,DTOV.ALAITPRT,Description not found,Unknown,0.250814332247557,2,Production,True
+Atelier Ovins viande,FONC1.HACFOV,SFP cultures fourragères (ha) atelier OV,NUM,0.250814332247557,8,Production,True
+Atelier Ovins viande,FONC1.HASPOV,Surface pastorale (ha) atelier OV,NUM,0.250814332247557,14,Production,True
+Atelier Ovins viande,DTOVCP.OVCP_SURFCERINT,Surface en céréales intra-consommées atelier OV (ha),NUM,0.250814332247557,41,Production,True
+Atelier Ovins viande,RESAUTO.RATIONMASSOV,Autonomie massique Ration atelier OV %,INT,0.250814332247557,26,Production,True
+Atelier Ovins viande,RESAUTO.RATIONENEROV,Autonomie énergétique Ration atelier OV %,INT,0.250814332247557,30,Production,True
+Atelier Ovins viande,RESAUTO.RATIONPROTOV,Autonomie protéique Ration Atelier OV %,INT,0.250814332247557,35,Production,True
+Atelier Ovins viande,RESAUTO.CONCMASSOV,Autonomie massique Concentrés atelier OV %,INT,0.250814332247557,34,Production,True
+Atelier Ovins viande,RESAUTO.CONCENEROV,Autonomie énergétique Concentrés atelier OV %,INT,0.250814332247557,36,Production,True
+Atelier Ovins viande,RESAUTO.CONCPROTOV,Autonomie protéique Concentrés atelier OV %,INT,0.250814332247557,33,Production,True
+Atelier Ovins viande,DTOV.QPLOV,Quantité de poudre de lait OV (t),NUM,0.250814332247557,55,Production,True
+Atelier Ovins viande,DTOVCP.OV_PAGNUMO,OV Productivité de la main-d'oeuvre rémunérée (Eq. kgc/UMO),INT,0.250814332247557,77,Production,True
+Atelier Ovins viande,DTOVCP.OVCP_PRODVIANDE,Description not found,Unknown,0.250814332247557,40,Production,True
+Atelier Ovins viande,DTOV.LTYPEGENBA,Libellé du type génétique des brebis allaitantes (Cas-type),STR,0.24104234527687296,5,Production,True
+Atelier Caprins,DTCA.LAITP,Lait chèvre produit,INT,0.1140065146579805,35,Production,True
+Atelier Caprins,DTCA.LPCA,Lait chèvre produit /chèvre,INT,0.1140065146579805,27,Production,True
+Atelier Caprins,DTCACP.CA_LAITCOM,CA Lait commercialisé (l),INT,0.1140065146579805,34,Production,True
+Atelier Caprins,DTCACP.CA_LAITTRANS,CA dont lait transformé (%),INT,0.1140065146579805,5,Production,True
+Atelier Caprins,DTCA.QLAITQ,Lait chèvre vendu laiterie (quota),INT,0.1140065146579805,21,Production,True
+Atelier Caprins,DTCA.PLAITQ,Description not found,Unknown,0.1140065146579805,20,Production,True
+Atelier Caprins,DTCA.QLTRCA,Quantité de lait transformé (l),INT,0.1140065146579805,18,Production,True
+Atelier Caprins,DTCA.LAITRACAPMTL,Lait transformé en pâtes molles type lactique CA (%),INT,0.1140065146579805,10,Production,True
+Atelier Caprins,DTCA.LAITRACAPMTP,Lait transformé en pâtes molles type présure CA (%),INT,0.1140065146579805,2,Production,True
+Atelier Caprins,DTCA.LAITRACAPMTCD,Lait transformé en pâtes molles type caillé doux CA (%),INT,0.1140065146579805,4,Production,True
+Atelier Caprins,DTCA.LAITRACAPPNC,Lait transformé en pâte pressée non cuite CA (%),INT,0.1140065146579805,6,Production,True
+Atelier Caprins,DTCA.LAITRACAPPCDC,Lait transformé pâte pressée cuite (>50°) et demi cuite (<=50°) CA (%),INT,0.1140065146579805,2,Production,True
+Atelier Caprins,DTCA.LAITRACAYLF,Lait transformé en yaourts et laits fermentés CA (%),INT,0.1140065146579805,5,Production,True
+Atelier Caprins,DTCA.LAITRACABC,Lait transformé en beurre/crème CA (%),INT,0.1140065146579805,2,Production,True
+Atelier Caprins,DTCA.LAITRACAAUT,Lait transformé autre technologie CA (%),INT,0.1140065146579805,3,Production,True
+Atelier Caprins,DTCA.LAITRACAVA,Lait transformé et vendu à l’affineur CA (%),INT,0.1140065146579805,3,Production,True
+Atelier Caprins,DTCA.LAITRACAVD,Lait transformé et vendu directement CA (%),INT,0.1140065146579805,10,Production,True
+Atelier Caprins,DTCA.LAITRACAVV1,Lait transformé et vendu via 1 intermédiaire CA (%),INT,0.1140065146579805,10,Production,True
+Atelier Caprins,DTCA.LAITRACAVV2,Lait transformé et vendu via 2 intermédiaires CA (%),INT,0.1140065146579805,3,Production,True
+Atelier Caprins,FONC1.HACFCA,SFP cultures fourragères (ha) atelier CA,NUM,0.1140065146579805,7,Production,True
+Atelier Caprins,FONC1.HASPCA,Surface pastorale (ha) atelier CA,NUM,0.1140065146579805,6,Production,True
+Atelier Caprins,DTCACP.CACP_SURFCERINT,Surface en céréales intra-consommées atelier CA (ha),NUM,0.1140065146579805,24,Production,True
+Atelier Caprins,RESAUTO.RATIONMASSCA,Autonomie massique Ration atelier CA %,INT,0.1140065146579805,29,Production,True
+Atelier Caprins,RESAUTO.CONCMASSCA,Autonomie massique Concentrés atelier CA %,INT,0.1140065146579805,23,Production,True
+Atelier Caprins,RESAUTO.CONCENERCA,Autonomie énergétique Concentrés atelier CA %,INT,0.1140065146579805,24,Production,True
+Atelier Caprins,RESAUTO.CONCPROTCA,Autonomie protéique Concentrés atelier CA %,INT,0.1140065146579805,21,Production,True
+Atelier Caprins,ENERGIE.EQFCAU,"MJ atelier Caprins ""Production"" /1000 litres de lait",INT,0.1140065146579805,35,Production,True
+Atelier Caprins,DTCACP.CA_LAITCOMUMO,CA Productivité de la main-d'oeuvre rémunérée (l/UMO),INT,0.1140065146579805,34,Production,True
+Atelier Caprins,DTCACP.CACP_PRODLAIT,Description not found,Unknown,0.1140065146579805,34,Production,True
+Atelier Caprins,DTCACP.CACP_PRODVIANDE,Description not found,Unknown,0.1140065146579805,35,Production,True
+Atelier Caprins,RESAUTO.RATIONENERCA,Autonomie énergétique Ration atelier CA %,INT,0.11074918566775249,27,Production,True
+Atelier Caprins,RESAUTO.RATIONPROTCA,Autonomie protéique Ration atelier CA %,INT,0.11074918566775249,26,Production,True
+Atelier Ovins viande,DTBV.QTCONCBVKGP100KGVV,Quantité de concentrés (kg) / 100 kilos de viande vive,INT,0.05211726384364823,8,Production,True
+Atelier Ovins lait,FONC1.NBBL,Nombre de brebis laitières,NUM,0.04234527687296419,12,Production,True
+Atelier Ovins lait,DTOL.LSIGQLOL,Signe de qualité du lait de brebis,STR,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.QLPOL,Lait produit OL (l),INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOLCP.OL_LAITTRANS,OL dont lait transformé (%),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LPPBOL,Lait produit /brebis OL,INT,0.04234527687296419,12,Production,True
+Atelier Ovins lait,DTOL.LAITVLOL,Lait vendu laiterie (l) OL,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLVDOL,Quantité lait transformé OL (l),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLPMTL,Lait transformé en pâtes molles type lactique OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLPMTP,Lait transformé en pâtes molles type présure OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLPMTCD,Lait transformé en pâtes molles type caillé doux OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLPPNC,Lait transformé en pâte pressée non cuite OL (%),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLPPCDC,Lait transformé pâte pressée cuite (>50°) et demi cuite (<=50°) OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLYLF,Lait transformé en yaourts et laits fermentés OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLBC,Lait transformé en beurre/crème OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLAUT,Lait transformé autre technologie OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLVA,Lait transformé et vendu à l’affineur OL (%),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLVD,Lait transformé et vendu directement OL (%),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLVV1,Lait transformé et vendu via 1 intermédiaire OL (%),INT,0.04234527687296419,3,Production,True
+Atelier Ovins lait,DTOL.LAITRAOLVV2,Lait transformé et vendu via 2 intermédiaires OL (%),INT,0.04234527687296419,2,Production,True
+Atelier Ovins lait,DTOL.QLPROL1,Lait produit (l) OL janvier,INT,0.04234527687296419,11,Production,True
+Atelier Ovins lait,DTOL.QLPROL2,Lait produit (l) OL février,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLPROL3,Lait produit (l) OL mars,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLPROL4,Lait produit (l) OL avril,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLPROL5,Lait produit (l) OL mai,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLPROL6,Lait produit (l) OL juin,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,DTOL.QLPROL7,Lait produit (l) OL juillet,INT,0.04234527687296419,11,Production,True
+Atelier Ovins lait,DTOL.QLPROL8,Lait produit (l) OL août,INT,0.04234527687296419,8,Production,True
+Atelier Ovins lait,DTOL.QLPROL9,Lait produit (l) OL septembre,INT,0.04234527687296419,4,Production,True
+Atelier Ovins lait,DTOL.QLPROL10,Lait produit (l) OL octobre,INT,0.04234527687296419,4,Production,True
+Atelier Ovins lait,DTOL.QLPROL11,Lait produit (l) OL novembre,INT,0.04234527687296419,7,Production,True
+Atelier Ovins lait,DTOL.QLPROL12,Lait produit (l) OL décembre,INT,0.04234527687296419,10,Production,True
+Atelier Ovins lait,FONC1.HACFOL,SFP cultures fourragères (ha) atelier OL,NUM,0.04234527687296419,5,Production,True
+Atelier Ovins lait,FONC1.HASPOL,Surface pastorale (ha) atelier OL,NUM,0.04234527687296419,7,Production,True
+Atelier Ovins lait,DTOLCP.OLCP_SURFCERINT,Surface en céréales intra-consommées atelier OL (ha),NUM,0.04234527687296419,13,Production,True
+Atelier Ovins lait,RESAUTO.RATIONENEROL,Autonomie énergétique Ration atelier OL %,INT,0.04234527687296419,10,Production,True
+Atelier Ovins lait,RESAUTO.CONCENEROL,Autonomie énergétique Concentrés atelier OL %,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,RESAUTO.RATIONPROTOL,Autonomie protéique Ration atelier OL %,INT,0.04234527687296419,13,Production,True
+Atelier Ovins lait,RESAUTO.CONCPROTOL,Autonomie protéique Concentrés atelier OL %,INT,0.04234527687296419,11,Production,True
+Atelier Ovins lait,DTOLCP.OL_LAITCOMUMO,OL Productivité de la main-d'oeuvre rémunérée (l/UMO),INT,0.04234527687296419,12,Production,True
+Atelier Ovins lait,DTOLCP.OLCP_PRODLAIT,Description not found,Unknown,0.04234527687296419,9,Production,True
+Atelier Ovins lait,DTOLCP.OLCP_PRODVIANDE,Description not found,Unknown,0.04234527687296419,13,Production,True
+Atelier Ovins lait,ENERGIE.EQFOLU,"MJ atelier OL ""Production"" /1000 litres de lait",INT,0.039087947882736174,12,Production,True

@@ -1,0 +1,811 @@
+,description,type
+NOMEXP,Nom du dossier,STR
+NTRA_NTRAN,Identifiant annuel,STR
+NTRA,N° Diapason,STR
+NTRAN,Année,STR
+CFILIERE,Code Filière,STR
+LIBFILIERE,Nom de la filière,STR
+CGTYPNAT,Code Grand type national,STR
+LGTYPNAT,Libellé Grand type national,STR
+REFEQUIPE,Référence équipe,STR
+NOMEQUIPE,Nom de l'équipe,STR
+SYSABPA,Système agro-bio productions animales (O/N),O/N
+PATELIERBL,Présence d'un atelier BL (O/N),O/N
+PATELIERBV,Présence d'un atelier BV (O/N),O/N
+PATELIEROL,Présence d'un atelier OL (O/N),O/N
+PATELIEROV,Présence d'un atelier OV (O/N),O/N
+PATELIERCA,Présence d'un atelier CA (O/N),O/N
+PATELIEREQ,Présence d'un atelier EQ (O/N),O/N
+PATELIERVEA,Présence d'un atelier HS Veaux (O/N),O/N
+ATELIERGCU,Atelier Grandes cultures significatif (O/N),O/N
+CT_REFERENCE,Référence du cas-type,STR
+CT_SOUSTITRE,Sous-titre du cas-type,STR
+MOREMUN,Main-d'oeuvre rémunérée,NUM
+MOFAMI,Main d'oeuvre exploitant,NUM
+MOSAL,Main d'oeuvre salariée,NUM
+TSAU,Total SAU de l'assolement,NUM
+HASFP,Surface fourragère principale (ha),NUM
+HASH,SFP en herbe - SH (ha),NUM
+HACF,SFP cultures fourragères (ha),NUM
+RECOURSSP,Recours à des surfaces pastorales (O/N),O/N
+HAGCU,Grandes cultures - GCU (ha),NUM
+HACPE,Cultures pérennes (ha),NUM
+HACSP,Cultures spéciales (ha),NUM
+HAIRR,Nb d'hectares irrigués,NUM
+PSAUIRRI,Part SAU irriguée (%),INT
+TOTUGB,Total UGB présents (propriété - mises en pension + prises en pension),NUM
+NUGBBL,Nombre d'UGB présents de l'atelier BL,NUM
+PNUGBBL,Pourcentage d'UGB présents de l'atelier BL (%),NUM
+NUGBOL,Nombre d'UGB présents de l'atelier OL,NUM
+PNUGBOL,Pourcentage d'UGB présents de l'atelier OL (%),NUM
+NUGBCA,Nombre d'UGB présents de l'atelier CA,NUM
+PNUGBCA,Pourcentage d'UGB présents de l'atelier CA (%),NUM
+NUGBBV,Nombre d'UGB présents de l'atelier BV,NUM
+PNUGBBV,Pourcentage d'UGB présents de l'atelier BV (%),NUM
+NUGBOV,Nombre d'UGB présents de l'atelier OV,NUM
+PNUGBOV,Pourcentage d'UGB présents de l'atelier OV (%),NUM
+NUGBEQ,Nombre d'UGB présents de l'atelier EQ,NUM
+PNUGBEQ,Pourcentage d'UGB présents de l'atelier EQ (%),NUM
+CAPPUGB,Chargement apparent UGB/ha SFT,NUM
+PHERBESFP,Part d'herbe dans la SFP (%),NUM
+HASTH,Surface toujours en herbe (ha),NUM
+PPRESEMEE,Prairie permanente sursemée dans l'année (ha),NUM
+PTIMPLAN,Prairies temporaires implantées (hors dérobées) dans l'année (ha),NUM
+SURFMEHA,Surface en maïs ensilage (ha),NUM
+HADI,Dérobées internes SFP (ha),NUM
+HADE,Dérobées externes SFP (ha),NUM
+HASP,Surface pastorale individuelle (ha),NUM
+UGBUP,Equivalent UGB utilisa. parcours individuels,NUM
+UGBUPC,Equivalent UGB utilisa. Parcours collectifs,NUM
+INDICEPAST,Indice de pastoralisme %,INT
+NMSH,N / ha SH (fumure minérale),INT
+PMSH,P2O5 / ha SH (fumure minérale),INT
+KMSH,K2O / ha SH (fumure minérale),INT
+NMCF,N / ha Culture fourragère hors herbe (fumure minérale),INT
+PMCF,P2O5 / ha Culture fourragère hors herbe (fumure minérale),INT
+KMCF,K2O / ha Culture fourragère hors herbe (fumure minérale),INT
+TDUMAIS,tMS utilisées /UGB maïs ensilage,NUM
+HRMAIS,Ha récoltés en maïs ensilage,NUM
+RDTMAIS,Rdt (tMS)/ha en maïs ensilage,NUM
+ACHMAIS,Quantité achetée en maïs ensilage (tMS),INT
+TDUSORG,tMS utilisées /UGB sorgho,NUM
+HRSORG,Ha récoltés sorgho ensilage,NUM
+RDTSORG,Rdt (tMS)/ha en sorgho ensilage,NUM
+ACHSORG,Quantité achetée en sorgho ensilage (tMS),INT
+TDUBET,tMS utilisées /UGB betteraves,NUM
+HRBET,Ha récoltés en betteraves,NUM
+RDTBET,Rdt (tMS)/ha en betteraves,NUM
+ACHBET,Quantité achetée en betteraves (tMS),INT
+TDUCIMA,tMS utilisées /UGB céréales immatures et autres,NUM
+HRCIMA,Ha récoltés en céréales immatures et autres,NUM
+RDTCIMA,Rdt (tMS)/ha en céréales immatures et autres,NUM
+ACHCIMA,Quantité achetée en céréales immatures et autres (tMS),INT
+TDUEH,tMS utilisées / UGB ensilage d'herbe - EH,NUM
+HREDERO,Ha récoltés EH de dérobées,NUM
+RDTEDERO,Rdt (tMS)/ha EH de dérobées,NUM
+HRE1CND,Ha récoltés EH 1° coupe non déprimée,NUM
+RDTE1CND,Rdt (tMS)/ha EH 1° coupe non déprimée,NUM
+HRE1CD,Ha récoltés EH 1° coupe déprimée,NUM
+RDTE1CD,Rdt (tMS)/ha EH 1° coupe déprimée,NUM
+HRE2C,Ha récoltés EH 2° coupe,NUM
+RDTE2C,Rdt (tMS)/ha EH 2° coupe,NUM
+HRE3C,Ha récoltés EH 3° coupe,NUM
+RDTE3C,Rdt (tMS)/ha EH 3° coupe,NUM
+HRE4C,Ha récoltés EH 4° coupe,NUM
+RDTE4C,Rdt (tMS)/ha EH 4° coupe,NUM
+HRERR,Ha récoltés EH Refus + Repousse,NUM
+RDTERR,Rdt (tMS)/ha EH Refus + Repousse,NUM
+ACHEH,Quantité achetée ensilage d'herbe (tMS),INT
+TDUEN,tMS utilisées /UGB enrubannage,NUM
+HREND,Ha récoltés enrubannage Dérobées,NUM
+RDEND,Rdt (tMS)/ha enrubannage Dérobées,NUM
+HREN1CND,Ha récoltés Enrubannage 1° C non dép,NUM
+RDEN1CND,Rdt (tMS)/ha Enrubannage 1° C non déprimée,NUM
+HREN1CD,Ha récoltés Enrubannage 1° C déprimée,NUM
+RDEN1CD,Rdt (tMS)/ha Enrubannage 1° C déprimée,NUM
+HREN2C,Ha récoltés Enrubannage 2° coupe,NUM
+RDEN2C,Rdt (tMS)/ha Enrubannage 2° coupe,NUM
+HREN3C,Ha récoltés Enrubannage 3° coupe,NUM
+RDEN3C,Rdt (tMS)/ha Enrubannage 3° coupe,NUM
+HREN4C,Ha récoltés Enrubannage 4° coupe,NUM
+RDEN4C,Rdt (tMS)/ha Enrubannage 4° coupe,NUM
+HRENRR,Ha récoltés enruban. Refus+Repousses,NUM
+RDTENRR,Rdt (tMS)/ha enruban. Refus+Repousses,NUM
+ACHEN,Quantité achetée enrubannage (tMS),INT
+TDUFO,tMS utilisées /UGB foin,NUM
+HRFOD,Ha récoltés Foin dérobées (tMS),NUM
+RDFOD,Rdt (tMS)/ha Foin dérobées,NUM
+HRF1CND,Ha récoltés FO 1° coupe non déprimée,NUM
+RDTF1CND,Rdt (tMS)/ha FO 1° coupe non déprimée,NUM
+HRF1CD,Ha récoltés FO 1° coupe déprimée,NUM
+RDTF1CD,Rdt (tMS)/ha FO 1° coupe déprimée,NUM
+HRF2C,Ha récoltés FO 2° coupe,NUM
+RDTF2C,Rdt (tMS)/ha FO 2° coupe,NUM
+HRF3C,Ha récoltés FO 3° coupe,NUM
+RDTF3C,Rdt (tMS)/ha FO 3° coupe,NUM
+HRF4C,Ha récoltés FO 4° coupe,NUM
+RDTF4C,Rdt (tMS)/ha FO 4° coupe,NUM
+HRFRR,Ha récoltés Foin Refus + Repousse,NUM
+RDTFRR,Rdt (tMS)/ha Foin Refus + Repousse,NUM
+ACHFO,Quantité achetée en foin (tMS),INT
+LIBAF1,Libellé autre fourrage 1,STR
+TDUAF1,tMS utilisées /UGB autre fourrage n°1,NUM
+HRAF1,Ha récoltés en fourrage N° 1,NUM
+RDTAF1,Rdt (tMS)/ha en fourrage N° 1,NUM
+ACHAF1,Quantité achetée en fourrage N° 1 (tMS),INT
+LIBAF2,Libellé autre fourrage 2,STR
+TDUAF2,tMS utilisées /UGB autre fourrage n°2,NUM
+HRAF2,Ha récoltés en fourrage N° 2,NUM
+RDTAF2,Rdt (tMS)/ha en fourrage N° 2,NUM
+ACHAF2,Quantité achetée en fourrage N° 2 (tMS),INT
+LIBAF3,Libellé autre fourrage 3,STR
+TDUAF3,tMS utilisées /UGB autre fourrage n°3,NUM
+HRAF3,Ha récoltés en fourrage N° 3,NUM
+RDTAF3,Rdt (tMS)/ha en fourrage N° 3,NUM
+ACHAF3,Quantité achetée en fourrage N° 3 (tMS),INT
+LIBAF4,Libellé autre fourrage 4,STR
+TDUAF4,tMS utilisées /UGB autre fourrage n°4,NUM
+HRAF4,Ha récoltés en fourrage N° 4,NUM
+RDTAF4,Rdt (tMS)/ha en fourrage N° 4,NUM
+ACHAF4,Quantité achetée en fourrage N° 4 (tMS),INT
+TDUPANI,Paille utilisée par les animaux (t)/UGB,NUM
+HRPL,Ha récoltés paille,NUM
+RDTPL,Rdt (tMS)/ha paille,NUM
+ACHPL,Quantité achetée paille (t),INT
+TUGBFSD,tMS de fourrages conservés utilisés /UGB,NUM
+TUGBFAD,tMS fourrages et co-produits achetés utilisés / UGB,NUM
+PAUTOFC,Pourcentage d'autonomie des fourrages conservés,NUM
+CCORUGB,Chargement corrigé UGB/ha SFP,NUM
+AIDDECP,% des aides découplées,INT
+SPAIDDECTOTHA,Surface primée pour les aides découplées (ha),NUM
+AID1PCP,% des aides 1° pilier couplées et autres,INT
+AID2PP,% des aides 2° pilier,INT
+SPAIDICHNHA,Surface primée pour l'ICHN (ha),NUM
+LIBACA,Libellé autre charge animale,STR
+LIBACV,Libellé autre charge végétale,STR
+CNEBEPB,EBE / Produit brut (%),NUM
+CNAEMPLMTEBE,Annuité des emprunts LMT / EBE (%),NUM
+PANI,% Animaux /actif hors foncier,INT
+PMAT,% Matériel /actif hors foncier,INT
+PBAT,% Bâtiments /actif hors foncier,INT
+NENGEAU,Entrée: N engrais SAU+Eau irrigation,INT
+PENG,Entrée: P2O5 engrais SAU,INT
+KENG,Entrée: K2O engrais SAU,INT
+NALIM,Entrée: N aliments,INT
+PALIM,Entrée: P2O5 aliments,INT
+KALIM,Entrée: K2O aliments,INT
+NFOUR,Entrée: N fourrages,INT
+PFOUR,Entrée: P2O5 fourrages,INT
+KFOUR,Entrée: K2O fourrages,INT
+NDEJI,Entrée: N Déjections importées,INT
+PDEJI,Entrée: P2O5 Déjections importées,INT
+KDEJI,Entrée: K2O Déjections importées,INT
+FSTOT,Fixation symbiotique totale,INT
+NTOTENT,Total entrées : N,INT
+PTOTENT,Total entrées : P2O5,INT
+KTOTENT,Total entrées : K2O,INT
+SNLAIT,Sortie: N lait,INT
+SPLAIT,Sortie: P2O5 lait,INT
+SKLAIT,Sortie: K2O lait,INT
+NVIANDE,Sortie: N viande,INT
+PVIANDE,Sortie: P2O5 viande,INT
+KVIANDE,Sortie: K2O viande,INT
+NVEG,Sortie: N végétaux,INT
+PVEG,Sortie: P2O5 végétaux,INT
+KVEG,Sortie: K2O végétaux,INT
+NDEJE,Sortie : N Déjections exportées,INT
+PDEJE,Sortie : P2O5 Déjections exportées,INT
+KDEJE,Sortie : K2O Déjections exportées,INT
+NTOTSOR,Total sorties : N,INT
+PTOTSOR,Total sorties : P2O5,INT
+KTOTSOR,Total sorties : K2O,INT
+NBAHAHFS,Bilan /ha : N hors fixation,NUM
+NBAHAAFS,Bilan /ha : N avec fixation,NUM
+PBAHAHFS,Bilan /ha : P2O5 hors fixation,NUM
+KBAHAHFS,Bilan /ha : K2O hors fixation,NUM
+EQFEXP,Total consommations MJ exploitation,INT
+EQFEXPHA,Total MJ exploitation /ha SAU,INT
+EQFELECP,Total MJ Electricité et pompage collectif eau irrigation,INT
+PEQFELECP,% MJ Electricité et pompage collectif eau irrigation,NUM
+EQFCAR,"Total MJ Carburants, lub, autres et TPT",INT
+PEQFCAR,"% MJ Carburants, lub, autres et TPT",NUM
+EQFFUM,MJ Fumure minérale,INT
+PEQFFUM,% MJ Fumure minérale,NUM
+EQFALIM,Total MJ alimentation,INT
+PEQFALIM,% MJ alimentation,NUM
+LTATBL,Type d'atelier BL,STR
+LRACE1BL,Race principale bovins lait,STR
+NBVL,Nombre de vaches laitières,NUM
+UGBVL,Nb UGB vaches laitières,NUM
+PUGBVL,% d'UGB VL /UGB atelier BL,NUM
+NBBLA,Atelier BL: Nb de génisses 1 an,INT
+NBBLB,Atelier BL: Nb de génisses 1-2ans,INT
+NBBLC,Atelier BL: Nb de génisses + 2ans,INT
+NBTAUBL,Nombre de taureaux BL,NUM
+LSIGQBL,Signe de qualité Bovins lait,STR
+QLAITP,Lait produit l,INT
+LPVL,Lait produit l/VL,INT
+QLAITVL,Quantité de lait vendu laiterie (l),INT
+QLAITVD,Quantité de lait vendu directement (l),INT
+QLAITTR,Quantité de lait transformé (l),INT
+QLAITATR,dont quantité lait acheté pour transformation l,INT
+QLAITDVBL,Lait distribué aux veaux l atelier BL,INT
+QLAITDVBV,Lait distribué aux veaux l atelier BV,INT
+TBMOY,TB moyen laiterie (g/l),NUM
+TPMOY,TP moyen laiterie (g/l),NUM
+LPVELCBL,Période de vêlages BL,STR
+VELTOT,Nombre de vêlages,INT
+VELG,dont vêlages génisses,INT
+RENOU,Pourcentage de renouvellement (%),NUM
+NVELCR,dont vêlages en croisement,INT
+PNVELCRBL,Pourcentage de vêlages en croisement (%),NUM
+AGEM1V,Age moyen au premier vêlage (mois) BL,NUM
+NVBL1,Nb vêlages BL janvier,INT
+DVGBL1,Nb vêlages génisse BL janvier,INT
+NVBL2,Nb vêlages BL février,INT
+DVGBL2,Nb vêlages génisse BL février,INT
+NVBL3,Nb vêlages BL mars,INT
+DVGBL3,Nb vêlages génisse BL mars,INT
+NVBL4,Nb vêlages BL avril,INT
+DVGBL4,Nb vêlages génisse BL avril,INT
+NVBL5,Nb vêlages BL mai,INT
+DVGBL5,Nb vêlages génisse BL mai,INT
+NVBL6,Nb vêlages BL juin,INT
+DVGBL6,Nb vêlages génisse BL juin,INT
+NVBL7,Nb vêlages BL juillet,INT
+DVGBL7,Nb vêlages génisse BL juillet,INT
+NVBL8,Nb vêlages BL août,INT
+DVGBL8,Nb vêlages génisse BL août,INT
+NVBL9,Nb vêlages BL septembre,INT
+DVGBL9,Nb vêlages génisse BL septembre,INT
+NVBL10,Nb vêlages BL octobre,INT
+DVGBL10,Nb vêlages génisse BL octobre,INT
+NVBL11,Nb vêlages BL novembre,INT
+DVGBL11,Nb vêlages génisse BL novembre,INT
+NVBL12,Nb vêlages BL décembre,INT
+DVGBL12,Nb vêlages génisse BL décembre,INT
+VEAUNBLNT,Veaux naissants BL vendus Nb têtes,INT
+VEAUNBLPOT,Veaux naissants BL vendus Poids moyen kilo vif/tête,INT
+VEAUCRBLNT,Veaux croisés BL vendus Nb têtes,INT
+VEAUCRBLPOT,Veaux croisés BL vendus Poids moyen kilo vif/tête,INT
+VEAUBBLNT,Veaux de boucherie BL vendus Nb têtes,INT
+VEAUBBLPOT,Veaux de boucherie BL vendus Poids moyen kilo carcasse/tête,INT
+VEAUSBLNT,Veaux sevrés BL vendus Nb têtes,INT
+VEAUSBLPOT,Veaux sevrés BL vendus Poids moyen kilo vif/tête,INT
+GENBLNT,Génisses BL vendues Nb têtes,INT
+GENBLPOT,Génisses BL vendues Poids moyen kilo carcasse/tête,INT
+VACHERBLNT,Vaches de réforme BL vendues Nb têtes,INT
+VACHERBLPOT,Vaches de réforme BL vendues Poids moyen kilo carcasse/tête,INT
+TAURRBLNT,Taureaux de réforme BL vendus Nb têtes,INT
+TAURRBLPOT,Taureaux de réforme BL vendus Poids moyen kilo carcasse/tête,INT
+REPROMBLNT,Reproducteurs mâles BL vendus Nb têtes,INT
+REPROMBLPOT,Reproducteurs mâles BL vendus Poids moyen kilo vif/tête,INT
+REPROFBLNT,Reproducteurs femelles BL vendues Nb têtes,INT
+REPROFBLPOT,Reproducteurs femelles BL vendus Poids moyen kilo vif/tête,INT
+AUTANIVBLNT,Autres animaux vendus BL vendus Nb têtes,INT
+AUTANIVBLPOT,Autres animaux vendus BL vendus Poids moyen kilo vif/tête,INT
+VEAUABLNT,Veaux achetés BL Nb têtes,INT
+VEAUABLPOT,Veaux achetés BL Poids moyen kilo vif/tête,INT
+REPROMABLNT,Reproducteurs mâles achetés BL Nb têtes,INT
+REPROMABLPOT,Reproducteurs mâles achetés BL Poids moyen kilo vif/tête,INT
+REPROFABLNT,Reproductrices femelles achetées BL Nb têtes,INT
+REPROFABLPOT,Reproducteurs femelles achetées BL Poids moyen kilo vif/tête,INT
+AUTANIABLNT,Autres animaux achetés BL Nb têtes,INT
+AUTANIABLPOT,Autres animaux achetés BL Poids moyen kilo vif/tête,INT
+HASHBL,SFP en herbe (ha) atelier BL,NUM
+HACFBL,SFP cultures fourragères (ha) atelier BL,NUM
+HASPBL,Surface pastorale (ha) atelier BL,NUM
+BLCP_SURFCERINT,Surface en céréales intra-consommées atelier BL (ha),NUM
+QFOUBLU,Quantité de fourrages conservés utilisés atelier BL t.MS/UGB,NUM
+RATIONMASSBL,Autonomie massique Ration atelier BL %,INT
+RATIONENERBL,Autonomie énergétique Ration atelier BL %,INT
+RATIONPROTBL,Autonomie protéique Ration Atelier BL %,INT
+FOUMASSBL,Autonomie massique Fourrages atelier BL %,INT
+FOUENERBL,Autonomie énergétique Fourrages atelier BL %,INT
+FOUPROTBL,Autonomie protéique Fourrages Atelier BL %,INT
+CONCMASSBL,Autonomie massique Concentrés atelier BL %,INT
+CONCENERBL,Autonomie énergétique Concentrés atelier BL %,INT
+CONCPROTBL,Autonomie protéique Concentrés Atelier BL %,INT
+QC,Quantité de concentré Atelier BL t,NUM
+PCONCPBL,Pourcentage de concentrés prélevés pour l'atelier BL (%),INT
+QCUGBBLHORSVL,Quantité de concentré par UGB BL hors VL (kg/UGB hors VL),INT
+QCVL,Quantité de concentré pour VL (kg)/VL,INT
+QCL,Quantité de concentré pour VL g/l,INT
+PAVL,Production autonome économique l /VL,INT
+PAUTPBL,Pourcentage de production autonome économique / Lait produit BL (%),NUM
+EQFBLP,"Consommations d'énergie MJ atelier BL ""Production""",INT
+EQFBLU,"MJ atelier BL ""Production"" /1000 litres de lait",INT
+EQFELEBL,MJ Electricité et pompage eau atelier BL,INT
+EQFCARBL,"MJ Carburants, lub, autres et TPT atelier BL",INT
+EQFFUMBL,MJ Fumure minérale atelier BL,INT
+EQFCONBL,MJ Concentrés atelier BL,INT
+EQFFOUBL,MJ Fourrages atelier BL,INT
+BL_CALCULE,BL Coût de production calculé (O/N),O/N
+BL_MOFAMTOTCLE,BL Main-d'oeuvre exploitant atelier et céré-intra,NUM
+BL_MOSALTOTCLE,BL Main-d'oeuvre salariée atelier et céré-intra,NUM
+BL_MOREMTOTCLE,BL Main-d'oeuvre à rémunérer atelier et céré-intra,NUM
+BL_PMOBLMOEXP,BL Part de la MO rémunérée de l'exploitation %,INT
+BL_LAITCOM,BL Lait commercialisé (l),INT
+BL_LAITTRANS,BL dont lait transformé (%),INT
+BL_LAITCOMUMO,BL Productivité de la main-d'oeuvre rémunérée (l/UMO),INT
+BLCP_REMTPERMINBSMIC,BLCP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+BLCP_TRESOPERMIUMO,BLCP Trésorerie permise par le produit nb SMIC / UMO,NUM
+NIVREMNATMO,Comvention nationale - Rémunération de la MO exploitant (nb SMIC/UMO),NUM
+CMSMIC,Coefficient multiplicateur pour SMIC brut,NUM
+TAUXINTNATCAPP,Convention nationale - Taux de rémunération des capitaux propres (%),NUM
+LTATBV,Type d'atelier BV,STR
+FINIGENISSES,Finition des génisses (O/N),O/N
+FINIVACHER,Finition des vaches de réforme (O/N),O/N
+LRACE1BV,Race principale bovins viande,STR
+NBVA,Nombre de vaches allaitantes,NUM
+PUGBVA,Nb d'UGB BV/Vêlage (Unité zootech.),NUM
+NBBVA,Atelier BV: Nb de génisses 1 an,INT
+NBBVB,Atelier BV: Nb de génisses 1-2ans,INT
+NBBVC,Atelier BV: Nb de génisses +2ans,INT
+NBBVD,Atelier BV: Nb de mâles 1 an,INT
+NBBVE,Atelier BV: Nb de mâles 1-2 ans,INT
+NBBVF,Atelier BV: Nb de mâles + 2 ans,INT
+NBTAUBV,Nombre de taureaux BV,NUM
+PBVVBV,Production brute de viande vive BV (kgv),INT
+PBVVUGB,PBVV /UGB,INT
+GES,Taux de gestation BV,NUM
+PRO,Taux de prolificité BV,NUM
+MORG,Taux de mortalité des veaux avant sevrage BV,NUM
+PRONUM,Taux de productivité numérique BV,NUM
+P1VEL,Taux de renouvellement BV,NUM
+NBVS,Nombre de veaux sevrés,INT
+NFAV,Nombre de femelles ayant vêlé,INT
+DGAP30,dont génisses après 30 mois,INT
+DGAV30,dont génisses avant 30 mois,INT
+AM1V,Age moyen au premier vêlage (mois) BV,NUM
+DCVBV,Date début campagne des vêlages BV,DATE
+NVBV1,Nb vêlages BV janvier,INT
+DVGBV1,Nb vêlages génisse BV janvier,INT
+NVBV2,Nb vêlages BV février,INT
+DVGBV2,Nb vêlages génisse BV février,INT
+NVBV3,Nb vêlages BV mars,INT
+DVGBV3,Nb vêlages génisse BV mars,INT
+NVBV4,Nb vêlages BV avril,INT
+DVGBV4,Nb vêlages génisse BV avril,INT
+NVBV5,Nb vêlages BV mai,INT
+DVGBV5,Nb vêlages génisse BV mai,INT
+NVBV6,Nb vêlages BV juin,INT
+DVGBV6,Nb vêlages génisse BV juin,INT
+NVBV7,Nb vêlages BV juillet,INT
+DVGBV7,Nb vêlages génisse BV juillet,INT
+NVBV8,Nb vêlages BV août,INT
+DVGBV8,Nb vêlages génisse BV août,INT
+NVBV9,Nb vêlages BV septembre,INT
+DVGBV9,Nb vêlages génisse BV septembre,INT
+NVBV10,Nb vêlages BV octobre,INT
+DVGBV10,Nb vêlages génisse BV octobre,INT
+NVBV11,Nb vêlages BV novembre,INT
+DVGBV11,Nb vêlages génisse BV novembre,INT
+NVBV12,Nb vêlages BV décembre,INT
+DVGBV12,Nb vêlages génisse BV décembre,INT
+VEAUNAISNT,Veaux naissants BV vendus Nb têtes,INT
+VEAUNAISPOT,Veaux naissants BV vendus Poids moyen kilo vif/tête,INT
+VEAUSNT,Veaux sevrés vendus Nb têtes,INT
+VEAUSPOT,Veaux sevrés vendus Poids moyen kilo vif/tête,INT
+VEAUSLMNT,Veaux sous la mères vendus Nb têtes,INT
+VEAUSLMPOT,Veaux sous la mères vendus Poids moyen kilo carcasse/tête,INT
+VEAUAVNT,Veaux d'Aveyron vendus Nb têtes,INT
+VEAUAVPOT,Veaux d'Aveyron vendus Poids moyen kilo carcasse/tête,INT
+VEAULNT,Veaux lourds vendus Nb têtes,INT
+VEAULPOT,Veaux lourds vendus Poids moyen kilo carcasse/tête,INT
+BROUTNT,Broutards vendus Nb têtes,INT
+BROUTPOT,Broutards vendus Poids moyen kilo vif/tête,INT
+BROUTRNT,Broutards repoussés vendus Nb têtes,INT
+BROUTRPOT,Broutards repoussés vendus Poids moyen kilo vif/tête,INT
+JBMAIGRENT,Jeunes bovins maigres vendus Nb têtes,INT
+JBMAIGREPOT,Jeunes bovins maigres vendus Poids moyen kilo vif/tête,INT
+JBFININT,Jeunes bovins finis vendus Nb têtes,INT
+JBFINIPOT,Jeunes bovins finis vendus Poids moyen kilo carcasse/tête,INT
+BOMAIGRENT,Bœufs maigres vendus Nb têtes,INT
+BOMAIGREPOT,Boeufs maigres vendus Poids moyen kilo vif/tête,INT
+BOFININT,Boeufs finis vendus Nb têtes,INT
+BOFINIPOT,Boeufs finis vendus Poids moyen kilo carcasse/tête,INT
+TAURRBVNT,Taureaux de réforme BV vendus Nb têtes,INT
+TAURRBVPOT,Taureaux de réforme BV vendus Poids moyen kilo carcasse/tête,INT
+REPROMBVNT,Reproducteurs mâles BV vendus Nb têtes,INT
+REPROMBVPOT,Reproducteurs mâles BV vendus Poids moyen kilo vif/tête,INT
+BROUTFNT,Broutardes vendus Nb têtes,INT
+BROUTFPOT,Broutardes vendus Poids moyen kilo vif/tête,INT
+BROUTFRNT,Broutardes repoussées vendus Nb têtes,INT
+BROUTFRPOT,Broutardes repoussées vendus Poids moyen kilo vif/tête,INT
+GENISMNT,Génisses maigres vendues Nb têtes,INT
+GENISMPOT,Génisses maigres vendues Poids moyen kilo vif/tête,INT
+GENISFNT,Génisses finies vendues Nb têtes,INT
+GENISFPOT,Génisses finies vendues Poids moyen kilo carcasse/tête,INT
+VACHERBVNT,Vaches de réforme BV vendues Nb têtes,INT
+VACHERBVPOT,Vaches de réforme BV vendues Poids moyen kilo carcasse/tête,INT
+REPROFBVNT,Reproducteurs femelles BV vendues Nb têtes,INT
+REPROFBVPOT,Reproducteurs femelles BV vendus Poids moyen kilo vif/tête,INT
+AUTANIVBVNT,Autres animaux vendus BV Nb têtes,INT
+AUTANIVBVPOT,Autres animaux vendus BV Poids moyen kilo vif/tête,INT
+VEAUABVNT,Veaux achetés BV Nb têtes,INT
+VEAUABVPOT,Veaux achetés BV Poids moyen kilo vif/tête,INT
+BROUTANT,Broutards achetés Nb têtes,INT
+BROUTAPOT,Broutards achetés Poids moyen kilo vif/tête,INT
+AUTMALANT,Autres mâles achetés Nb têtes,INT
+AUTMALAPOT,Autres mâles achetés Poids moyen kilo vif/tête,INT
+BROUTFANT,Broutardes achetées Nb têtes,INT
+BROUTFAPOT,Broutardes achetées Poids moyen kilo vif/tête,INT
+GENANT,Génisses achetées Nb têtes,INT
+GENAPOT,Génisses achetées Poids moyen kilo vif/tête,INT
+VARMANT,Vaches de réforme maigres achetées Nb têtes,INT
+VARMAPOT,Vaches de réforme maigres achetées Poids moyen kilo vif/tête,INT
+FEMRABVNT,Femelles reproductrices achetées BV Nb têtes,INT
+FEMRABVPOT,Femelles reproductrices achetées BV Poids moyen kilo vif/tête,INT
+REPROMABVNT,Reproducteurs mâles achetés BV Nb têtes,INT
+REPROMABVPOT,Reproducteurs mâles achetées BV Poids moyen kilo vif/tête,INT
+AUTANIABVNT,Autres animaux achetés BV Nb têtes,INT
+AUTANIABVPOT,Autres animaux achetés BV Poids moyen kilo vif/tête,INT
+VEAUCBVNT,Veaux issus de l'atelier BL Nb têtes,INT
+VEAUCBVPOT,Veaux issus de l'atelier BL Poids moyen kilo vif/tête,INT
+HASHBV,SFP en herbe (ha) atelier BV,NUM
+HACFBV,SFP cultures fourragères (ha) atelier BV,NUM
+HASPBV,Surface pastorale (ha) atelier BV,NUM
+BVCP_SURFCERINT,Surface en céréales intra-consommées atelier BV (ha),NUM
+QFOUBVU,Quantité de fourrages conservés utilisés atelier BV t.MS/UGB,NUM
+RATIONMASSBV,Autonomie massique Ration atelier BV %,INT
+RATIONENERBV,Autonomie énergétique Ration atelier BV %,INT
+RATIONPROTBV,Autonomie protéique Ration atelier BV %,INT
+FOUMASSBV,Autonomie massique Fourrages atelier BV %,INT
+FOUENERBV,Autonomie énergétique Fourrages atelier BV %,INT
+FOUPROTBV,Autonomie protéique Fourrages atelier BV %,INT
+CONCMASSBV,Autonomie massique Concentrés atelier BV %,INT
+CONCENERBV,Autonomie énergétique Concentrés atelier BV %,INT
+CONCPROTBV,Autonomie protéique Concentrés atelier BV %,INT
+QCSP,Quantité de concentré et sous produits BV (t),NUM
+PCONCPBV,Pourcentage de concentrés prélevés pour l'atelier BV (%),INT
+QCSPUGB,Quantité de concentrés et co-produits (kg) / UGB BV,INT
+QTCONCBVKGP100KGVV,Quantité de concentrés (kg) / 100 kilos de viande vive,INT
+EQFBVP,"Consommation d'énergie MJ atelier BV ""Production""",INT
+EQFBVU,"MJ atelier BV ""Production"" /100 kilos de viande vive",INT
+EQFELEBV,MJ Electricité et pompage eau atelier BV,INT
+EQFCARBV,"MJ Carburants, lub, autres et TPT atelier BV",INT
+EQFFUMBV,MJ Fumure minérale atelier BV,INT
+EQFCONBV,MJ Concentrés atelier BV,INT
+EQFFOUBV,MJ Fourrages atelier BV,INT
+BV_CALCULE,BV Coût de production calculé (O/N),O/N
+BV_MOFAMTOTCLE,BV Main-d'oeuvre exploitant atelier et céré-intra,NUM
+BV_MOSALTOTCLE,BV Main-d'oeuvre salariée atelier et céré-intra,NUM
+BV_MOREMTOTCLE,BV Main-d'oeuvre à rémunérer atelier et céré-intra,NUM
+BV_PMOBVMOEXP,BV Part de la MO rémunérée de l'exploitation %,INT
+BV_NBUNITES,BV Nombre d'unités (100kgvv) pour le calcul du coût de production,NUM
+BV_PBVVUMO,BV Productivité de la main-d'oeuvre rémunérée (kgvv/UMO),INT
+BVCP_REMTPERMINBSMIC,BVCP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+BVCP_TRESOPERMIUMO,BVCP Trésorerie permise par le produit nb SMIC / UMO,NUM
+LTATOL,Type d'atelier OL,STR
+LRACEOL,Race principale des brebis,STR
+NBBL,Nombre de brebis laitières,NUM
+NBAGNOL,Nombre d'agnelles OL,NUM
+NBBELOL,Nombre de béliers OL,NUM
+LSIGQLOL,Signe de qualité du lait de brebis,STR
+QLPOL,Lait produit OL (l),INT
+OL_LAITTRANS,OL dont lait transformé (%),INT
+LPPBOL,Lait produit /brebis OL,INT
+LAITVLOL,Lait vendu laiterie (l) OL,INT
+TBOL,TB moyen g/l OL,NUM
+TPOL,TP moyen g/l OL,NUM
+QLVDOL,Quantité lait transformé OL (l),INT
+NBSEMCOMMOL,Nombre de semaines avec de la commercialisation OL,INT
+NBMARCHEANOL,Nombre de marchés par an OL,INT
+NBTOULIVANOL,Nombre de tournées ou livraisons par an OL,INT
+NBEXPANOL,Nombre d'expéditions par an OL,INT
+KMCOMMANOL,Distance parcourue par an pour la commercialisation OL,INT
+LAITRAOLPMTL,Lait transformé en pâtes molles type lactique OL (%),INT
+LAITRAOLPMTP,Lait transformé en pâtes molles type présure OL (%),INT
+LAITRAOLPMTCD,Lait transformé en pâtes molles type caillé doux OL (%),INT
+LAITRAOLPPNC,Lait transformé en pâte pressée non cuite OL (%),INT
+LAITRAOLPPCDC,Lait transformé pâte pressée cuite (>50°) et demi cuite (<=50°) OL (%),INT
+LAITRAOLYLF,Lait transformé en yaourts et laits fermentés OL (%),INT
+LAITRAOLBC,Lait transformé en beurre/crème OL (%),INT
+LAITRAOLFF,Lait transformé en fromages frais OL (%),INT
+LAITRAOLFL,Lait transformé en fromages de lactosérum OL (%),INT
+LAITRAOLFPP,Lait transformé en fromages à pâte persillée OL (%),INT
+LAITRAOLAUT,Lait transformé autre technologie OL (%),INT
+LAITRAOLVA,Lait transformé et vendu à l’affineur OL (%),INT
+LAITRAOLVD,Lait transformé et vendu directement OL (%),INT
+LAITRAOLVV1,Lait transformé et vendu via 1 intermédiaire OL (%),INT
+LAITRAOLVV2,Lait transformé et vendu via 2 intermédiaires OL (%),INT
+EPMBTLP,Total brebis à la traite présentes à la mise bas OL,INT
+TMBLPOL,Total brebis à la traite taux de mises bas OL,INT
+TPLPOL,Total brebis à la traite taux de prolificité OL,INT
+TMLPOL,Total brebis à la traite taux de mortalité OL,NUM
+TRENOL,Total taux de renouvellement OL,NUM
+AEEMPOL,Agneaux élevés/EMP OL,NUM
+DDTRAI,Date début de traite OL,DATE
+DFTRAI,Date fin de traite OL,DATE
+DPL,Durée période de livraison jours OL,INT
+QLPROL1,Lait produit (l) OL janvier,INT
+QLPROL2,Lait produit (l) OL février,INT
+QLPROL3,Lait produit (l) OL mars,INT
+QLPROL4,Lait produit (l) OL avril,INT
+QLPROL5,Lait produit (l) OL mai,INT
+QLPROL6,Lait produit (l) OL juin,INT
+QLPROL7,Lait produit (l) OL juillet,INT
+QLPROL8,Lait produit (l) OL août,INT
+QLPROL9,Lait produit (l) OL septembre,INT
+QLPROL10,Lait produit (l) OL octobre,INT
+QLPROL11,Lait produit (l) OL novembre,INT
+QLPROL12,Lait produit (l) OL décembre,INT
+HASHOL,SFP en herbe (ha) atelier OL,NUM
+HACFOL,SFP cultures fourragères (ha) atelier OL,NUM
+HASPOL,Surface pastorale (ha) atelier OL,NUM
+OLCP_SURFCERINT,Surface en céréales intra-consommées atelier OL (ha),NUM
+QFOUOLU,Quantité de fourrages conservés utilisés atelier OL Kg.MS/brebis,INT
+RATIONMASSOL,Autonomie massique Ration atelier OL %,INT
+FOUMASSOL,Autonomie massique Fourrages atelier OL %,INT
+CONCMASSOL,Autonomie massique Concentrés atelier OL %,INT
+RATIONENEROL,Autonomie énergétique Ration atelier OL %,INT
+FOUENEROL,Autonomie énergétique Fourrages atelier OL %,INT
+CONCENEROL,Autonomie énergétique Concentrés atelier OL %,INT
+RATIONPROTOL,Autonomie protéique Ration atelier OL %,INT
+FOUPROTOL,Autonomie protéique Fourrages atelier OL %,INT
+CONCPROTOL,Autonomie protéique Concentrés atelier OL %,INT
+QCDOL,Quantité de concentrés troupeau OL (t),NUM
+PCONCPOL,Pourcentage de concentrés prélevés pour l'atelier OL (%),INT
+QCPBOL,Quantité de concentrés troupeau OL (kg)/brebis,INT
+QCDOLBB,Quantité concentrés adultes OL (kg)/brebis,INT
+QCDOLAA,Quantité concentré aux agnelles OL (kg) /agnelle,INT
+EQFOLP,"Consommation d'énergie MJ atelier OL ""Production""",INT
+EQFOLU,"MJ atelier OL ""Production"" /1000 litres de lait",INT
+EQFELEOL,MJ Electricité et pompage eau atelier OL,INT
+EQFCAROL,"MJ Carburants, lub, autres et TPT atelier OL",INT
+EQFFUMOL,MJ Fumure minérale atelier OL,INT
+EQFCONOL,MJ Concentrés atelier OL,INT
+EQFFOUOL,MJ Fourrages atelier OL,INT
+OL_CALCULE,OL Coût de production calculé (O/N),O/N
+OL_MOFAMTOTCLE,OL Main-d'oeuvre exploitant atelier et céré-intra,NUM
+OL_MOSALTOTCLE,OL Main-d'oeuvre salariée atelier et céré-intra,NUM
+OL_MOREMTOTCLE,OL Main-d'oeuvre à rémunérer atelier et céré-intra,NUM
+OL_PMOOLMOEXP,OL Part de la MO rémunérée de l'exploitation %,INT
+OL_NBUNITES,OL Nombre d'unités (1000l) pour le calcul du coût de production,NUM
+OL_LAITCOMUMO,OL Productivité de la main-d'oeuvre rémunérée (l/UMO),INT
+OLCP_REMTPERMINBSMIC,OLCP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+OLCP_TRESOPERMIUMO,OLCP Trésorerie permise par le produit nb SMIC / UMO,NUM
+LTATOV,Type d'atelier OV,STR
+NBBV,Nombre de brebis viande EMP,NUM
+NBBELOV,Nombre de béliers OV,NUM
+LTYPEGENBA,Libellé du type génétique des brebis allaitantes (Cas-type),STR
+LRACE1BR,Race principale des brebis allaitantes,STR
+LRACE1BE,Race principale des béliers,STR
+LTYPEAGNP,Libellé du type d'agneaux produits,STR
+TFEP,Taux de femelles épongées,INT
+TMBOV,Taux de mises bas,INT
+TAGNEL,Taux de 1ère mise bas OV,INT
+TPRO,Taux de prolificité OV,INT
+TMORT,Taux de mortalité OV,NUM
+TPNECO,Taux de productivité numérique éco.,NUM
+NAELEV,Nombre d'agneaux élevés,INT
+PRODPON,Productivité pondérale,NUM
+PMAG,Poids moyen des agneaux vendus hors repro. kgc,NUM
+NMB,G Nombre de mises bas OV,INT
+NMBB,Nb mises bas brebis,INT
+NMBA,Nb mises bas agnelles,INT
+DDCAOV,Date début de campagne agnelages OV,DATE
+NAOV1,Nb agnelages OV janvier,INT
+NAOVA1,Nb agnelages OV agnel. janvier,INT
+NAOV2,Nb agnelages OV février,INT
+NAOVA2,Nb agnelages OV agnel. février,INT
+NAOV3,Nb agnelages OV mars,INT
+NAOVA3,Nb agnelages OV agnel. mars,INT
+NAOV4,Nb agnelages OV avril,INT
+NAOVA4,Nb agnelages OV agnel. avril,INT
+NAOV5,Nb agnelages OV mai,INT
+NAOVA5,Nb agnelages OV agnel. mai,INT
+NAOV6,Nb agnelages OV juin,INT
+NAOVA6,Nb agnelages OV agnel. juin,INT
+NAOV7,Nb agnelages OV juillet,INT
+NAOVA7,Nb agnelages OV agnel. juillet,INT
+NAOV8,Nb agnelages OV août,INT
+NAOVA8,Nb agnelages OV agnel. août,INT
+NAOV9,Nb agnelages OV septembre,INT
+NAOVA9,Nb agnelages OV agnel. septembre,INT
+NAOV10,Nb agnelages OV octobre,INT
+NAOVA10,Nb agnelages OV agnel. octobre,INT
+NAOV11,Nb agnelages OV novembre,INT
+NAOVA11,Nb agnelages OV agnel. novembre,INT
+NAOV12,Nb agnelages OV décembre,INT
+NAOVA12,Nb agnelages OV agnel. décembre,INT
+ALOURBNT,Agneaux lourds bergerie vendus Nb têtes,INT
+ALOURBPRC,Pourcentage des agneaux lourds bergerie vendus,NUM
+ALOURBPOT,Agneaux lourds bergerie vendus Poids moyen kilo carcasse/tête,NUM
+ALOURHNT,Agneaux lourds herbe vendus Nb têtes,INT
+ALOURHPRC,Pourcentage des agneaux lourds herbe vendus,NUM
+ALOURHPOT,Agneaux lourds herbe Poids moyen kilo carcasse/tête,NUM
+AMAIGRNT,Agneaux maigres vendus Nb têtes,INT
+AMAIGRPRC,Pourcentage d' agneaux maigres vendus,NUM
+AMAIGRPOT,Agneaux maigres vendus Poids moyen kilo vif/tête,NUM
+ALEGERNT,Agneaux légers vendus Nb têtes,INT
+ALEGERPRC,Pourcentage d'agneaux légers vendus,NUM
+ALEGERPOT,Agneaux légers vendus Poids moyen kilo vif/tête,NUM
+ALAITNT,Agneaux de lait vendus Nb têtes,INT
+ALAITPRC,Pourcentage d'agneaux de lait vendus,NUM
+ALAITPOT,Agneaux de lait vendus Poids moyen kilo vif/tête,NUM
+REPJFNT,Reproducteurs jeunes femelles vendus Nb têtes,INT
+REPJFPRC,Pourcentage de reproducteurs jeunes femelles vendus,NUM
+REPJFPOT,Reproducteurs jeunes femelles vendus Poids moyen kilo vif/tête,NUM
+REPJMNT,Reproducteurs jeunes mâles vendus Nb têtes,INT
+REPJMPRC,Pourcentage de reproducteurs jeunes mâles vendus,NUM
+REPJMPOT,Reproducteurs jeunes mâles vendus Poids moyen kilo vif/tête,NUM
+REPADNT,Reproducteurs adultes vendus Nb têtes,INT
+REPADPOT,Reproducteurs adultes vendus Poids moyen kilo vif/tête,NUM
+ANIREFNT,Animaux de réforme vendus Nb têtes,INT
+ANIREFPOT,Animaux de réforme vendus Poids moyen kilo vif/tête,NUM
+HASHOV,SFP en herbe (ha) atelier OV,NUM
+HACFOV,SFP cultures fourragères (ha) atelier OV,NUM
+HASPOV,Surface pastorale (ha) atelier OV,NUM
+OVCP_SURFCERINT,Surface en céréales intra-consommées atelier OV (ha),NUM
+QFOUOVU,Quantité de fourrages conservés utilisés atelier OV Kg.MS/brebis,INT
+CHARAPOV,Chargement appar OV:EMP/ha SFPO,NUM
+RATIONMASSOV,Autonomie massique Ration atelier OV %,INT
+RATIONENEROV,Autonomie énergétique Ration atelier OV %,INT
+RATIONPROTOV,Autonomie protéique Ration Atelier OV %,INT
+FOUMASSOV,Autonomie massique Fourrages atelier OV %,INT
+FOUENEROV,Autonomie énergétique Fouurages atelier OV %,INT
+FOUPROTOV,Autonomie protéique Fourrages atelier OV %,INT
+CONCMASSOV,Autonomie massique Concentrés atelier OV %,INT
+CONCENEROV,Autonomie énergétique Concentrés atelier OV %,INT
+CONCPROTOV,Autonomie protéique Concentrés atelier OV %,INT
+QCOV,Quantité de concentrés distribués OV (t),NUM
+PCONCPOV,Pourcentage de concentrés prélevés pour l'atelier OV (%),INT
+QPLOV,Quantité de poudre de lait OV (t),NUM
+QTCB,Quantité de concentré OV (kg) /brebis,INT
+EQFOVP,"Consommation d'énergie MJ atelier OV ""Production""",INT
+EQFOVU,"MJ atelier OV ""Production"" /100 kilos carcasse agneaux",INT
+EQFELEOV,MJ Electricité et pompage eau atelier OV,INT
+EQFCAROV,"MJ Carburants, lub, autres et TPT atelier OV",INT
+EQFFUMOV,MJ Fumure minérale atelier OV,INT
+EQFCONOV,MJ Concentrés atelier OV,INT
+EQFCONCPOV,MJ Concentrés prélevés atelier OV,INT
+OV_CALCULE,OV Coût de production calculé (O/N),O/N
+OV_MOFAMTOTCLE,OV Main-d'oeuvre exploitant atelier et céré-intra,NUM
+OV_MOSALTOTCLE,OV Main-d'oeuvre salariée atelier et céré-intra,NUM
+OV_MOREMTOTCLE,OV Main-d'oeuvre à rémunérer atelier et céré-intra,NUM
+OV_PMOOVMOEXP,OV Part de la MO rémunérée de l'exploitation %,INT
+OV_NBUNITES,OV Nombre d'unités (Eq. kgc) pour le calcul du coût de production,INT
+OV_PAGNUMO,OV Productivité de la main-d'oeuvre rémunérée (Eq. kgc/UMO),INT
+OVCP_REMTPERMINBSMIC,OVCP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+OVCP_TRESOPERMIUMO,OVCP Trésorerie permise par le produit nb SMIC / UMO,NUM
+LTATCA,Type d'atelier CA,STR
+LSYSALICA,Libellé du système d'alimentation CA,STR
+LRACE1C,Libellé race 1 chèvres,STR
+NBCH,Nombre de chèvres,NUM
+NBCHEVRET,Nombre de chevrettes,NUM
+NBBOUCS,Nombre de boucs,NUM
+LSIGQCA,Libellé signe de qualité caprins,STR
+LAITP,Lait chèvre produit,INT
+LPCA,Lait chèvre produit /chèvre,INT
+CA_LAITCOM,CA Lait commercialisé (l),INT
+CA_LAITTRANS,CA dont lait transformé (%),INT
+QLAITQ,Lait chèvre vendu laiterie (quota),INT
+TBCA,Taux butyreux CA,NUM
+TPCA,Taux protéique CA,NUM
+QLVDCA,Lait chèvre vente directe (l),INT
+QLAITDC,Lait consommé par les chevreaux (l),INT
+QLTRCA,Quantité de lait transformé (l),INT
+NBSEMCOMMCA,Nombre de semaines avec de la commercialisation CA,INT
+NBMARCHEANCA,Nombre de marchés par an CA,INT
+NBTOULIVANCA,Nombre de tournées ou livraisons par an CA,INT
+NBEXPANCA,Nombre d'expéditions par an CA,INT
+KMCOMMANCA,Distance parcourue par an pour la commercialisation CA,INT
+LAITRACAPMTL,Lait transformé en pâtes molles type lactique CA (%),INT
+LAITRACAPMTP,Lait transformé en pâtes molles type présure CA (%),INT
+LAITRACAPMTCD,Lait transformé en pâtes molles type caillé doux CA (%),INT
+LAITRACAPPNC,Lait transformé en pâte pressée non cuite CA (%),INT
+LAITRACAPPCDC,Lait transformé pâte pressée cuite (>50°) et demi cuite (<=50°) CA (%),INT
+LAITRACAYLF,Lait transformé en yaourts et laits fermentés CA (%),INT
+LAITRACABC,Lait transformé en beurre/crème CA (%),INT
+LAITRACAFF,Lait transformé en fromages frais CA (%),INT
+LAITRACAFL,Lait transformé en fromages de lactosérum CA (%),INT
+LAITRACAFPP,Lait transformé en fromages à pâte persillée CA (%),INT
+LAITRACAAUT,Lait transformé autre technologie CA (%),INT
+LAITRACAVA,Lait transformé et vendu à l’affineur CA (%),INT
+LAITRACAVD,Lait transformé et vendu directement CA (%),INT
+LAITRACAVV1,Lait transformé et vendu via 1 intermédiaire CA (%),INT
+LAITRACAVV2,Lait transformé et vendu via 2 intermédiaires CA (%),INT
+NMBCA,Nb de mises bas chèvres + chevrettes,INT
+TMB,Taux de mises bas Chèvres+Chevrettes,NUM
+TRENOUCA,Taux de 1ère mise bas caprins,NUM
+PIACA,Pourcentage IA sur mises en repro atelier CA,NUM
+NBCMORT,Nombre de chèvres mortes,INT
+NBLACL,Nombre de lactations longues,INT
+NBLACLP,Nombre de lactations longues primipares,INT
+DDCMBCA,Date début de campagne mises bas CA,DATE
+NMBCA1,Nb mises bas CA janvier,INT
+NMBCCA1,Nb mises bas CA chevrettes janvier,INT
+NMBCA2,Nb mises bas CA février,INT
+NMBCCA2,Nb mises bas CA chevrettes février,INT
+NMBCA3,Nb mises bas CA mars,INT
+NMBCCA3,Nb mises bas CA chevrettes mars,INT
+NMBCA4,Nb mises bas CA avril,INT
+NMBCCA4,Nb mises bas CA chevrettes avril,INT
+NMBCA5,Nb mises bas CA mai,INT
+NMBCCA5,Nb mises bas CA chevrettes mai,INT
+NMBCA6,Nb mises bas CA juin,INT
+NMBCCA6,Nb mises bas CA chevrettes juin,INT
+NMBCA7,Nb mises bas CA juillet,INT
+NMBCCA7,Nb mises bas CA chevrettes juillet,INT
+NMBCA8,Nb mises bas CA août,INT
+NMBCCA8,Nb mises bas CA chevrettes août,INT
+NMBCA9,Nb mises bas CA septembre,INT
+NMBCCA9,Nb mises bas CA chevrettes septembre,INT
+NMBCA10,Nb mises bas CA octobre,INT
+NMBCCA10,Nb mises bas CA chevrettes octobre,INT
+NMBCA11,Nb mises bas CA novembre,INT
+NMBCCA11,Nb mises bas CA chevrettes novembre,INT
+NMBCA12,Nb mises bas CA décembre,INT
+NMBCCA12,Nb mises bas CA chevrettes décembre,INT
+HASHCA,SFP en herbe (ha) atelier CA,NUM
+HACFCA,SFP cultures fourragères (ha) atelier CA,NUM
+HASPCA,Surface pastorale (ha) atelier CA,NUM
+CACP_SURFCERINT,Surface en céréales intra-consommées atelier CA (ha),NUM
+QFOUCAU,Quantité de fourrages conservés utilisés atelier CA Kg.MS/chèvre,INT
+RATIONMASSCA,Autonomie massique Ration atelier CA %,INT
+FOUMASSCA,Autonomie massique Fourrages atelier CA %,INT
+CONCMASSCA,Autonomie massique Concentrés atelier CA %,INT
+RATIONENERCA,Autonomie énergétique Ration atelier CA %,INT
+FOUENERCA,Autonomie énergétique Fourrages atelier CA %,INT
+CONCENERCA,Autonomie énergétique Concentrés atelier CA %,INT
+RATIONPROTCA,Autonomie protéique Ration atelier CA %,INT
+FOUPROTCA,Autonomie protéique Fourrages atelier CA %,INT
+CONCPROTCA,Autonomie protéique Concentrés atelier CA %,INT
+QCCA,Quantité de concentrés Caprins (t),NUM
+PCONCPCA,Pourcentage de concentrés prélevés pour l'atelier CA (%),INT
+KGCON,Quantité concentrés des chèvres/chèvre (kg),INT
+QTCONCHCPCC,Quantité de concentrés hors co-produits aux chèvres (kg / chèvre),INT
+QTCONCHCPCL,Quantité de concentrés hors co-produits aux chèvres (g / l),INT
+QTCPDESYCC,"Quantité de co-produits (déshydratés,…) aux chèvres (kg / chèvre)",INT
+QTCPDESYCL,"Quantité de co-produits (déshydratés,…) aux chèvres (g / l)",INT
+EQFCAP,"MJ atelier Caprins ""Production""",INT
+EQFCAU,"MJ atelier Caprins ""Production"" /1000 litres de lait",INT
+EQFELECA,MJ Electricité et pompage eau atelier Caprins,INT
+EQFCARCA,"MJ Carburants, lub, autres et TPT atelier Caprins",INT
+EQFFUMCA,MJ Fumure minérale atelier Caprins,INT
+EQFCONCA,MJ Concentrés atelier Caprins,INT
+EQFFOUCA,MJ Fourrages atelier Caprins,INT
+CA_CALCULE,CA Coût de production calculé (O/N),O/N
+CA_MOFAMTOTCLE,CA Main-d'oeuvre exploitant atelier et céré-intra,NUM
+CA_MOSALTOTCLE,CA Main-d'oeuvre salariée atelier et céré-intra,NUM
+CA_MOREMTOTCLE,CA Main-d'oeuvre à rémunérer atelier et céré-intra,NUM
+CA_PMOCAMOEXP,CA Part de la MO rémunérée de l'exploitation %,INT
+CA_LAITCOMUMO,CA Productivité de la main-d'oeuvre rémunérée (l/UMO),INT
+CACP_REMTPERMINBSMIC,CACP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+CACP_TRESOPERMIUMO,CACP Trésorerie permise par le produit nb SMIC / UMO,NUM
+LTATEQ,Type d'atelier EQ,STR
+LPATGCU,Poids de l'atelier grandes cultures,STR
+GCUCAHBDHA,Surface céréales d'automne hors blé dur (ha),NUM
+GCUCAHBDRDT,Rendement céréales d'automne hors blé dur (q/ha),NUM
+GCUBDHA,Surface blé dur (ha),NUM
+GCUBDRDT,Rendement blé dur (q/ha),NUM
+GCUCPHMAISHA,Surface céréales de printemps hors blé dur et maïs (ha),NUM
+GCUCPHMAISRDT,Rendement céréales de printemps hors blé dur et maïs (q/ha),NUM
+GCUCPMAISHA,Surface maïs grain (ha),NUM
+GCUCPMAISRDT,Rendement maïs grain (q/ha),NUM
+GCUOLEHA,Surface oléagineux (ha),NUM
+GCUOLERDT,Rendement oléagineux (q/ha),NUM
+GCUPROHA,Surface protéagineux (ha),NUM
+GCUPRORDT,Rendement protéagineux (q/ha),NUM
+GCUCIHA,Surface cultures industrielles GCU (ha),NUM
+GCUAUTHA,Surface autres grandes cultures (ha),NUM
+GCUJAHA,Surface jachères (ha),NUM
+NMSNF,N / ha de grandes cultures (fumure minérale),INT
+PMSNF,P2O5 / ha de grandes cultures (fumure minérale),INT
+KMSNF,K2O / ha de grandes cultures (fumure minérale),INT
+EQFGCU,Consommation d'énergie MJ atelier GCU,INT
+EQFGCUU,"MJ atelier GCU ""Production"" /ha",INT
+EQFELEGCU,MJ Electricité et pompage eau atelier GCU,INT
+EQFCARGCU,"MJ Carburants, lub, autres et TPT atelier GCU",INT
+EQFFUMGCU,MJ Fumure minérale atelier GCU,INT
+GCU_CALCULE,GCU Coût de production calculé (O/N),O/N
+GCU_MOFAMTOTCLE,GCU Main-d'oeuvre exploitant atelier hors céréales intraconsommées,NUM
+GCU_MOSALTOTCLE,GCU Main-d'oeuvre salariée atelier hors céréales intraconsommées,NUM
+GCU_MOREMTOTCLE,GCU Main-d'oeuvre à rémunérer hors céréales intraconsommées,NUM
+GCU_PMOGCUMOEXP,GCU Part de la MO rémunérée de l'exploitation %,INT
+GCU_HAGCUVEN,GCU Grandes cultures commercialisées (ha),NUM
+GCU_HAGCUVENUMO,GCU Productivité de la main-d'oeuvre rémunérée (ha GCU VEN /UMO),NUM
+GCUCP_REMTPERMINBSMIC,GCUCP Rémunération travail exploitant permise par le produit SMIC /UMO,NUM
+GCUCP_TRESOPERMIUMO,GCUCP Trésorerie permise par le produit nb SMIC / UMO,NUM
