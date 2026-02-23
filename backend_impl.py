@@ -27,13 +27,23 @@ class FarmInput(BaseModel):
     # Structural Data
     region: str = Field(..., description="Région de l'exploitation")
     filiere: str = Field(..., description="Filière de production (ex: Bovins Lait)")
+    
+    # Workforce & Herd
     sau: float = Field(..., gt=0, description="Surface Agricole Utile (ha)")
+    umo: float = Field(..., gt=0, description="Unités Main d'Œuvre (Total)")
     ugb: float = Field(..., ge=0, description="Unités Gros Bétail (Total)")
+    nb_vl: Optional[int] = Field(None, ge=0, description="Nombre de Vaches Laitières (si applicable)")
+    
+    # Assolement Details (Surfaces)
+    surface_culture: float = Field(0, ge=0, description="Surface en Cultures (Céréales, Oléoprotéineux)")
+    surface_sfp: float = Field(0, ge=0, description="Surface Fourragère Principale (SFP)")
+    surface_herbe_pp: float = Field(0, ge=0, description="Surface Herbe - Prairies Permanentes (PP)")
+    surface_herbe_pt: float = Field(0, ge=0, description="Surface Herbe - Prairies Temporaires (PT)")
     
     # Key Indicators for Simulation
     chargement: Optional[float] = Field(None, description="Chargement (UGB/ha SFP)")
     part_maïs: Optional[float] = Field(0, description="Part de maïs dans la SFP (%)")
-    part_herbe: float = Field(..., ge=0, le=100, description="Pourcentage d'herbe dans la SFP")
+    part_herbe: float = Field(..., ge=0, le=100, description="Pourcentage d'herbe dans la SFP (Calculé ou saisi)")
     
     # Environmental Inputs
     conso_fioul: Optional[float] = Field(None, description="Consommation fioul (L/an)")
@@ -70,6 +80,8 @@ class ChatMessage(BaseModel):
 class ChatResponse(BaseModel):
     response: str
     suggested_actions: Optional[List[str]] = None
+    reasoning_steps: Optional[List[str]] = None
+    citations: Optional[List[Dict[str, str]]] = None
 
 # --- System Logic ---
 
@@ -126,9 +138,15 @@ def simulate_system(input: FarmInput, override_part_herbe: float = None) -> Simu
 
 def determine_ktype(input: FarmInput) -> str:
     """Heuristic to determine current K-Type based on input."""
+    # Logic enriched with UMO/VL
+    labor_intensity = input.ugb / input.umo if input.umo > 0 else 0
+    
     if "Lait" in input.filiere:
         if input.part_herbe > 70:
-            return "Laitier Herbager"
+            if input.surface_herbe_pp > input.surface_herbe_pt:
+                return "Laitier Herbager (Dominante PP)"
+            else:
+                return "Laitier Herbager Dynamique"
         elif input.part_maïs > 30:
             return "Laitier Intensif Plaine"
         else:
@@ -189,27 +207,53 @@ async def get_advisor_stats():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_with_advisor_agent(chat_input: ChatMessage):
-    """Chatbot intelligent pour assister le conseiller."""
+    """Chatbot intelligent pour assister le conseiller (Mocked RAG)."""
     msg = chat_input.message.lower()
     
-    # Simple rule-based logic to mimic LLM behavior
+    # 1. Bonjour
     if "bonjour" in msg:
-        return ChatResponse(response="Bonjour ! Je suis votre assistant agricole. Comment puis-je vous aider aujourd'hui ?")
+        return ChatResponse(
+            response="Bonjour ! Je suis votre assistant expert. Je peux analyser la ferme, chercher des fiches techniques ou vérifier la réglementation.",
+            reasoning_steps=["Détection intention : Salutation", "Chargement contexte conseiller"],
+            suggested_actions=["Lancer une simulation", "Voir mes clients"]
+        )
     
+    # 2. Aides / Subventions
     if "aide" in msg or "subvention" in msg:
         return ChatResponse(
-            response="Pour les aides à la transition, vous pouvez consulter les dispositifs PCAE (Plan de Compétitivité et d'Adaptation des Exploitations) de votre région. Pour la plantation de haies, regardez le 'Pacte en faveur de la haie'.",
-            suggested_actions=["Voir dossier PCAE", "Simuler impact financier"]
+            reasoning_steps=[
+                "Recherche base documentaire : 'aides transition'",
+                "Filtrage géographique : France/Régional",
+                "Identification dispositifs : PCAE, Eco-régimes"
+            ],
+            response="Pour les investissements matériels, le dispositif PCAE (Plan de Compétitivité) est mobilisable. Pour la transition agro-écologique, visez le niveau 1 des écorégimes PAC.",
+            citations=[
+                {"id": "PAC-2023", "title": "Guide Ecorégimes", "url": "/docs/pac"},
+                {"id": "REG-PCAE", "title": "Règlement PCAE Normandie", "url": "/docs/pcae"}
+            ],
+            suggested_actions=["Simuler impact financier", "Télécharger dossier"]
         )
     
-    if "carbone" in msg:
+    # 3. Carbone / Herbe
+    if "carbone" in msg or "herbe" in msg:
         return ChatResponse(
-            response="Le levier carbone le plus efficace pour cette exploitation semble être l'augmentation de la surface en herbe (stockage C) et la réduction de la fertilisation minérale.",
-            suggested_actions=["Simuler +20% Herbe", "Voir fiche Technique 'Stockage Carbone'"]
+            reasoning_steps=[
+                "Analyse impact levier : Surface Herbe",
+                "Calcul stockage carbone additionnel",
+                "Vérification cohérence système (chargement)"
+            ],
+            response="L'augmentation de la surface en herbe est le levier le plus efficace. Elle permet de stocker du carbone (environ +0.5 tC/ha/an) et de réduire les achats de correcteurs azotés.",
+            citations=[
+                {"id": "INOSYS-42", "title": "Stockage Carbone sous prairie", "url": "/docs/carb"},
+                {"id": "EXP-GAEC", "title": "Retour Expérience Système Herbager", "url": "/exp/gaec"}
+            ],
+            suggested_actions=["Simuler +10% Herbe", "Voir impact Marge"]
         )
         
+    # 4. Fallback
     return ChatResponse(
-        response="Je comprends votre demande. Pourriez-vous préciser si cela concerne l'aspect technique, économique ou réglementaire ?",
+        reasoning_steps=["Analyse sémantique échouée", "Demande de précision"],
+        response="Je comprends que vous cherchez une information. Pourriez-vous préciser si cela concerne l'aspect technique (agronomie), économique ou réglementaire ?",
         suggested_actions=["Aspect Technique", "Aspect Économique"]
     )
 

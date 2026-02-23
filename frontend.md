@@ -1,75 +1,60 @@
-# Frontend - Interface Conseiller & Simulateur Systémique
+# Frontend - Interface Conseiller & UX Avancée
 
-Ce document décrit la structure de l'interface utilisateur, conçue pour être utilisée par un conseiller agricole lors de visites ou de sessions de travail.
+Ce document décrit la structure de l'interface utilisateur, conçue comme un véritable **Assistant Intelligent (AI-First)** pour le conseiller.
 
-## 1. Philosophie de l'Interface
+## 1. Philosophie UX : "Perplexity-Like"
 
-L'objectif est de fournir un outil **visuel et pédagogique**. Il ne s'agit pas d'un simple formulaire, mais d'un **tableau de bord interactif** où chaque modification d'un levier (comme la surface en herbe) montre immédiatement son impact sur la trajectoire vers le K-Type cible.
+L'interface s'inspire des moteurs de réponse modernes. Elle ne se contente pas d'afficher des formulaires, elle **dialogue** et **argumente**.
+*   **Sidebar Navigation** : Accès rapide aux contextes (Clients, Outils, Veille).
+*   **Split View** : L'écran est divisé entre le **Chat Contextuel** (à gauche ou overlay) et l'**Espace de Travail** (Simulation, Dashboard).
+*   **Réponses Sourcées** : Chaque conseil donné par l'IA est justifié par une référence technique (Fiche INOSYS, Règlementation).
 
-## 2. Structure des Vues
+## 2. Configuration Ferme (Entrées)
 
-### A. Tableau de Bord (Landing Page)
-Vue synthétique de l'activité du conseiller.
-*   **KPIs** : Nombre d'agriculteurs accompagnés, Surface totale auditée, Tonnage Carbone évité potentiel.
-*   **Liste Clients** : Tableau triable par date de visite, état (En cours, Validé), et alerte réglementaire.
-*   **Actions Phares** : Les leviers les plus recommandés (ex: "Augmentation Herbe", "Implantation Méteil").
+Le formulaire de configuration permet au conseiller de saisir les données structurelles de l'exploitation pour initialiser le profilage K-Type.
 
-### B. Simulateur "What-If" (Cœur du Système)
-L'outil principal utilisé face à l'agriculteur.
+### Champs Requis :
+*   **Structure & Main d'Œuvre**
+    *   **Filière** : Orientation technico-économique (ex: Bovins Lait, Grandes Cultures).
+    *   **SAU (ha)** : Surface Agricole Utile totale.
+    *   **UMO** : Unités Main d'Œuvre (Total travail sur la ferme).
+    *   **UGB Totaux** : Chargement animal total.
+    *   **Nb Vaches Laitières (VL)** : Taille du troupeau laitier.
 
-#### Zone 1 : Situation Initiale (Gauche)
-*   **Saisie Rapide** : SAU, UGB, Filière (Liste déroulante intelligente).
-*   **Jauge K-Type Actuel** : "Vous êtes proche du profil *Laitier Intensif Maïs*".
-*   **Indicateurs Clés** : Autonomie (%), Carbone (tCO2e), Marge (€/ha).
+*   **Assolement Détaillé (ha)**
+    *   **SFP** : Surface Fourragère Principale.
+    *   **Herbe (PP)** : Surface en Prairies Permanentes.
+    *   **Herbe (PT)** : Surface en Prairies Temporaires.
+    *   **Cultures Vente** : Surface en cultures (Céréales, etc.).
 
-#### Zone 2 : Levier d'Action (Centre)
-C'est ici que l'utilisateur agit sur la variable principale.
-*   **Slider "Surface Herbe"** : Permet de faire varier la part d'herbe de 0% à 100%.
-*   **Feedback Immédiat** : Une jauge se déplace en temps réel.
-*   **Contraintes Réglementaires** : Des marqueurs rouges sur le slider indiquent les zones à risque (ex: "Zone Vulnérable > 170kg N/ha").
+Ces données permettent de calculer automatiquement :
+*   Le chargement (UGB/SFP)
+*   La part d'herbe dans la SFP (%)
+*   La productivité du travail (UGB/UMO ou Lait/UMO)
 
-#### Zone 3 : Projection Cible (Droite)
-*   **Jauge K-Type Cible** : "Objectif : *Laitier Herbager Autonome*".
-*   **Delta** : "Gain Autonomie : +15 pts", "Gain Carbone : -10 tCO2e".
-*   **Radar Chart** : Superposition des polygones "Situation Actuelle" vs "Cible K-Type".
+Ces indicateurs sont ensuite utilisés par le backend pour identifier le **K-Type** de référence.
 
-### C. Assistant IA (Chat Contextuel)
-Une fenêtre de chat toujours accessible.
-*   **Rôle** : Répondre aux questions techniques ou réglementaires pointues.
-*   **Contexte** : L'IA "sait" quelle ferme est simulée et adapte ses réponses (ex: "Pour cette surface de 80ha, l'aide à la conversion bio serait de...").
-
-## 3. Wireframe (Schéma Conceptuel)
+## 3. Interface de Simulation
 
 ```
-+-------------------------------------------------------+
-|  [Logo AgriTransition]   Dashboard   Simulateur   IA  |
-+-------------------------------------------------------+
-|                                                       |
-|  [Situation Actuelle]      [Levier Principal]         |
-|  Filière: Lait             Surface Herbe: [====O--]   |
-|  SAU: 100ha                (60%) -> (75%)             |
-|  UGB: 80                   (! Zone Vulnérable)        |
-|  -----------------         ------------------         |
-|  Profil: Intensif          Action: +15ha Herbe        |
-|                                                       |
-+-------------------------------------------------------+
-|                                                       |
-|  [Résultats Comparatifs]                              |
-|  Autonomie:  50% -> 70%  (Objectif K-Type: 80%)       |
-|  Carbone:    800t -> 750t                             |
-|  Marge:      Stabe (Moins d'intrants, moins de lait)  |
-|                                                       |
-+-------------------------------------------------------+
-|  [Chatbot IA]                                         |
-|  "Attention, en augmentant la surface herbe,          |
-|   vérifiez le chargement instantané au printemps..."  |
-+-------------------------------------------------------+
++----------------+---------------------------------------------------+
+| [Sidebar]      |  [Barre de Recherche / Chat Prompt]               |
+|                |  "Comment améliorer l'autonomie protéique ?"      |
+|  Dashboard     |---------------------------------------------------|
+|  Clients       |  [Chat Response Area]        |  [Workspace Area]  |
+|  Simulateur    |                              |                    |
+|  Docs          |  > Analyse en cours...       |  [Graphique Radar] |
+|                |  > D'après la fiche #42:     |   Autonomie: +12%  |
+|  [User Profil] |    Le méteil est efficace.   |   Carbone: -5%     |
+|                |    [Source: Arvalis]         |                    |
+|                |                              |  [Slider Herbe]    |
+|                |  > Action:                   |  O-------------    |
+|                |  [Simuler Méteil]            |                    |
++----------------+------------------------------+--------------------+
 ```
 
-## 4. Interactions Clés
+## 4. Interactions Avancées
 
-1.  **Init** : Le conseiller charge les données (ou saisit).
-2.  **Diagnostique** : Le système affiche le K-Type actuel.
-3.  **Simule** : Le conseiller bouge le slider "Herbe".
-4.  **Alerte** : Si le chargement dépasse 1.7 UGB/ha (Directive Nitrates), une pop-up "Attention Réglementation" apparaît.
-5.  **Converge** : Le système indique "Bravo, vous vous rapprochez du K-Type *Herbager Durable*".
+1.  **Drill-Down** : Cliquer sur une source dans le chat ouvre le document dans l'espace de travail.
+2.  **Context-Aware** : Si le simulateur est ouvert sur la "Ferme des Lilas", le chat répond spécifiquement pour cette ferme (prise en compte de la SAU, du sol, etc.).
+3.  **Export Automatique** : À la fin de la session, le chat peut générer un compte-rendu PDF résumant les simulations et les conseils donnés.
