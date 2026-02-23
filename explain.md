@@ -1,63 +1,59 @@
-# Architecture Technique - Assistant Transition Agricole
+# Architecture Technique - Portail Conseiller AgriTransition
 
-Ce document détaille l'architecture technique de la solution, les choix technologiques et le flux de données.
+Ce document détaille l'architecture technique de la solution, conçue comme un outil d'aide à la décision pour les conseillers agricoles.
 
 ## 1. Vue d'ensemble (Architecture 3-Tiers)
 
-L'application repose sur une architecture moderne et découplée, facilitant la maintenance et l'évolutivité.
+L'application repose sur une architecture moderne et découplée, intégrant un tableau de bord, un simulateur et un assistant IA.
 
 ```mermaid
 graph LR
-    User[Agriculteur] -- HTTPS --> Frontend[Interface Web/Mobile]
+    User[Conseiller] -- HTTPS --> Frontend[Portail Web/Mobile]
     Frontend -- JSON/REST --> Backend[API FastAPI]
-    Backend -- Simulation --> ML[Moteur IA / K-Types]
-    Backend -- Lecture --> DB[(Base de Données / Fichiers)]
+    Backend -- Simulation --> ML[Moteur K-Types]
+    Backend -- RAG --> Chat[Assistant IA]
+    Backend -- Stats --> DB[(Base de Données)]
 ```
 
 ### Composants
-1.  **Frontend (`frontend.html`)** : Interface utilisateur légère (HTML5/Bootstrap/JS Vanilla).
-    *   *Rôle* : Collecte les données structurelles et offre une interface de simulation interactive (Sliders).
-    *   *Avantage* : Fonctionne sur tout navigateur (PC/Mobile) sans installation.
-2.  **Backend (`backend.py`)** : Serveur d'application Python (FastAPI).
-    *   *Rôle* : Valide les données, orchestre la logique systémique et calcule les impacts.
-    *   *Avantage* : Très haute performance, validation automatique des données (Pydantic).
-3.  **Moteur de Décision (Mocké actuellement)** :
-    *   *Rôle* : Contient la logique des Cas-Types (K-Types) et les règles de comportement du système global.
+1.  **Frontend (`frontend.html`)** : Interface "Portail Conseiller" (HTML5/Bootstrap).
+    *   *Tableau de Bord* : Vue d'ensemble du portefeuille clients et KPI globaux.
+    *   *Simulateur* : Outil interactif pour les rendez-vous terrain.
+    *   *Assistant IA* : Interface de chat pour interroger la base de connaissances.
+2.  **Backend (`backend.py`)** : API RESTful (FastAPI).
+    *   *Endpoints* : `/advisor/stats`, `/simulate`, `/chat`.
+    *   *Logique* : Orchestration des simulations systémiques et réponses contextuelles du chat.
+3.  **Moteur IA** :
+    *   *K-Types* : Logique de classification et projection des fermes.
+    *   *Chatbot* : Système RAG (Retrieval-Augmented Generation) pour assister le conseiller.
 
-## 2. Flux de Données (Data Flow)
+## 2. Fonctionnalités Clés
 
-### Étape 1 : Initialisation Situation
-L'agriculteur renseigne les indicateurs structurels :
-- Structure : `SAU` (Surface), `UGB` (Cheptel).
-- Filière : `FILIERE` (ex: Bovins Lait).
-- Pratique Actuelle : `Part d'Herbe`.
+### A. Tableau de Bord Conseiller (`/advisor/stats`)
+Affiche les métriques agrégées du portefeuille :
+- Nombre d'agriculteurs suivis.
+- Potentiel de réduction carbone cumulé.
+- Actions les plus recommandées.
 
-### Étape 2 : Simulation Interactive (`/simulate`)
-Le backend reçoit un objet JSON contenant l'état actuel et la variable cible :
-```json
-{
-  "region": "Bretagne",
-  "filiere": "Bovins Lait",
-  "sau": 80,
-  "ugb": 60,
-  "part_herbe": 50
-}
-```
-*Paramètre URL* : `?target_part_herbe=70`
+### B. Simulation Terrain (`/simulate`)
+Lors d'une visite, le conseiller saisit la structure de la ferme.
+*   **Approche Systémique** : Modification d'une variable (ex: Part d'Herbe) -> Impact global recalculé (Autonomie, Carbone, Marge).
+*   **Visualisation** : Comparaison "Avant/Après" immédiate pour faciliter la pédagogie.
 
-### Étape 3 : Logique Systémique
-1.  **Calcul État Initial** : Le système estime l'autonomie et le carbone actuels basés sur les ratios standards.
-2.  **Projection** : Il recalcule ces métriques avec la nouvelle variable (70% d'herbe).
-3.  **Comparaison** :
-    *   *Delta Autonomie* : +15 pts (Moins d'achats).
-    *   *Delta Carbone* : -10 tonnes (Plus de stockage).
+### C. Assistant IA (`/chat`)
+Un chatbot contextuel pour répondre aux questions du conseiller en temps réel :
+- *Réglementaire* : "Quelles aides pour la haie ?"
+- *Technique* : "Impact de l'augmentation du maïs sur le bilan humique ?"
+- *Contexte* : L'IA a accès aux données de la simulation en cours pour personnaliser ses réponses.
 
-### Étape 4 : Restitution
-Le frontend reçoit et affiche :
-- Les deux états (Actuel vs Simulé) côte à côte.
-- Des messages d'analyse explicatifs ("Augmenter l'herbe améliore l'autonomie...").
+## 3. Flux de Données (Exemple : Visite)
 
-## 3. Guide de Démarrage
+1.  **Dashboard** : Le conseiller prépare sa visite en consultant l'historique.
+2.  **Saisie** : Sur place, il rentre les données structurelles (SAU, UGB, Filière).
+3.  **Simulation** : Il utilise le slider pour montrer à l'agriculteur l'impact d'une augmentation de l'herbe (+20%).
+4.  **Chat** : L'agriculteur pose une question sur les subventions. Le conseiller interroge le chat intégré qui fournit les dispositifs PCAE applicables.
+
+## 4. Guide de Démarrage
 
 ### Pré-requis
 - Python 3.9+
@@ -74,13 +70,14 @@ Le frontend reçoit et affiche :
     ```bash
     python backend.py
     ```
-    *Le serveur démarrera sur http://localhost:8000*
+    *Le serveur écoute sur http://localhost:8000*
 
-3.  **Ouvrir le Frontend** :
-    *   Ouvrir simplement le fichier `frontend.html` dans votre navigateur.
-    *   Remplir le formulaire et utiliser le slider pour simuler.
+3.  **Accéder au Portail** :
+    *   Ouvrir `frontend.html` dans le navigateur.
+    *   Naviguer entre les onglets Dashboard, Simulation et Chat.
 
-## 4. Évolutions Techniques Futures
+## 5. Évolutions Futures
 
-*   **Modèle ML** : Remplacer la logique heuristique par un modèle XGBoost entraîné sur les données INOSYS pour prédire les impacts avec précision.
-*   **Multi-Variables** : Permettre de modifier plusieurs variables en même temps (ex: Herbe + Cheptel).
+*   **Authentification** : Gestion multi-comptes conseillers.
+*   **Base de Données Réelle** : Connexion à PostgreSQL pour persister les suivis.
+*   **IA Générative** : Connexion à un vrai LLM (OpenAI/Mistral) avec indexation vectorielle des fiches techniques INOSYS.

@@ -1,14 +1,15 @@
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from typing import List, Optional
+from typing import List, Optional, Dict
 from fastapi.middleware.cors import CORSMiddleware
 import random
+from datetime import datetime
 
 app = FastAPI(
     title="AgriTransition API",
-    description="API pour l'accompagnement à la transition écologique agricole",
-    version="1.1.0"
+    description="API pour l'accompagnement à la transition écologique agricole (Outil Conseiller)",
+    version="1.2.0"
 )
 
 # Enable CORS
@@ -55,6 +56,20 @@ class PredictionResult(BaseModel):
     delta_carbon: float = Field(..., description="Différence Carbone (Simulé - Actuel)")
     delta_autonomy: float = Field(..., description="Différence Autonomie (Simulé - Actuel)")
     recommendations: List[str]
+
+class AdvisorStats(BaseModel):
+    total_farmers: int
+    visits_this_month: int
+    avg_carbon_reduction_potential: float
+    top_actions: List[str]
+
+class ChatMessage(BaseModel):
+    message: str
+    context: Optional[Dict] = None
+
+class ChatResponse(BaseModel):
+    response: str
+    suggested_actions: Optional[List[str]] = None
 
 # --- System Logic ---
 
@@ -162,9 +177,45 @@ async def simulate_transition(input: FarmInput, target_part_herbe: Optional[floa
         recommendations=recs
     )
 
+@app.get("/advisor/stats", response_model=AdvisorStats)
+async def get_advisor_stats():
+    """Retourne les statistiques globales pour le tableau de bord du conseiller."""
+    return AdvisorStats(
+        total_farmers=42,
+        visits_this_month=8,
+        avg_carbon_reduction_potential=12.5,
+        top_actions=["Implantation Méteil", "Réduction Engrais Minéral", "Allongement Rotations"]
+    )
+
+@app.post("/chat", response_model=ChatResponse)
+async def chat_with_advisor_agent(chat_input: ChatMessage):
+    """Chatbot intelligent pour assister le conseiller."""
+    msg = chat_input.message.lower()
+    
+    # Simple rule-based logic to mimic LLM behavior
+    if "bonjour" in msg:
+        return ChatResponse(response="Bonjour ! Je suis votre assistant agricole. Comment puis-je vous aider aujourd'hui ?")
+    
+    if "aide" in msg or "subvention" in msg:
+        return ChatResponse(
+            response="Pour les aides à la transition, vous pouvez consulter les dispositifs PCAE (Plan de Compétitivité et d'Adaptation des Exploitations) de votre région. Pour la plantation de haies, regardez le 'Pacte en faveur de la haie'.",
+            suggested_actions=["Voir dossier PCAE", "Simuler impact financier"]
+        )
+    
+    if "carbone" in msg:
+        return ChatResponse(
+            response="Le levier carbone le plus efficace pour cette exploitation semble être l'augmentation de la surface en herbe (stockage C) et la réduction de la fertilisation minérale.",
+            suggested_actions=["Simuler +20% Herbe", "Voir fiche Technique 'Stockage Carbone'"]
+        )
+        
+    return ChatResponse(
+        response="Je comprends votre demande. Pourriez-vous préciser si cela concerne l'aspect technique, économique ou réglementaire ?",
+        suggested_actions=["Aspect Technique", "Aspect Économique"]
+    )
+
 @app.get("/")
 async def root():
-    return {"message": "API AgriTransition v1.1 (Simulation Systémique)"}
+    return {"message": "API AgriTransition v1.2 (Outil Conseiller)"}
 
 if __name__ == "__main__":
     import uvicorn
