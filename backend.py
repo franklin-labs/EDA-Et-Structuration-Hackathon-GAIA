@@ -8,7 +8,7 @@ import random
 app = FastAPI(
     title="AgriTransition API",
     description="API pour l'accompagnement à la transition écologique agricole",
-    version="1.0.0"
+    version="1.1.0"
 )
 
 # Enable CORS
@@ -25,14 +25,14 @@ app.add_middleware(
 class FarmInput(BaseModel):
     # Structural Data
     region: str = Field(..., description="Région de l'exploitation")
-    otex: str = Field(..., description="Orientation Technico-Économique (ex: Bovins Lait)")
+    filiere: str = Field(..., description="Filière de production (ex: Bovins Lait)")
     sau: float = Field(..., gt=0, description="Surface Agricole Utile (ha)")
     ugb: float = Field(..., ge=0, description="Unités Gros Bétail (Total)")
     
-    # Key Indicators (Optional for initial profiling, but needed for precise transition)
+    # Key Indicators for Simulation
     chargement: Optional[float] = Field(None, description="Chargement (UGB/ha SFP)")
     part_maïs: Optional[float] = Field(0, description="Part de maïs dans la SFP (%)")
-    autonomie_fourragère: Optional[float] = Field(None, description="Autonomie fourragère (%)")
+    part_herbe: float = Field(..., ge=0, le=100, description="Pourcentage d'herbe dans la SFP")
     
     # Environmental Inputs
     conso_fioul: Optional[float] = Field(None, description="Consommation fioul (L/an)")
@@ -41,117 +41,130 @@ class FarmInput(BaseModel):
     # Economic Inputs
     ebe: Optional[float] = Field(None, description="Excédent Brut d'Exploitation (€)")
 
-class Recommendation(BaseModel):
-    category: str  # "Environment", "Economic", "Social"
-    title: str
-    description: str
-    impact_score: int = Field(..., ge=1, le=5, description="Impact potentiel (1-5)")
-    cost_score: int = Field(..., ge=1, le=5, description="Coût de mise en œuvre (1-5)")
+class SimulationResult(BaseModel):
+    scenario_name: str
+    autonomie_fourragere_estimee: float = Field(..., description="Autonomie fourragère calculée (%)")
+    carbon_footprint: float = Field(..., description="Empreinte carbone estimée (tCO2e/an)")
+    feed_cost_index: float = Field(..., description="Indice coût alimentaire (Base 100)")
+    biodiversity_score: float = Field(..., description="Score biodiversité (0-10)")
 
 class PredictionResult(BaseModel):
     current_ktype: str
-    target_ktype: str
-    transition_score: float = Field(..., ge=0, le=100, description="Score de viabilité de la transition")
-    carbon_footprint_current: float = Field(..., description="Empreinte carbone actuelle estimée (tCO2e/an)")
-    carbon_footprint_target: float = Field(..., description="Empreinte carbone cible estimée (tCO2e/an)")
-    recommendations: List[Recommendation]
+    current_state: SimulationResult
+    simulated_state: Optional[SimulationResult] = None
+    delta_carbon: float = Field(..., description="Différence Carbone (Simulé - Actuel)")
+    delta_autonomy: float = Field(..., description="Différence Autonomie (Simulé - Actuel)")
+    recommendations: List[str]
 
-# --- Mock Logic (Placeholder for ML Model) ---
+# --- System Logic ---
+
+def calculate_autonomy(input: FarmInput, part_herbe: float) -> float:
+    """
+    Calcule l'autonomie fourragère estimée basée sur le % d'herbe et le chargement.
+    Plus d'herbe et moins de chargement = Meilleure autonomie.
+    """
+    base_autonomy = 50.0
+    # Bonus pour l'herbe : +0.4 point d'autonomie par % d'herbe
+    base_autonomy += part_herbe * 0.4
+    
+    # Malus pour le chargement élevé : -10 pts si chargement > 1.4
+    chargement = input.chargement if input.chargement else (input.ugb / input.sau)
+    if chargement > 1.4:
+        base_autonomy -= (chargement - 1.4) * 20
+        
+    return max(0, min(100, base_autonomy))
+
+def calculate_carbon(input: FarmInput, part_herbe: float) -> float:
+    """
+    Estime l'empreinte carbone globale.
+    L'herbe stocke du carbone (-), le maïs consomme des intrants (+).
+    """
+    base_emission_factor = 8.0 # tCO2e/ha moyen
+    
+    # Impact de l'herbe : réduit l'empreinte nette (stockage C)
+    # Hypothèse : 1ha d'herbe émet 30% moins qu'1ha de culture annuelle + stockage
+    modifier = 1.0 - (part_herbe / 100.0 * 0.3)
+    
+    return input.sau * base_emission_factor * modifier
+
+def calculate_biodiversity(part_herbe: float) -> float:
+    # Simple linear relation for mock
+    return 2.0 + (part_herbe / 100.0 * 8.0)
+
+def simulate_system(input: FarmInput, override_part_herbe: float = None) -> SimulationResult:
+    part_herbe = override_part_herbe if override_part_herbe is not None else input.part_herbe
+    
+    autonomy = calculate_autonomy(input, part_herbe)
+    carbon = calculate_carbon(input, part_herbe)
+    biodiversity = calculate_biodiversity(part_herbe)
+    
+    # Cost index: High autonomy reduces cost
+    cost_index = 100 - (autonomy - 50) # If autonomy 70, cost is 80 (lower)
+    
+    return SimulationResult(
+        scenario_name="Simulé" if override_part_herbe is not None else "Actuel",
+        autonomie_fourragere_estimee=round(autonomy, 1),
+        carbon_footprint=round(carbon, 1),
+        feed_cost_index=round(cost_index, 1),
+        biodiversity_score=round(biodiversity, 1)
+    )
 
 def determine_ktype(input: FarmInput) -> str:
     """Heuristic to determine current K-Type based on input."""
-    if "Lait" in input.otex:
-        if input.chargement and input.chargement < 1.4:
-            return "Laitier Herbager Extensif"
+    if "Lait" in input.filiere:
+        if input.part_herbe > 70:
+            return "Laitier Herbager"
         elif input.part_maïs > 30:
-            return "Laitier Intensif Plaine (Maïs)"
+            return "Laitier Intensif Plaine"
         else:
             return "Laitier Polyculture"
-    elif "Céréales" in input.otex or "Grandes Cultures" in input.otex:
+    elif "Céréales" in input.filiere or "Grandes Cultures" in input.filiere:
         return "Céréalier Intensif"
     else:
         return "Polyculture-Élevage Standard"
 
-def generate_recommendations(input: FarmInput, current_ktype: str) -> List[Recommendation]:
-    recs = []
-    
-    # Logic based on "Gap Analysis"
-    if input.autonomie_fourragère and input.autonomie_fourragère < 70:
-        recs.append(Recommendation(
-            category="Environment",
-            title="Améliorer l'autonomie protéique",
-            description="Introduire des légumineuses (luzerne, trèfle) dans la rotation pour réduire les achats de tourteaux de soja importé.",
-            impact_score=5,
-            cost_score=3
-        ))
-    
-    if input.part_maïs > 30:
-        recs.append(Recommendation(
-            category="Environment",
-            title="Réduire la part de maïs ensilage",
-            description="Substituer une partie du maïs par de l'herbe pâturée ou fauchée pour réduire les intrants (azote, phyto) et améliorer le bilan carbone.",
-            impact_score=4,
-            cost_score=2
-        ))
-        
-    if input.chargement and input.chargement > 1.8:
-        recs.append(Recommendation(
-            category="Economic",
-            title="Optimiser le chargement",
-            description="Votre chargement est élevé. Une légère réduction du cheptel pourrait paradoxalement améliorer la marge par UGB en réduisant les coûts alimentaires.",
-            impact_score=4,
-            cost_score=1
-        ))
-
-    # Generic recommendations if few inputs
-    if not recs:
-        recs.append(Recommendation(
-            category="Social",
-            title="Diagnostic Carbone Simplifié",
-            description="Réaliser un diagnostic CAP'2ER niveau 1 pour situer précisément vos émissions.",
-            impact_score=3,
-            cost_score=1
-        ))
-        
-    return recs
-
 # --- Endpoints ---
 
-@app.post("/predict", response_model=PredictionResult)
-async def predict_transition(input: FarmInput):
+@app.post("/simulate", response_model=PredictionResult)
+async def simulate_transition(input: FarmInput, target_part_herbe: Optional[float] = None):
     """
-    Endpoint principal : Analyse la ferme et propose un scénario de transition.
+    Simule l'impact d'un changement de variable (ex: % Herbe) sur le système global.
     """
+    current_state = simulate_system(input)
     current_ktype = determine_ktype(input)
     
-    # Define a target K-Type (simplified logic)
-    target_ktype = current_ktype + " (Optimisé)"
-    if "Intensif" in current_ktype:
-        target_ktype = current_ktype.replace("Intensif", "Durable")
-    
-    # Calculate dummy carbon footprint (heuristics)
-    # Average ~10 tCO2e/ha for intensive, ~6 for extensive
-    base_emission_factor = 8.0
-    if "Herbager" in current_ktype: base_emission_factor = 5.5
-    if "Céréalier" in current_ktype: base_emission_factor = 3.0
-    
-    current_carbon = input.sau * base_emission_factor
-    target_carbon = current_carbon * 0.85 # Assume 15% reduction target
-    
-    recs = generate_recommendations(input, current_ktype)
-    
+    simulated_state = None
+    delta_carbon = 0.0
+    delta_autonomy = 0.0
+    recs = []
+
+    if target_part_herbe is not None:
+        simulated_state = simulate_system(input, target_part_herbe)
+        delta_carbon = simulated_state.carbon_footprint - current_state.carbon_footprint
+        delta_autonomy = simulated_state.autonomie_fourragere_estimee - current_state.autonomie_fourragere_estimee
+        
+        # Generate dynamic advice based on delta
+        if delta_autonomy > 0:
+            recs.append(f"Augmenter l'herbe de {input.part_herbe}% à {target_part_herbe}% améliore votre autonomie de {delta_autonomy:.1f} pts.")
+        if delta_carbon < 0:
+            recs.append(f"Cela permettrait de réduire vos émissions de {abs(delta_carbon):.1f} tCO2e/an (Stockage Carbone accru).")
+        
+        # Systemic warning
+        if target_part_herbe > input.part_herbe + 20:
+             recs.append("Attention : Une augmentation importante de la surface en herbe peut nécessiter une réduction du cheptel pour maintenir les performances individuelles.")
+
     return PredictionResult(
         current_ktype=current_ktype,
-        target_ktype=target_ktype,
-        transition_score=random.randint(60, 90), # Mock score
-        carbon_footprint_current=round(current_carbon, 1),
-        carbon_footprint_target=round(target_carbon, 1),
+        current_state=current_state,
+        simulated_state=simulated_state,
+        delta_carbon=round(delta_carbon, 1),
+        delta_autonomy=round(delta_autonomy, 1),
         recommendations=recs
     )
 
 @app.get("/")
 async def root():
-    return {"message": "Bienvenue sur l'API AgriTransition. Utilisez /docs pour la documentation."}
+    return {"message": "API AgriTransition v1.1 (Simulation Systémique)"}
 
 if __name__ == "__main__":
     import uvicorn

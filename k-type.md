@@ -1,19 +1,19 @@
-# K-Type (Cas-Types) : Méthodologie de Profilage et Benchmarking
+# K-Type (Cas-Types) : Méthodologie de Profilage et Simulation Systémique
 
 ## Introduction aux Cas-Types (K-Types)
 
 Dans le contexte des réseaux d'élevage INOSYS, un **Cas-Type (K-Type)** représente un système d'exploitation modélisé, cohérent et optimisé, caractéristique d'une région ou d'un mode de production. Il ne s'agit pas d'une moyenne statistique simple, mais d'une **construction d'experts** validée par le terrain, servant de référence technico-économique.
 
-Pour l'assistant de transition écologique, les K-Types sont utilisés comme **cibles** ou **points de comparaison** pour guider l'agriculteur.
+Pour l'assistant de transition écologique, les K-Types sont utilisés pour **simuler le comportement global du système** lorsqu'on modifie une variable clé.
 
 ## 1. Identification et Construction des K-Types
 
 Les K-Types sont définis par clustering (regroupement) des exploitations réelles de la base de données (`base_inosys.xlsx`) selon des critères structurels et fonctionnels majeurs.
 
 ### Variables discriminantes (Clustering Features)
-Pour identifier à quel K-Type appartient une ferme (ou vers lequel elle peut évoluer), nous utilisons les variables suivantes identifiées dans l'analyse :
+Pour identifier à quel K-Type appartient une ferme, nous utilisons les variables suivantes :
 
-*   **OTEX (Orientation Technico-Économique)** :
+*   **FILIÈRE** :
     *   *Bovins Lait* (Spécialisé Plaine, Montagne, Herbager, Maïs...)
     *   *Grandes Cultures* (Céréales, Oléo-protéagineux...)
     *   *Polyculture-Élevage*
@@ -22,48 +22,46 @@ Pour identifier à quel K-Type appartient une ferme (ou vers lequel elle peut é
     *   `FONC1.UGB` (Cheptel total)
 *   **Intensité / Système Fourrager** :
     *   `FONC1.CHARGEMENT` (UGB/ha SFP)
-    *   `SYSFOU.PAUTOFC` (Autonomie fourragère)
-    *   `STRUC.MAIS_ENS` (% Maïs dans la SFP)
+    *   `STRUC.PART_HERBE` (Pourcentage d'herbe dans la SFP)
 
 ### Exemple de K-Types (Profils Types)
 
 | Nom du K-Type | Description | Indicateurs Clés (Moyenne) | Objectif Transition |
 | :--- | :--- | :--- | :--- |
-| **LAIT_HERB_AUTO** | Laitier Herbager Autonome | Chargement < 1.2 UGB/ha, >80% Herbe, Faible Conso Concentrés | Maintien biodiversité, HVE |
-| **LAIT_INTENSIF_PLAINE** | Laitier Intensif Plaine | Chargement > 1.8 UGB/ha, >30% Maïs, Haut Rendement Laitier | Réduction Intrants (Azote/Soja), Méthanisation |
-| **CULT_BIO_DIV** | Grandes Cultures Bio Diversifiées | Rotation longue (>6 ans), Légumineuses, Pas d'engrais minéral | Optimisation Marge/ha, Carbone Sol |
-| **VIANDE_NAISSEUR** | Naisseur Extensif | Chargement < 1.0 UGB/ha, 100% Herbe | Valorisation paysagère, Circuit court |
+| **LAIT_HERB_AUTO** | Laitier Herbager Autonome | Chargement < 1.2 UGB/ha, >80% Herbe | Maintien biodiversité, HVE |
+| **LAIT_INTENSIF_PLAINE** | Laitier Intensif Plaine | Chargement > 1.8 UGB/ha, >30% Maïs | Réduction Intrants, Méthanisation |
+| **CULT_BIO_DIV** | Grandes Cultures Bio Diversifiées | Rotation longue, Légumineuses | Optimisation Marge/ha, Carbone Sol |
+| **VIANDE_NAISSEUR** | Naisseur Extensif | Chargement < 1.0 UGB/ha, 100% Herbe | Valorisation paysagère |
 
-## 2. Utilisation dans l'Assistant (Le "Gap Analysis")
+## 2. Simulation Systémique (Approche "What-If")
 
-L'approche K-Type permet de réaliser un **Gap Analysis** (Analyse d'écart) pour l'utilisateur.
+Au lieu de simplement comparer des moyennes, l'approche K-Type permet de **simuler l'impact systémique** d'un changement.
 
-### Étape 1 : Classification
-L'algorithme classe la ferme actuelle de l'utilisateur dans son K-Type de référence "Actuel" (ex: *Laitier Intensif Plaine*).
+### Le Principe : "Changer une variable, observer le système"
+L'utilisateur définit sa situation actuelle, puis modifie une variable levier (ex: *Augmenter la part d'herbe de 50% à 70%*).
 
-### Étape 2 : Projection
-L'utilisateur choisit un objectif (ex: "Réduire mon empreinte carbone de 20%"). L'assistant identifie un **K-Type Cible** (ex: *Laitier Herbager Autonome* ou *Laitier Intensif Optimisé*).
+L'agent utilise les règles du K-Type pour prédire les effets en cascade :
 
-### Étape 3 : Recommandation (Le "Chemin de Transition")
-Le système calcule les écarts (Gaps) entre la situation actuelle et le K-Type Cible pour générer des actions concrètes.
+1.  **Variable modifiée** : Part d'Herbe (+20%)
+2.  **Impact Direct** :
+    *   Baisse des surfaces en maïs (-20%)
+    *   Baisse des achats d'engrais azotés (Moins de cultures exigeantes)
+3.  **Impact Systémique (Calculé)** :
+    *   **Autonomie Fourragère** : Augmente (car l'herbe est produite sur place et nécessite moins de correcteur azoté que le maïs).
+    *   **Carbone** : Diminue (Stockage carbone sous prairie + Moins d'émissions liées aux engrais).
+    *   **Économie** : Baisse du coût alimentaire (Index Coût).
 
-**Exemple de Gap Analysis :**
+### Exemple de Simulation
 
-*   **Variable** : `SYSFOU.PAUTOFC` (Autonomie Fourragère)
-    *   *Actuel* : 65%
-    *   *K-Type Cible* : 85%
-    *   *Gap* : +20 pts
-    *   *Action Recommandée* : "Augmenter la surface en légumineuses de 10ha pour réduire les achats de correcteur azoté."
-
-*   **Variable** : `ECOCSTB.GAZ` (Consommation Gaz)
-    *   *Actuel* : 1500 €/an
-    *   *K-Type Cible* : 800 €/an
-    *   *Gap* : -700 €
-    *   *Action Recommandée* : "Installer un pré-refroidisseur de lait et récupérer la chaleur du tank."
+*   **Scénario** : Passage d'un système "Maïs Dominant" à "Herbager".
+*   **Action** : Slider "Part d'Herbe" déplacé de 30% à 60%.
+*   **Réponse de l'Agent** :
+    > "En augmentant votre surface en herbe à 60%, votre **autonomie fourragère** passerait de 55% à **72%**.
+    > Cela réduirait vos émissions de **15 tonnes CO2e/an** grâce au stockage carbone additionnel.
+    > *Attention* : Avec un chargement inchangé, vous devrez peut-être acheter du foin en hiver ou réduire légèrement le cheptel."
 
 ## 3. Implémentation Technique
 
-Le module `KTypeMatcher` utilise un algorithme de **K-Nearest Neighbors (KNN)** pondéré :
-1.  Il trouve les $k$ fermes les plus proches (voisins) dans la base de données qui ont réussi leur transition (Label "Performance Écologique" élevé).
-2.  Il construit un K-Type virtuel (moyenne pondérée de ces voisins performants).
-3.  Il restitue ce profil comme objectif atteignable.
+Le module de simulation ne se contente pas d'une règle de trois. Il utilise des courbes de réponse non-linéaires basées sur les données INOSYS :
+*   $Autonomie = f(Part\_Herbe, Chargement)$
+*   $Carbone = f(Intrants, Stockage\_Sol)$
