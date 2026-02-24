@@ -1,0 +1,277 @@
+ktype,filiere,region,sau,umo,ugb,nb_vl,surface_sfp,surface_herbe_pp,surface_herbe_pt,surface_culture
+Herbe et betterave fourragère,Bovins lait,0,90.0,0.0,83.7,60.0,66.5,27.5,37.0,23.5
+100% herbe,Bovins lait,0,55.0,0.0,64.4,42.0,55.0,51.5,3.5,0.0
+5-15% maïs/SFP,Bovins lait,0,55.0,0.0,79.2,52.0,55.0,46.0,4.0,0.0
+100% herbe/SFP,Bovins lait,0,113.0,0.0,158.8,96.0,106.0,70.0,36.0,7.0
+Zero concentré,Bovins lait,0,80.0,0.0,80.1,58.0,80.0,68.5,11.5,0.0
+Concentrés auto-produits,Bovins lait,0,98.0,0.0,101.2,72.0,90.0,45.0,45.0,8.0
+Concentrés auto-produits,Bovins lait,0,113.5,0.0,122.2,91.0,96.5,34.5,53.5,17.0
+"autonomie protéïque, < 5500 l/VL ",Bovins lait,0,83.3,0.0,74.7,54.0,74.4,7.44,66.96000000000001,8.9
+6000 à 7000 l/VL,Bovins lait,0,117.1,0.0,113.2,81.0,102.0,9.22,82.98,15.1
+"autonomie protéique, > 6500 l/VL",Bovins lait,0,152.0,0.0,132.7,95.0,133.6,13.27,120.33,18.4
+100% herbe/SFP,Bovins lait,0,148.0,0.0,122.2,78.0,124.0,100.0,24.0,24.0
+100% herbe/SFP,Bovins lait,0,238.0,0.0,162.8,105.0,169.0,100.0,69.0,69.0
+Une partie des concentrés achetée,Bovins lait,0,106.0,0.0,117.8,84.0,89.0,26.0,47.0,17.0
+"90 % de la SAU en SFP, mais-herbe",Bovins lait,0,90.0,0.0,97.9,72.0,80.0,10.0,55.0,10.0
+100% pâture VL pendant 3 mois,Bovins lait,0,86.0,0.0,121.2,77.0,80.0,0.0,57.0,6.0
+ 6000 à 6500 l/VL,Bovins lait,0,70.0,0.0,85.9,65.0,64.7,8.0,48.0,5.3
+2/3 pâture VL au printemps,Bovins lait,0,97.7,0.0,104.6,75.0,75.6,5.35,48.15,22.1
+100% pâture VL pendant 3 mois,Bovins lait,0,98.0,0.0,97.6,69.0,73.85,5.64,52.11,24.15
+100% pâture VL pendant 4 mois,Bovins lait,0,78.0,0.0,80.6,59.0,68.3,5.86,52.74,9.7
+> 7000 l/VL,Bovins lait,0,144.0,0.0,135.4,98.0,122.1,9.66,90.54,21.9
+zone à bon potentiel herbager,Bovins lait,0,140.0,0.0,143.6,97.0,105.0,50.0,30.0,35.0
+35% maïs/SFP,Bovins lait,0,60.0,0.0,94.0,64.0,48.0,28.0,3.0,12.0
+35% maïs/SFP,Bovins lait,0,69.0,0.0,88.7,57.0,51.0,11.0,22.0,18.0
+" 80 % de la SAU en SFP, maïs-herbe",Bovins lait,0,100.0,0.0,108.0,82.0,79.5,6.3,45.2,20.5
+> 9000 l/VL,Bovins lait,0,86.0,0.0,103.0,72.0,60.0,2.0,29.0,26.0
+140 VL avec ROTO ,Bovins lait,0,142.0,0.0,193.7,141.0,121.0,0.0,68.0,21.0
+0% pâture VL,Bovins lait,0,92.4,0.0,110.7,79.0,66.0,3.42,30.78,26.4
+0% pâture VL,Bovins lait,0,215.5,0.0,253.0,180.0,153.94,7.92,71.28,61.56
+1/3 pâture VL au printemps ,Bovins lait,0,94.0,0.0,107.9,79.0,67.5,3.84,34.56,26.5
+1/3 pâture VL au printemps ,Bovins lait,0,184.9,0.0,205.9,149.0,129.8,7.47,67.23,55.1
+"35% maïs/SFP, grande dimension",Bovins lait,0,199.0,0.0,237.0,140.0,143.0,76.0,18.0,56.0
+25% maïs/SFP,Bovins lait,0,105.0,0.0,117.9,58.0,72.5,55.0,0.0,32.5
+30% maïs/SFP,Bovins lait,0,140.0,0.0,216.9,90.0,122.0,84.0,0.0,18.0
+"14% maïs/SFP, Bœufs normands",Bovins lait,0,119.0,0.0,145.7,75.0,104.0,66.0,23.0,15.0
+50% mais/SFP,Bovins lait,0,101.5,0.0,117.2,61.0,67.5,17.0,16.5,34.0
+"bœufs laitiers, 100% pâture VL 2 mois",Bovins lait,0,102.0,0.0,116.9,74.0,77.5,20.0,35.0,24.5
+"génisses viande, 100% pâture VL 4 mois",Bovins lait,0,67.5,0.0,71.2,47.0,48.5,0.0,40.0,19.0
+"< 10% maïs/SFP, vaches allaitantes",Bovins lait,0,236.0,0.0,210.6,76.0,188.0,176.0,0.0,48.0
+"< 10% maïs/SFP, bœufs",Bovins lait,0,120.0,0.0,112.8,50.0,100.0,90.0,0.0,20.0
+50% Maïs/SFP,Bovins lait,0,250.0,0.0,200.8,138.0,103.0,45.0,4.5,147.0
+"Robot de traite, 50% Maïs/SFP",Bovins lait,0,100.0,0.0,83.7,60.0,42.5,16.0,6.0,57.5
+50% Maïs/SFP,Bovins lait,0,140.0,0.0,95.4,62.0,54.5,23.0,4.0,85.5
+50% Maïs/SFP,Bovins lait,0,80.0,0.0,51.2,36.0,26.5,10.0,4.5,53.5
+50% Maïs/SFP,Bovins lait,0,140.0,0.0,95.4,62.0,46.0,22.0,2.5,94.0
+"35% maïs/SFP, 97 VL",Bovins lait,0,190.0,0.0,140.5,96.0,82.0,38.0,14.5,108.0
+"Roto, 45% Maïs/SFP, 140 VL",Bovins lait,0,270.0,0.0,188.3,139.0,99.0,33.0,20.0,171.0
+65 % de la SAU en  SFP - Maïs dominant,Bovins lait,0,145.0,0.0,134.2,100.0,93.6,0.0,47.6,51.4
+"60 % de la SAU en SFP, Maïs dominant",Bovins lait,0,180.0,0.0,175.3,130.0,107.5,15.0,50.5,72.5
+30 % de la SAU en SFP - maïs dominant,Bovins lait,0,250.0,0.0,114.2,85.0,84.6,0.0,52.6,165.4
+"35 % de la SAU en SFP, maïs dominant",Bovins lait,0,150.0,0.0,78.6,60.0,53.0,6.2,13.8,97.0
+1/3 pâture VL au printemps ,Bovins lait,0,166.8,0.0,136.1,95.0,83.4,4.78,43.019999999999996,83.4
+"30% maïs/SFP, grande dimension",Bovins lait,0,602.0,0.0,331.4,210.0,232.0,134.0,27.0,370.0
+Robot de traite. Plus de 20% de maïs/SFP,Bovins lait,0,140.0,0.0,91.2,65.0,63.0,28.0,16.0,77.0
+"Bon potentiel agronomique, 50% SCOP",Bovins lait,0,280.0,0.0,215.0,150.0,132.0,60.0,28.0,148.0
+"70% cultures de vente, sol superficiel ",Bovins lait,0,340.0,0.0,130.1,85.7,106.0,55.0,25.0,234.0
+35% maïs/SFP,Bovins lait,0,150.0,0.0,110.5,54.0,69.3,45.0,2.299999999999997,80.7
+"Robot de traite, 35% maïs/SFP",Bovins lait,0,182.0,0.0,127.8,70.0,82.0,48.0,7.0,100.0
+" 25% maïs/SFP, vaches allaitantes et JB",Bovins lait,0,414.0,0.0,368.6,148.0,265.5,198.0,0.0,148.5
+"35% maïs/SFP, JB",Bovins lait,0,176.0,0.0,117.5,64.0,80.0,52.0,0.0,96.0
+Engraissement de taurillons laitiers,Bovins lait,0,260.0,0.0,201.5,114.0,148.7,61.0,48.0,111.3
+"Zone de plaine, bons potentiels",Bovins lait,0,240.0,0.0,202.3,99.0,154.0,99.0,27.0,86.0
+100% herbe/SFP,Bovins lait,0,120.0,0.0,87.4,50.0,120.0,120.0,0.0,0.0
+Herbager foin ventilé,Bovins lait,0,95.0,0.0,76.1,54.0,85.8,40.0,45.8,9.2
+Herbager ensilage d'herbe,Bovins lait,0,67.0,0.0,53.4,38.0,61.0,39.0,22.0,6.0
+Herbe Maïs Montagne,Bovins lait,0,96.0,0.0,76.1,55.0,80.0,43.0,31.0,16.0
+AOP - petite structure,Bovins lait,0,66.0,0.0,65.1,41.3,66.0,66.0,0.0,0.0
+AOP - structure grandes dimensions,Bovins lait,0,145.05,0.0,144.8,94.8,145.05,145.05,0.0,0.0
+AOP Cantal et Bleu d'Auvergne,Bovins lait,0,80.0,0.0,80.6,55.3,80.0,80.0,0.0,0.0
+AOP - Structure modeste,Bovins lait,0,54.3,0.0,56.1,38.0,54.3,54.3,0.0,0.0
+AOP - Système tout foin (séchage au sol),Bovins lait,0,90.0,0.0,82.1,57.2,90.0,78.0,12.0,0.0
+Volume de lait modeste,Bovins lait,0,60.0,0.0,52.7,35.0,57.0,40.5,16.5,3.0
+10% maïs/SFP,Bovins lait,0,57.95,0.0,48.3,35.0,51.45,11.89,34.56,6.5
+Herbe et céréales intraconsommées,Bovins lait,0,80.0,0.0,64.2,43.3,65.0,20.9,44.1,15.0
+AOP Laguiole,Bovins lait,0,74.6,0.0,69.2,42.0,62.9,4.0,58.9,11.7
+Massif jurassien,Bovins lait,0,110.0,0.0,92.9,60.0,110.0,110.0,0.0,0.0
+Massif jurassien,Bovins lait,0,190.0,0.0,157.1,109.0,180.0,125.0,55.0,10.0
+"85 % de la sau en SFP, maïs dominant",Bovins lait,0,60.0,0.0,81.1,60.0,50.0,25.0,6.0,10.0
+25 % maïs/SFP (irrigation),Bovins lait,0,98.2,0.0,105.0,75.3,83.2,9.5,53.2,15.0
+15% de maïs/SFP,Bovins lait,0,125.0,0.0,96.4,70.0,106.0,53.0,37.0,19.0
+20% de maïs/SFP,Bovins lait,0,80.0,0.0,101.1,75.0,70.0,18.5,37.5,10.0
+10 à 20% de maïs dans la SFP,Bovins lait,0,120.0,0.0,118.5,80.0,106.0,60.0,31.0,14.0
+8500 litres/VL et 25-30% de Maïs/SFP,Bovins lait,0,95.0,0.0,109.8,84.0,82.0,38.0,23.5,13.0
+"7750 litres/VL, 20-30% de maïs/SFP",Bovins lait,0,50.0,0.0,61.0,45.0,42.75,23.0,9.25,7.25
+Système à double vitesse,Bovins lait,0,160.0,0.0,141.8,92.0,143.0,73.0,50.0,17.0
+AOP - Zone volcanique d'altitude,Bovins lait,0,100.4,0.0,97.5,36.5,100.4,100.4,0.0,0.0
+Vêlages de printemps,Bovins viande,0,135.0,0.0,189.8,0.0,120.0,120.0,0.0,15.0
+"Race charolaise, vêlages de printemps",Bovins viande,0,60.0,0.0,78.3,0.0,60.0,60.0,0.0,0.0
+"Broutards, femelles finies",Bovins viande,0,95.0,0.0,125.9,0.0,89.0,53.0,36.0,6.0
+"Broutards, femelles finies",Bovins viande,0,91.0,0.0,125.3,0.0,85.5,44.0,38.5,5.5
+"Charolaise, Broutards et femelles finies",Bovins viande,0,160.0,0.0,173.0,0.0,160.0,160.0,0.0,0.0
+"Charolaise, Broutards, femelles finies ",Bovins viande,0,160.0,0.0,164.8,0.0,148.0,136.0,12.0,12.0
+"Vêl. hiver, Broutards, femelles finies",Bovins viande,0,160.0,0.0,169.0,0.0,140.0,135.0,5.0,20.0
+Broutards mâles et femelles,Bovins viande,0,110.0,0.0,115.6,0.0,105.0,65.0,40.0,5.0
+Broutards mâles et génisses de boucherie,Bovins viande,0,110.0,0.0,135.7,0.0,104.0,64.0,40.0,6.0
+"Vêl hiver, Repousse - femelles finies",Bovins viande,0,100.0,0.0,104.0,0.0,87.0,65.5,21.5,13.0
+"Vêl. hiver, Broutards repoussés",Bovins viande,0,129.0,0.0,126.7,0.0,117.0,105.0,12.0,12.0
+"Vêl.hiver, Broutards et femelles finies",Bovins viande,0,105.0,0.0,111.5,0.0,94.0,71.0,23.0,11.0
+"Vêl. hiver, Broutards repoussés",Bovins viande,0,130.0,0.0,130.7,0.0,118.0,94.0,24.0,12.0
+"Vêl. hiver, Broutard d'automne dominant",Bovins viande,0,165.0,0.0,165.9,0.0,145.0,115.0,25.0,20.0
+"Vêl. fin d'hiver, taurillons maigres",Bovins viande,0,120.0,0.0,132.1,0.0,120.0,120.0,0.0,0.0
+"Vêl. Print., Taurillons et fem. maigres",Bovins viande,0,280.0,0.0,289.7,0.0,280.0,280.0,0.0,0.0
+"Vêl. Précoce, Repousse - Femelles finies",Bovins viande,0,152.0,0.0,153.1,0.0,140.0,110.0,25.0,12.0
+"Vêl automne, Broutards et fem. finies",Bovins viande,0,220.0,0.0,197.6,0.0,166.0,109.0,49.0,54.0
+"Vêl. hiver, Repousse - femelles finies",Bovins viande,0,215.0,0.0,197.9,0.0,167.0,145.0,16.0,48.0
+"Vente directe de vaches, bœufs et géniss",Bovins viande,0,90.0,0.0,80.5,0.0,80.0,55.0,25.0,10.0
+"Vêl. étalés, Broutards, vaches finies",Bovins viande,0,147.0,0.0,158.5,0.0,147.0,87.0,60.0,0.0
+"Broutards, femelles finies",Bovins viande,0,91.0,0.0,95.1,0.0,81.0,13.0,60.0,10.0
+"Vêl. hiver, Repousse - femelles finies",Bovins viande,0,170.0,0.0,153.5,0.0,118.0,60.1,51.9,52.0
+"Vêl. hiver-print, Broutards, fem. finies",Bovins viande,0,80.0,0.0,114.8,0.0,67.0,30.0,32.0,13.0
+Broutards mâles et femelles,Bovins viande,0,125.0,0.0,101.4,0.0,125.0,82.0,43.0,0.0
+"Vêl.hiver, Broutards avec fem. maigres",Bovins viande,0,94.0,0.0,92.4,0.0,86.0,70.0,16.0,8.0
+Vente de broutards et femelles finies,Bovins viande,0,40.0,0.0,92.3,0.0,32.0,0.0,26.0,8.0
+"Vêl. hiver, Broutard(e)s, vaches finies",Bovins viande,0,100.0,0.0,81.9,0.0,90.0,53.0,37.0,10.0
+"Vêl. hiver, Broutards, Rosées des Pyr.",Bovins viande,0,25.0,0.0,62.6,0.0,25.0,22.0,3.0,0.0
+"Vêl. automne, Broutards lourds",Bovins viande,0,67.0,0.0,90.4,0.0,62.0,32.6,26.4,5.0
+Spécialisé Naisseur broutards croisés ,Bovins viande,0,150.0,0.0,108.5,0.0,150.0,128.0,22.0,0.0
+"Vêl. hiver-printemps, Broutards lourds",Bovins viande,0,86.0,0.0,80.8,0.0,78.0,68.0,10.0,8.0
+"Salers croisés, Broutards alourdis",Bovins viande,0,96.0,0.0,95.5,0.0,96.0,96.0,0.0,0.0
+"Vêl.automne, Broutards repoussés",Bovins viande,0,58.0,0.0,75.6,0.0,54.5,29.5,21.5,3.5
+"Vêl. hiver-print., Broutards repoussés",Bovins viande,0,72.0,0.0,70.0,0.0,72.0,60.0,12.0,0.0
+"Vêl.aut., broutards lourds, gén. finies",Bovins viande,0,135.0,0.0,126.6,0.0,121.0,95.0,26.0,14.0
+"Vêl. aut., veaux ss la mère et broutards",Bovins viande,0,115.0,0.0,109.6,0.0,108.0,82.0,26.0,7.0
+Naisseur Strict,Bovins viande,0,40.0,0.0,55.7,0.0,40.0,0.0,40.0,0.0
+"Race charolaise, vêlages d'hiver",Bovins viande,0,130.0,0.0,63.0,0.0,25.0,25.0,0.0,105.0
+"Race charolaise, vêlages de fin d'été",Bovins viande,0,210.0,0.0,169.8,0.0,76.76,70.0,0.0,133.24
+"Vêl. hiver, Broutards, femelles finies",Bovins viande,0,230.0,0.0,120.0,0.0,100.0,94.0,6.0,130.0
+"Vêl. automne, Broutards, fem. finies",Bovins viande,0,140.0,0.0,84.0,0.0,71.5,68.0,3.5,68.5
+"Vêl. automne, Broutards, fem. finies",Bovins viande,0,140.0,0.0,91.0,0.0,89.0,68.0,21.0,51.0
+"Vêl. hiver, Broutards - femelles maigres",Bovins viande,0,125.0,0.0,96.0,0.0,82.0,45.1,36.9,43.0
+"Vêl. hiver, Broutards, fem. finies",Bovins viande,0,175.0,0.0,88.0,0.0,67.0,38.9,28.1,108.0
+"Vêl. aut, Broutards lourds, fem. finies",Bovins viande,0,150.0,0.0,122.1,0.0,95.0,47.0,48.0,55.0
+"Jeunes bovins finis, femelles finies",Bovins viande,0,80.0,0.0,118.6,0.0,64.0,24.0,32.0,16.0
+"Jeunes bovins finis, femelles finies",Bovins viande,0,84.0,0.0,115.6,0.0,70.0,12.0,44.0,14.0
+"Jeunes bovins finis, femelles finies",Bovins viande,0,81.0,0.0,119.2,0.0,68.5,25.0,35.5,12.5
+"Jeunes bovins finis, femelles finies",Bovins viande,0,81.0,0.0,111.2,0.0,66.0,25.0,33.5,15.0
+"Vêl. hiver, Jeunes bovins finis (maïs)",Bovins viande,0,130.0,0.0,127.0,0.0,93.0,86.0,0.0,37.0
+Jeunes Bovins et Génisses type Lyon,Bovins viande,0,102.0,0.0,130.4,0.0,90.0,36.0,49.0,12.0
+Jeunes Bovins et Génisses type Lyon,Bovins viande,0,180.0,0.0,224.5,0.0,155.0,75.5,72.5,25.0
+"Vêl. automne, Jeunes bovins, fem. finies",Bovins viande,0,190.0,0.0,212.0,0.0,164.0,115.0,37.0,26.0
+"Vêl. hiver, Jeunes bovins 16-18 mois",Bovins viande,0,140.0,0.0,150.3,0.0,113.0,53.5,53.5,27.0
+"Vêl. hiver, Jeunes bovins, fem. finies",Bovins viande,0,250.0,0.0,237.6,0.0,199.0,187.5,0.0,51.0
+"Vêl. aut, Très jeunes bovins-fem. finies",Bovins viande,0,125.0,0.0,137.3,0.0,106.0,35.0,71.0,19.0
+"Vêl. automne, jeunes bovins-fem. finies",Bovins viande,0,140.0,0.0,143.7,0.0,126.0,93.0,27.0,14.0
+Naisseur Engraisseur,Bovins viande,0,60.0,0.0,119.1,0.0,60.0,49.0,11.0,0.0
+"Veaux sous la mère, femelles finies",Bovins viande,0,85.0,0.0,84.0,0.0,74.0,40.5,30.5,11.0
+Race Limousine sous Labels,Bovins viande,0,67.0,0.0,68.9,0.0,62.0,37.0,25.0,5.0
+"Vêl. étalés, Veaux de lait sous la mère",Bovins viande,0,65.0,0.0,86.8,0.0,55.0,30.0,20.0,10.0
+"Vêl. étalés, Veaux lourds 7-9 mois",Bovins viande,0,56.0,0.0,79.4,0.0,48.0,20.0,28.0,8.0
+"Vêl. étalés, veaux ss la mère limousins",Bovins viande,0,105.0,0.0,96.5,0.0,99.0,75.5,23.5,6.0
+"Boeufs, femelles finies",Bovins viande,0,100.0,0.0,112.7,0.0,92.0,36.0,56.0,8.0
+Charolaise - Boeufs et femelles finies,Bovins viande,0,160.0,0.0,161.0,0.0,148.0,136.0,12.0,12.0
+"Race blonde d'Aquitaine, vêlages d'hiver",Bovins viande,0,160.0,0.0,134.3,0.0,57.13,45.0,0.0,102.87
+"Vêl. automne-hiver, jeunes bovins finis",Bovins viande,0,280.0,0.0,132.0,0.0,91.0,75.0,6.5,189.0
+"Vêl. automne, Jeunes bovins lourds ",Bovins viande,0,280.0,0.0,251.2,0.0,178.0,134.0,34.0,102.0
+"Deux périodes, Jeunes bovins-fem. finies",Bovins viande,0,125.0,0.0,144.9,0.0,78.0,50.0,28.0,47.0
+"Vêl. étalés, Veaux lourds 7-9 mois",Bovins viande,0,130.0,0.0,88.0,0.0,72.0,22.0,40.0,58.0
+"Race charolaise, 200 places",Grandes cultures,0,200.0,0.0,141.0,0.0,21.26,0.0,0.0,178.74
+"Race charolaise, 200 places",Grandes cultures,0,200.0,0.0,141.0,0.0,0.0,0.0,0.0,200.0
+Jeunes bovins finis - finition au maïs,Grandes cultures,0,88.0,0.0,109.2,0.0,21.0,0.0,0.0,67.0
+Engraisseur avec diversification canne,Autre,0,10.0,0.0,17.6,0.0,3.0,0.0,3.0,0.0
+19% du lait transformé en fromages ,Caprins,0,51.0,0.0,86.3,0.0,27.0,0.0,27.0,24.0
+"Désaisonnement, enrubannage",Caprins,0,65.0,0.0,52.4,0.0,36.0,0.0,36.0,29.0
+"MB saison, affouragement en vert",Caprins,0,61.0,0.0,71.8,0.0,40.0,0.0,40.0,21.0
+"MB de saison, 33% LL, ensilage de maïs",Caprins,0,86.0,0.0,123.2,0.0,61.0,0.0,37.0,25.0
+"MB saison, pâturage et foin",Caprins,0,48.0,0.0,45.2,0.0,35.0,5.0,30.0,13.0
+"MB saison, pâturage et affouragement",Caprins,0,48.0,0.0,45.2,0.0,37.0,5.0,32.0,11.0
+"MB saison, maxi pâturage",Caprins,0,48.0,0.0,45.2,0.0,37.0,5.0,32.0,11.0
+Un systéme simple mais technique ,Caprins,0,79.0,0.0,60.0,0.0,67.0,43.0,24.0,12.0
+"Mises bas en saison, enrubannage et foin",Caprins,0,73.0,0.0,59.2,0.0,65.0,48.0,17.0,8.0
+Mises bas désaisonnées,Caprins,0,12.0,0.0,25.1,0.0,12.0,12.0,0.0,0.0
+"MB désaisonnées, enrubannage",Caprins,0,45.0,0.0,62.6,0.0,39.0,10.0,29.0,6.0
+"MB saison, 25% LL, ensilage de maïs",Bovins viande,0,139.0,0.0,200.3,0.0,124.0,30.0,76.0,15.0
+"Désaisonnement, LL, ensilage de maïs ",Bovins viande,0,55.0,0.0,73.6,0.0,48.17,8.0,33.17,6.83
+"2 périodes de mises bas, foin de luzerne",Caprins,0,130.0,0.0,52.4,0.0,33.0,0.0,33.0,97.0
+"Désaisonnement, 30% LL, foin de luzerne",Caprins,0,200.0,0.0,82.2,0.0,51.0,16.0,35.0,149.0
+"MB saison, pâturage, enrubannage et foin",Bovins viande,0,190.0,0.0,120.3,0.0,97.0,33.0,64.0,93.0
+"MB saison, affouragement en vert",Caprins,0,30.0,0.0,22.9,0.0,15.0,0.0,15.0,15.0
+"MB saison, pâturage",Caprins,0,30.0,0.0,16.5,0.0,12.0,4.0,8.0,18.0
+"Deux périodes de MB, foin de luzerne",Caprins,0,45.0,0.0,43.5,0.0,29.0,0.0,29.0,16.0
+"MB saison, monotraite, pâturage, méteil",Caprins,0,23.0,0.0,14.2,0.0,17.0,5.0,12.0,6.0
+65% du lait transformé en fromages ,Caprins,0,63.0,0.0,45.9,0.0,28.5,14.0,14.5,34.5
+"MB saison, pâturage",Caprins,0,7.0,0.0,10.2,0.0,7.0,7.0,0.0,0.0
+Une gamme lactique en circuits courts,Caprins,0,25.0,0.0,20.7,0.0,21.0,13.0,8.0,4.0
+Une gamme bien valorisée,Caprins,0,12.0,0.0,10.4,0.0,12.0,12.0,0.0,0.0
+Réussir sa commercialisation,Caprins,0,60.0,0.0,42.0,0.0,48.0,20.0,28.0,12.0
+Pastoral assurant par le distribué,Caprins,0,5.0,0.0,9.9,0.0,5.0,5.0,0.0,0.0
+Pastoral misant sur les parcours,Caprins,0,5.0,0.0,19.5,0.0,5.0,0.0,5.0,0.0
+Tendre vers l'autonomie fourragère,Caprins,0,22.0,0.0,10.9,0.0,22.0,12.0,8.0,0.0
+Rentabiliser les charges alimentaires,Caprins,0,0.0,0.0,8.2,0.0,0.0,0.0,0.0,0.0
+Pastoral misant sur le distribué,Caprins,0,4.5,0.0,14.4,0.0,4.5,4.5,0.0,0.0
+Mises bas saison,Caprins,0,15.0,0.0,11.0,0.0,15.0,15.0,0.0,0.0
+"Début de traite au 15/12, foin ventilé",Ovins lait,0,70.0,0.0,67.2,0.0,58.0,18.0,40.0,12.0
+"Début de traite au 20/11, ensilage",Ovins lait,0,55.0,0.0,63.0,0.0,41.0,8.0,28.0,14.0
+"Début de traite au 20/02, foin",Ovins lait,0,103.0,0.0,78.4,0.0,79.0,12.0,61.0,24.0
+"Début de traite au 15/01, enrubannage",Bovins viande,0,100.0,0.0,105.3,0.0,76.0,26.0,50.0,24.0
+"Début de traite au 15/02, ensilage herbe",Ovins lait,0,174.0,0.0,118.3,0.0,136.0,11.0,125.0,38.0
+"Début de traite au 01/09, ensilage herbe",Ovins lait,0,63.0,0.0,75.7,0.0,55.0,20.0,32.0,8.0
+"Début de traite au 05/03, ensilage herbe",Ovins lait,0,89.0,0.0,87.0,0.0,75.0,20.0,55.0,14.0
+"Début de traite au 01/12, enrubannage",Ovins lait,0,100.0,0.0,84.1,0.0,70.0,20.0,50.0,30.0
+"Petite structure mixte OL – BV, montagne",Bovins viande,0,25.0,0.0,53.4,0.0,25.0,25.0,0.0,0.0
+"Structure moyenne mixte, piémont",Bovins viande,0,40.0,0.0,79.3,0.0,37.5,22.0,14.0,2.5
+"Structure moyenne mixte, coteaux",Bovins viande,0,45.0,0.0,81.3,0.0,41.0,13.5,26.0,4.0
+"Structure moyenne spécialisée, montagne",Bovins viande,0,40.0,0.0,70.3,0.0,38.0,29.0,7.5,2.0
+Deux périodes d'agn. Agneaux Bergerie,Ovins viande,0,65.0,0.0,77.0,0.0,52.0,0.0,45.5,13.0
+Deux périodes d'agn. Agneaux Bergerie,Ovins viande,0,60.0,0.0,84.8,0.0,47.0,0.0,47.0,13.0
+3 mises bas en 2 ans,Ovins viande,0,48.0,0.0,56.4,0.0,40.0,10.0,30.0,8.0
+300 brebis - Agneaux fini en bergerie,Ovins viande,0,40.0,0.0,42.4,0.0,40.0,40.0,0.0,0.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,80.0,0.0,77.1,0.0,68.0,15.0,53.0,12.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,80.0,0.0,84.8,0.0,69.0,10.0,59.0,11.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,130.0,0.0,108.8,0.0,130.0,30.0,100.0,0.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,70.0,0.0,76.2,0.0,70.0,0.0,70.0,0.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,70.0,0.0,64.8,0.0,70.0,6.0,64.0,0.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,150.0,0.0,155.3,0.0,150.0,57.0,93.0,0.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,80.0,0.0,77.3,0.0,74.0,26.0,48.0,6.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,130.0,0.0,123.8,0.0,120.0,60.0,60.0,10.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,130.0,0.0,123.8,0.0,114.0,50.0,64.0,16.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,75.0,0.0,87.1,0.0,75.0,75.0,0.0,0.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,170.0,0.0,159.7,0.0,150.0,150.0,0.0,20.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,140.0,0.0,162.2,0.0,140.0,90.4,49.599999999999994,0.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,90.0,0.0,99.2,0.0,85.0,72.2,12.799999999999997,5.0
+3 agn.s en 2 ans Reproducteurs ,Ovins viande,0,60.0,0.0,60.3,0.0,52.0,30.0,22.0,8.0
+3 agn./2 ans non systématique Bergerie ,Ovins viande,0,65.0,0.0,69.8,0.0,60.0,45.0,15.0,5.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,70.0,0.0,73.4,0.0,65.0,52.6,12.399999999999999,5.0
+Deux périodes d'agn. Bergerie dominants,Ovins viande,0,60.0,0.0,82.2,0.0,60.0,39.0,21.0,0.0
+2 périodes de mise bas,Ovins viande,0,70.0,0.0,67.5,0.0,61.0,14.0,47.0,9.0
+3 mises bas en 2 ans,Ovins viande,0,70.0,0.0,63.9,0.0,55.0,17.0,38.0,15.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,185.0,0.0,179.5,0.0,176.5,20.0,156.5,8.5
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,150.0,0.0,182.0,0.0,130.0,15.0,115.0,20.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,100.0,0.0,115.9,0.0,100.0,100.0,0.0,0.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,120.0,0.0,123.4,0.0,100.0,70.0,30.0,20.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,200.0,0.0,197.8,0.0,190.0,90.0,100.0,10.0
+Alimentation sèche ,Ovins viande,0,100.0,0.0,55.8,0.0,15.5,11.0,4.5,84.5
+200 brebis race bouchère - Batiment,Ovins viande,0,100.0,0.0,28.4,0.0,6.5,6.5,0.0,93.5
+200 brebis - Romane - 100 Ha,Ovins viande,0,100.0,0.0,28.4,0.0,6.5,0.0,6.5,93.5
+Ile de france - 1 agnelage en automne,Ovins viande,0,100.0,0.0,55.8,0.0,17.0,11.0,6.0,83.0
+600 brebis IDF - 3 périodes d'agnelage,Ovins viande,0,180.0,0.0,83.8,0.0,24.0,24.0,0.0,156.0
+Un agn. en automne Bergerie dominants,Ovins viande,0,120.0,0.0,61.5,0.0,20.0,5.0,15.0,100.0
+Un agn. en automne Bergerie et herbe,Ovins viande,0,120.0,0.0,61.1,0.0,45.0,5.0,40.0,75.0
+Un agn. en automne Bergerie dominants,Ovins viande,0,250.0,0.0,77.5,0.0,45.0,45.0,0.0,205.0
+Un agn. En automne Bergerie dominants,Ovins viande,0,170.0,0.0,56.3,0.0,35.0,35.0,0.0,135.0
+Bergerie dominants Achat des agnelles,Ovins viande,0,250.0,0.0,83.9,0.0,56.0,50.0,6.0,194.0
+Un agn. en automne Bergerie dominants,Ovins viande,0,170.0,0.0,56.3,0.0,20.0,20.0,0.0,150.0
+Deux périodes d'agn. Bergerie et herbe,Bovins viande,0,150.0,0.0,85.6,0.0,69.0,69.0,0.0,81.0
+Trois périodes d'agn. Bergerie dominants,Ovins viande,0,150.0,0.0,126.4,0.0,81.0,75.0,6.0,69.0
+2 périodes de mise bas ,Ovins viande,0,90.0,0.0,67.5,0.0,42.0,8.0,30.0,48.0
+Un agn. Race proli. Bergerie dominants,Bovins viande,0,350.0,0.0,206.6,0.0,149.0,130.0,9.0,201.0
+200 brebis - Petits Fruits,Ovins viande,0,86.25,0.0,34.2,0.0,30.0,30.0,0.0,55.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,120.0,0.0,129.1,41.0,104.5,95.0,0.0,15.5
+Deux périodes d'agn. Bergerie dominants,Ovins viande,0,70.0,0.0,69.8,0.0,70.0,35.0,35.0,0.0
+Un agn. au printemps Herbe dominants,Bovins lait,0,60.0,0.0,40.9,0.0,60.0,60.0,0.0,0.0
+3 agn.s en 2 ans Bergerie dominants,Ovins viande,0,70.0,0.0,53.5,0.0,65.0,55.0,10.0,5.0
+3 agn./2 ans non systématique Bergerie,Ovins viande,0,110.0,0.0,100.2,0.0,100.0,80.0,20.0,10.0
+3 agn./2 ans non systématique Bergerie,Ovins viande,0,100.0,0.0,107.0,0.0,100.0,100.0,0.0,0.0
+3 agn.s en 2 ans Bergerie dominants,Ovins viande,0,50.0,0.0,65.9,0.0,50.0,50.0,0.0,0.0
+Deux périodes d'agn. Reproducteurs,Ovins viande,0,80.0,0.0,82.1,0.0,75.0,38.0,37.0,5.0
+Bergerie dominants - auto renouvellement,Ovins viande,0,68.0,0.0,70.5,0.0,62.0,46.0,14.0,6.0
+Deux périodes d'agn. Bergerie dominant,Ovins viande,0,35.0,0.0,35.9,0.0,35.0,23.0,10.0,0.0
+Deux périodes d'agn. Bergerie dominants,Ovins viande,0,80.0,0.0,81.5,0.0,80.0,66.0,14.0,0.0
+Bergerie dominants - auto renouvellement,Ovins viande,0,68.0,0.0,69.7,0.0,65.0,59.0,6.0,3.0
+3 agn./2 ans non systématique Bergerie ,Ovins viande,0,75.0,0.0,80.1,0.0,75.0,75.0,0.0,0.0
+3 mises bas en 2 ans non systématique,Ovins viande,0,100.0,0.0,99.0,0.0,80.0,0.0,80.0,20.0
+2 périodes de mise bas,Ovins viande,0,55.0,0.0,45.9,0.0,49.0,9.0,33.0,6.0
+Agnelage x2 - bergerie lourds + tardons,Ovins viande,0,25.0,0.0,37.5,0.0,25.0,25.0,0.0,0.0
+Agnelage x2 - agneaux lourds bergerie,Ovins viande,0,32.0,0.0,54.0,0.0,25.0,11.0,14.0,7.0
+Agnelage x2 - agneaux lourds bergerie,Ovins viande,0,37.0,0.0,67.5,0.0,26.0,6.0,20.0,11.0
+Agnelage x2 - agneaux lourds + tardons,Ovins viande,0,37.0,0.0,67.5,0.0,33.0,5.0,28.0,4.0
+Agnelage x2 - agneaux maigres dominants,Ovins viande,0,12.0,0.0,120.0,0.0,12.0,12.0,0.0,0.0
+Agnelage x2 - agnx maigres ou semi-finis,Ovins viande,0,10.0,0.0,75.0,0.0,10.0,10.0,0.0,0.0
+Agnelage x2 - agneaux semi-finis,Ovins viande,0,40.0,0.0,184.7,0.0,15.0,15.0,0.0,25.0
+Agnelage x1 - agneaux lourds bergerie,Ovins viande,0,52.0,0.0,69.0,0.0,41.0,6.0,35.0,11.0
+Agnelage x1 - tardons semi-finis,Ovins viande,0,0.0,0.0,60.0,0.0,0.0,0.0,0.0,0.0
+Agnelage x2 - agneaux lourds bergerie,Ovins viande,0,40.0,0.0,48.0,0.0,26.0,9.0,17.0,11.0
+Agnelage principal en hiver,Ovins viande,0,70.0,0.0,90.0,0.0,54.0,6.0,48.0,16.0
+1 période de mise bas,Ovins viande,0,10.0,0.0,27.0,0.0,10.0,10.0,0.0,0.0
+Un agn. en hiver Bergerie dominants,Bovins viande,0,160.0,0.0,152.6,0.0,154.0,99.0,55.0,6.0
+"3 agn.s en 2 ans Bergerie lourds, lég.",Bovins lait,0,140.0,0.0,123.0,56.3,121.0,79.0,30.0,19.0
