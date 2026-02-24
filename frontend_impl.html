@@ -294,6 +294,22 @@
                 <div id="simulation-results" style="display:none;">
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-body">
+                            <h5 class="text-primary mb-3">Détails des Surfaces et K-Type</h5>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <div class="small text-muted">K-Type Identifié</div>
+                                        <div class="h5 mb-0 fw-bold text-success" id="ktype-badge">--</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <div class="small text-muted">Surface Herbe (PP+PT)</div>
+                                        <div class="h5 mb-0 fw-bold" id="surf-herbe-badge">-- ha</div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <h5 class="text-primary mb-3">Levier Principal : Surface en Herbe</h5>
                             <label class="form-label d-flex justify-content-between">
                                 <span>Part d'herbe actuelle : <strong id="current-herbe-disp">50%</strong></span>
@@ -427,7 +443,10 @@
             let actionsHtml = '';
             if (data.suggested_actions) {
                 actionsHtml = `<div class="mt-2">
-                    ${data.suggested_actions.map(a => `<button class="btn btn-sm btn-outline-primary me-2 action-btn">${a.label}</button>`).join('')}
+                    ${data.suggested_actions.map(a => {
+                        const label = typeof a === 'string' ? a : a.label;
+                        return `<button class="btn btn-sm btn-outline-primary me-2 action-btn">${label}</button>`;
+                    }).join('')}
                 </div>`;
             }
 
@@ -481,15 +500,21 @@
                 
                 if (response.ok) {
                     const data = await response.json();
+                    
+                    // Update Badges
+                    document.getElementById('ktype-badge').innerText = data.current_ktype;
+                    document.getElementById('surf-herbe-badge').innerText = data.current_state.surface_herbe_totale + ' ha';
+                    
                     // Update Chat with Backend Insight
                     addStructuredMessage({
-                        response: `Simulation terminée. Votre système est identifié comme **${data.current_ktype}**.`,
+                        response: `Analyse terminée. Votre système est identifié comme **${data.current_ktype}**.`,
                         reasoning_steps: [
-                            `Identification K-Type: ${data.current_ktype}`,
-                            `Analyse Autonomie: ${data.current_state.autonomie_fourragere_estimee}%`,
-                            `Score Biodiversité: ${data.current_state.biodiversity_score}/10`
+                            `Identification K-Type par ML`,
+                            `Surface herbe totale: ${data.current_state.surface_herbe_totale} ha`,
+                            `Part herbe/SFP: ${data.current_state.part_herbe_sfp}%`,
+                            `Autonomie fourragère: ${data.current_state.autonomie_fourragere_estimee}%`
                         ],
-                        suggested_actions: [{label: "Voir détail technico-éco"}]
+                        suggested_actions: [{label: "Voir le référentiel"}]
                     });
                 }
             } catch (err) {
@@ -506,16 +531,55 @@
             updateSimDisplay(Math.round(partHerbe));
         });
 
-        function updateSimDisplay(val) {
+        async function updateSimDisplay(val) {
             document.getElementById('current-herbe-disp').innerText = val + '%';
-            // Mock logic
-            const autonomy = 40 + (val * 0.4); 
-            const carbon = 1200 - (val * 5);
             
-            document.getElementById('sim-autonomy').innerText = Math.round(autonomy) + ' %';
-            document.getElementById('sim-carbon').innerText = Math.round(carbon) + ' tCO2';
+            // Appeler le backend pour la simulation dynamique
+            const sfp = parseFloat(document.getElementById('surf_sfp').value) || 1;
+            const pp = parseFloat(document.getElementById('surf_pp').value) || 0;
+            const pt = parseFloat(document.getElementById('surf_pt').value) || 0;
             
-            document.getElementById('delta-autonomy').innerText = (val > 50 ? '+' : '') + Math.round((val-50)*0.4) + ' pts';
+            const payload = {
+                region: "Bretagne",
+                filiere: document.getElementById('filiere').value,
+                sau: parseFloat(document.getElementById('sau').value),
+                umo: parseFloat(document.getElementById('umo').value),
+                ugb: parseFloat(document.getElementById('ugb').value),
+                nb_vl: parseFloat(document.getElementById('nb_vl').value),
+                surface_sfp: sfp,
+                surface_herbe_pp: pp,
+                surface_herbe_pt: pt,
+                surface_culture: parseFloat(document.getElementById('surf_cult').value),
+                part_herbe: val, // On passe la valeur du slider
+                part_mais: 100 - val
+            };
+
+            try {
+                const response = await fetch(`http://localhost:8000/simulate?target_part_herbe=${val}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    const state = data.simulated_state || data.current_state;
+                    
+                    document.getElementById('sim-autonomy').innerText = Math.round(state.autonomie_fourragere_estimee) + ' %';
+                    document.getElementById('sim-carbon').innerText = Math.round(state.carbon_footprint) + ' tCO2';
+                    document.getElementById('surf-herbe-badge').innerText = state.surface_herbe_totale + ' ha';
+                    
+                    const deltaA = data.delta_autonomy;
+                    document.getElementById('delta-autonomy').innerText = (deltaA >= 0 ? '+' : '') + deltaA.toFixed(1) + ' pts';
+                    document.getElementById('delta-autonomy').className = `badge ${deltaA >= 0 ? 'bg-success' : 'bg-danger'}`;
+                    
+                    const deltaC = data.delta_carbon;
+                    document.getElementById('delta-carbon').innerText = (deltaC >= 0 ? '+' : '') + deltaC.toFixed(1) + ' tCO2';
+                    document.getElementById('delta-carbon').className = `badge ${deltaC <= 0 ? 'bg-success' : 'bg-danger'}`;
+                }
+            } catch (err) {
+                console.error("Erreur simulation:", err);
+            }
         }
 
         // Init

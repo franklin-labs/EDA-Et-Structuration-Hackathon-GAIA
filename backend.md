@@ -24,21 +24,25 @@ Ces données permettent de calculer :
 *   `chargement` = UGB / SFP
 *   `part_herbe` = (Herbe PP + Herbe PT) / SFP
 
-## 2. Algorithme de Profilage (K-Type Matching)
+## 2. Intelligence Artificielle & Profilage (K-Type Matching)
 
-Le backend maintient un "State" de la session courante.
-*   Si le conseiller modifie `part_herbe` via le slider, le backend met à jour le contexte du chat.
-*   Le Chatbot peut alors commenter proactivement : *"Attention, avec 70% d'herbe, vérifiez votre capacité de stockage fourrager."*
+Le backend utilise un modèle de **Machine Learning (Random Forest)** entraîné sur 5000 exploitations synthétiques (générées à partir de statistiques réelles INOSYS).
 
-## 3. Endpoints Clés
+*   **Modèle** : `model_ktype.pkl` (Pipeline Scikit-Learn avec StandardScaler et OneHotEncoder).
+*   **Features** : SAU, UMO, UGB, Nb VL, SFP, Herbe PP, Herbe PT, Cultures, Région, Filière.
+*   **Précision** : Le modèle identifie dynamiquement le K-Type le plus proche du référentiel de production.
+
+## 3. Endpoints API (FastAPI)
 
 | Endpoint | Méthode | Description |
 | :--- | :--- | :--- |
-| `/chat/stream` | POST | Chat temps réel (SSE) avec étapes de raisonnement. |
-| `/context/update` | POST | Met à jour l'état de la ferme simulée (ex: après modif slider). |
-| `/docs/{id}` | GET | Récupère le contenu d'une source citée. |
-| `/advisor/stats` | GET | Données agrégées pour le Dashboard (inchangé). |
+| `/simulate` | POST | Calcule les indicateurs (Autonomie, Carbone, Bio) et prédit le K-Type via ML. |
+| `/chat` | POST | Assistant expert "Perplexity-style" avec raisonnement et citations contextuelles. |
+| `/advisor/stats` | GET | Statistiques globales pour le tableau de bord du conseiller. |
 
-## 4. Sécurité & Rôles
-*   **Authentification** : Token JWT Conseiller.
-*   **Accès** : Le conseiller ne voit que ses fermes (Row-Level Security).
+## 4. Assistant Intelligent (Chat)
+
+Le chatbot (`/chat`) est conçu pour être **Context-Aware** :
+*   **Raisonnement** : Chaque réponse inclut les étapes logiques (`reasoning_steps`).
+*   **Citations** : Références directes aux fiches techniques INOSYS ou à la réglementation.
+*   **Actions Suggérées** : Propose des boutons cliquables pour approfondir l'analyse.

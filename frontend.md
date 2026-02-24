@@ -9,32 +9,18 @@ L'interface s'inspire des moteurs de réponse modernes. Elle ne se contente pas 
 *   **Split View** : L'écran est divisé entre le **Chat Contextuel** (à gauche ou overlay) et l'**Espace de Travail** (Simulation, Dashboard).
 *   **Réponses Sourcées** : Chaque conseil donné par l'IA est justifié par une référence technique (Fiche INOSYS, Règlementation).
 
-## 2. Configuration Ferme (Entrées)
+## 2. Configuration Ferme & Simulation
 
-Le formulaire de configuration permet au conseiller de saisir les données structurelles de l'exploitation pour initialiser le profilage K-Type.
+L'interface permet de saisir l'ensemble des variables réglementaires et structurelles nécessaires au profilage K-Type :
 
-### Champs Requis :
-*   **Structure & Main d'Œuvre**
-    *   **Filière** : Orientation technico-économique (ex: Bovins Lait, Grandes Cultures).
-    *   **SAU (ha)** : Surface Agricole Utile totale.
-    *   **UMO** : Unités Main d'Œuvre (Total travail sur la ferme).
-    *   **UGB Totaux** : Chargement animal total.
-    *   **Nb Vaches Laitières (VL)** : Taille du troupeau laitier.
+*   **Structure** : SAU (ha), UMO (Travail), UGB (Cheptel), Nb Vaches Laitières.
+*   **Assolement Détaillé** : SFP (Surface Fourragère), Herbe PP (Permanente), Herbe PT (Temporaire), Cultures de vente.
 
-*   **Assolement Détaillé (ha)**
-    *   **SFP** : Surface Fourragère Principale.
-    *   **Herbe (PP)** : Surface en Prairies Permanentes.
-    *   **Herbe (PT)** : Surface en Prairies Temporaires.
-    *   **Cultures Vente** : Surface en cultures (Céréales, etc.).
-
-Ces données permettent de calculer automatiquement :
-*   Le chargement (UGB/SFP)
-*   La part d'herbe dans la SFP (%)
-*   La productivité du travail (UGB/UMO ou Lait/UMO)
-
-Ces indicateurs sont ensuite utilisés par le backend pour identifier le **K-Type** de référence.
-
-## 3. Interface de Simulation
+### Simulation "Surface en Herbe"
+Un slider interactif permet de simuler une transition vers un système plus herbager. L'interface affiche en temps réel les deltas sur :
+*   **Autonomie Fourragère** (%)
+*   **Empreinte Carbone** (tCO2)
+*   **Biodiversité** (Score 0-10)
 
 ```
 +----------------+---------------------------------------------------+

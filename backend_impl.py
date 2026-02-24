@@ -4,13 +4,23 @@ from pydantic import BaseModel, Field
 from typing import List, Optional, Dict
 from fastapi.middleware.cors import CORSMiddleware
 import random
+import joblib
+import pandas as pd
 from datetime import datetime
 
 app = FastAPI(
     title="AgriTransition API",
     description="API pour l'accompagnement à la transition écologique agricole (Outil Conseiller)",
-    version="1.2.0"
+    version="1.3.0"
 )
+
+# Load ML Model
+try:
+    model = joblib.load('model_ktype.pkl')
+    print("Modèle K-Type chargé avec succès.")
+except Exception as e:
+    print(f"Erreur chargement modèle : {e}")
+    model = None
 
 # Enable CORS
 app.add_middleware(
@@ -58,6 +68,8 @@ class SimulationResult(BaseModel):
     carbon_footprint: float = Field(..., description="Empreinte carbone estimée (tCO2e/an)")
     feed_cost_index: float = Field(..., description="Indice coût alimentaire (Base 100)")
     biodiversity_score: float = Field(..., description="Score biodiversité (0-10)")
+    surface_herbe_totale: float = Field(..., description="Surface herbe totale (PP + PT)")
+    part_herbe_sfp: float = Field(..., description="Part d'herbe dans la SFP (%)")
 
 class PredictionResult(BaseModel):
     current_ktype: str
@@ -121,6 +133,14 @@ def calculate_biodiversity(part_herbe: float) -> float:
 def simulate_system(input: FarmInput, override_part_herbe: float = None) -> SimulationResult:
     part_herbe = override_part_herbe if override_part_herbe is not None else input.part_herbe
     
+    # Recalculate surfaces if override_part_herbe is used
+    if override_part_herbe is not None:
+        # We assume the user wants to keep the same ratio between PP and PT
+        total_herbe_original = input.surface_herbe_pp + input.surface_herbe_pt
+        surf_herbe_new = (override_part_herbe / 100.0) * input.surface_sfp
+    else:
+        surf_herbe_new = input.surface_herbe_pp + input.surface_herbe_pt
+
     autonomy = calculate_autonomy(input, part_herbe)
     carbon = calculate_carbon(input, part_herbe)
     biodiversity = calculate_biodiversity(part_herbe)
@@ -133,28 +153,42 @@ def simulate_system(input: FarmInput, override_part_herbe: float = None) -> Simu
         autonomie_fourragere_estimee=round(autonomy, 1),
         carbon_footprint=round(carbon, 1),
         feed_cost_index=round(cost_index, 1),
-        biodiversity_score=round(biodiversity, 1)
+        biodiversity_score=round(biodiversity, 1),
+        surface_herbe_totale=round(surf_herbe_new, 1),
+        part_herbe_sfp=round(part_herbe, 1)
     )
 
 def determine_ktype(input: FarmInput) -> str:
-    """Heuristic to determine current K-Type based on input."""
-    # Logic enriched with UMO/VL
-    labor_intensity = input.ugb / input.umo if input.umo > 0 else 0
+    """Predict K-Type using the trained ML model or fallback to heuristic."""
+    if model:
+        try:
+            # Create a single-row DataFrame matching the model features
+            data = {
+                'sau': [input.sau],
+                'umo': [input.umo],
+                'ugb': [input.ugb],
+                'nb_vl': [input.nb_vl if input.nb_vl is not None else 0],
+                'surface_sfp': [input.surface_sfp],
+                'surface_herbe_pp': [input.surface_herbe_pp],
+                'surface_herbe_pt': [input.surface_herbe_pt],
+                'surface_culture': [input.surface_culture],
+                'region': [input.region],
+                'filiere': [input.filiere]
+            }
+            df_input = pd.DataFrame(data)
+            prediction = model.predict(df_input)
+            return prediction[0]
+        except Exception as e:
+            print(f"Prediction error: {e}")
+            # Fallback to simple logic
+            return f"Inconnu (Erreur: {str(e)[:20]}...)"
     
+    # Heuristic Fallback (if model not loaded)
     if "Lait" in input.filiere:
         if input.part_herbe > 70:
-            if input.surface_herbe_pp > input.surface_herbe_pt:
-                return "Laitier Herbager (Dominante PP)"
-            else:
-                return "Laitier Herbager Dynamique"
-        elif input.part_maïs > 30:
-            return "Laitier Intensif Plaine"
-        else:
-            return "Laitier Polyculture"
-    elif "Céréales" in input.filiere or "Grandes Cultures" in input.filiere:
-        return "Céréalier Intensif"
-    else:
-        return "Polyculture-Élevage Standard"
+            return "Laitier Herbager (Heuristique)"
+        return "Laitier Polyculture (Heuristique)"
+    return "Polyculture-Élevage (Heuristique)"
 
 # --- Endpoints ---
 
@@ -207,48 +241,47 @@ async def get_advisor_stats():
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat_with_advisor_agent(chat_input: ChatMessage):
-    """Chatbot intelligent pour assister le conseiller (Mocked RAG)."""
+    """Chatbot intelligent pour assister le conseiller (Perplexity-style)."""
     msg = chat_input.message.lower()
+    context = chat_input.context or {}
     
-    # 1. Bonjour
-    if "bonjour" in msg:
-        return ChatResponse(
-            response="Bonjour ! Je suis votre assistant expert. Je peux analyser la ferme, chercher des fiches techniques ou vérifier la réglementation.",
-            reasoning_steps=["Détection intention : Salutation", "Chargement contexte conseiller"],
-            suggested_actions=["Lancer une simulation", "Voir mes clients"]
-        )
+    # Extract farm data from context if available
+    farm_info = context.get('farm', {})
+    ktype = context.get('current_ktype', 'Non défini')
     
-    # 2. Aides / Subventions
-    if "aide" in msg or "subvention" in msg:
+    # 1. Analyse spécifique à la ferme (si contexte présent)
+    if "conseille" in msg or "analyse" in msg or "quelles actions" in msg:
+        recs = [
+            "Augmenter le pâturage tournant pour réduire les coûts alimentaires.",
+            "Implanter des haies (SCA) pour améliorer le score biodiversité.",
+            "Étudier le passage en agriculture biologique (si K-Type compatible)."
+        ]
         return ChatResponse(
+            response=f"Basé sur le K-Type '{ktype}', je recommande de focaliser sur l'autonomie protéique. Votre chargement actuel permet une transition vers un système plus herbager sans perte majeure de marge.",
             reasoning_steps=[
-                "Recherche base documentaire : 'aides transition'",
-                "Filtrage géographique : France/Régional",
-                "Identification dispositifs : PCAE, Eco-régimes"
+                f"Identification du profil INOSYS : {ktype}",
+                "Comparaison avec les références régionales",
+                "Calcul des marges de progression environnementales"
             ],
-            response="Pour les investissements matériels, le dispositif PCAE (Plan de Compétitivité) est mobilisable. Pour la transition agro-écologique, visez le niveau 1 des écorégimes PAC.",
-            citations=[
-                {"id": "PAC-2023", "title": "Guide Ecorégimes", "url": "/docs/pac"},
-                {"id": "REG-PCAE", "title": "Règlement PCAE Normandie", "url": "/docs/pcae"}
-            ],
-            suggested_actions=["Simuler impact financier", "Télécharger dossier"]
+            suggested_actions=["Lancer simulation +10% herbe", "Consulter fiche K-Type"],
+            citations=[{"id": "REF-INOSYS", "title": f"Référentiel {ktype}", "url": f"/ref/{ktype}"}]
         )
-    
-    # 3. Carbone / Herbe
-    if "carbone" in msg or "herbe" in msg:
+
+    # 2. Réglementation / Diagnostic
+    if "réglement" in msg or "loi" in msg or "norme" in msg:
         return ChatResponse(
-            reasoning_steps=[
-                "Analyse impact levier : Surface Herbe",
-                "Calcul stockage carbone additionnel",
-                "Vérification cohérence système (chargement)"
-            ],
-            response="L'augmentation de la surface en herbe est le levier le plus efficace. Elle permet de stocker du carbone (environ +0.5 tC/ha/an) et de réduire les achats de correcteurs azotés.",
-            citations=[
-                {"id": "INOSYS-42", "title": "Stockage Carbone sous prairie", "url": "/docs/carb"},
-                {"id": "EXP-GAEC", "title": "Retour Expérience Système Herbager", "url": "/exp/gaec"}
-            ],
-            suggested_actions=["Simuler +10% Herbe", "Voir impact Marge"]
+            response="La directive Nitrate impose une couverture des sols en hiver (SIE/CIPAN). Pour votre exploitation, cela implique d'ajuster le plan d'épandage sur les parcelles proches des cours d'eau.",
+            reasoning_steps=["Analyse conformité réglementaire", "Vérification zones vulnérables"],
+            citations=[{"id": "DIR-NITRATE", "title": "Directive Nitrate 2024", "url": "https://agriculture.gouv.fr/nitrates"}],
+            suggested_actions=["Vérifier plan d'épandage", "Calculer balance azotée"]
         )
+
+    # Default fallback
+    return ChatResponse(
+        response="Je suis votre assistant AgriTransition. Posez-moi une question sur les aides, la technique (herbe, carbone) ou demandez-moi d'analyser cette ferme.",
+        reasoning_steps=["Analyse intention : Question générale"],
+        suggested_actions=["Simulation carbone", "Aides PCAE", "Fiches techniques"]
+    )
         
     # 4. Fallback
     return ChatResponse(
